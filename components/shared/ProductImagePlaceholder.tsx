@@ -25,12 +25,12 @@ export default function ProductImagePlaceholder({
   return (
     <div
       className={cn(
-        "relative flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 via-white to-accent-50",
+        "relative flex items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-primary-50 via-white to-gold-50",
         className
       )}
     >
       <div className="absolute inset-0 opacity-40" style={{
-        backgroundImage: "radial-gradient(circle at 30% 20%, rgba(30,42,120,0.15), transparent 55%), radial-gradient(circle at 80% 80%, rgba(230,57,70,0.1), transparent 55%)",
+        backgroundImage: "radial-gradient(circle at 30% 20%, rgba(15,26,60,0.12), transparent 55%), radial-gradient(circle at 80% 80%, rgba(197,168,128,0.12), transparent 55%)",
       }} />
       <Icon className="relative h-16 w-16 text-primary-400" strokeWidth={1.5} aria-hidden />
     </div>

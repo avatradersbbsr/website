@@ -75,8 +75,8 @@ export default function Hero() {
         </div>
 
         {/* Right graphical composition column */}
-        <div className="lg:col-span-5 relative lg:block flex items-center justify-center">
-          <div className="relative w-full max-w-[420px] aspect-[4/5] mx-auto">
+        <div className="lg:col-span-5 relative lg:block flex items-center justify-center mt-10 lg:mt-0">
+          <div className="relative w-full max-w-[340px] sm:max-w-[420px] aspect-[4/5] mx-auto">
             {/* Background glowing card */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-800/40 via-secondary-700/50 to-secondary-900/80 border border-white/10 shadow-card backdrop-blur-md overflow-hidden transform hover:scale-[1.02] transition-transform duration-500">
               <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(230,57,70,0.15), transparent 70%)" />
@@ -84,7 +84,7 @@ export default function Hero() {
             </div>
 
             {/* Overlapping glass stat panel 1 */}
-            <div className="absolute top-10 -left-6 rounded-2xl bg-white/10 border border-white/20 p-4 shadow-card backdrop-blur-xl animate-float flex items-center gap-3">
+            <div className="absolute top-10 left-2 sm:-left-6 rounded-2xl bg-white/10 border border-white/20 p-4 shadow-card backdrop-blur-xl animate-float flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent text-white shadow-glow-accent">
                 <Award className="h-5 w-5" />
               </span>
@@ -95,7 +95,7 @@ export default function Hero() {
             </div>
 
             {/* Overlapping glass stat panel 2 */}
-            <div className="absolute bottom-16 -right-6 rounded-2xl bg-white/10 border border-white/20 p-4 shadow-card backdrop-blur-xl animate-float [animation-delay:2s] flex items-center gap-3">
+            <div className="absolute bottom-16 right-2 sm:-right-6 rounded-2xl bg-white/10 border border-white/20 p-4 shadow-card backdrop-blur-xl animate-float [animation-delay:2s] flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-glow">
                 <HeartHandshake className="h-5 w-5" />
               </span>
@@ -107,10 +107,22 @@ export default function Hero() {
 
             {/* Center piece circle illustration placeholder / graphics overlay */}
             <div className="absolute inset-12 rounded-full border border-white/10 bg-gradient-to-tr from-secondary-900 to-primary-950 flex flex-col items-center justify-center text-center p-6 shadow-glow">
-              <svg className="w-16 h-16 text-accent mb-3 animate-pulse" viewBox="0 0 200 200">
-                <path d="M 30 140 Q 55 160, 75 90 Q 85 55, 100 100 Q 115 145, 130 90 Q 145 40, 170 140" stroke="currentColor" strokeWidth="14" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                <line x1="25" y1="100" x2="175" y2="85" stroke="#ffffff" strokeWidth="10" strokeLinecap="round" />
-                <circle cx="105" cy="72" r="10" fill="#ffffff" />
+              <svg className="w-16 h-16 mb-3 animate-pulse" viewBox="0 0 200 200">
+                <circle cx="100" cy="100" r="95" fill="none" stroke="#ffffff" strokeWidth="2.5" opacity="0.6" />
+                <path
+                  d="M 35,142 C 35,142 55,50 78,50 C 100,50 90,140 100,140 C 110,140 100,50 122,50 C 145,50 165,142 165,142"
+                  stroke="#ffffff"
+                  strokeWidth="12"
+                  fill="none"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M 15,108 C 50,96 100,78 185,82 C 100,73 50,88 15,100 Z"
+                  fill="#E5191C"
+                />
+                <line x1="100" y1="140" x2="100" y2="76" stroke="#E5191C" strokeWidth="12" strokeLinecap="round" />
+                <circle cx="100" cy="62" r="10" fill="#E5191C" />
               </svg>
               <h3 className="font-display font-bold text-white text-lg leading-tight">AVA Traders</h3>
               <p className="text-xs text-secondary-300 mt-1 uppercase tracking-wider font-semibold">ESTD. 2010</p>

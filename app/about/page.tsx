@@ -116,14 +116,14 @@ export default function AboutPage() {
           
           <div className="mt-16 relative max-w-4xl mx-auto">
             {/* Center Line for desktop, Left Line for mobile */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 timeline-line transform md:-translate-x-1/2" />
+            <div className="absolute left-[15px] md:left-1/2 top-0 bottom-0 timeline-line transform md:-translate-x-1/2" />
             
             <div className="space-y-12">
               {timeline.map((item, idx) => (
                 <div key={item.year} className={`relative flex flex-col md:flex-row items-start md:items-center ${idx % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
                   
                   {/* Timeline point */}
-                  <div className="absolute left-2.5 md:left-1/2 transform -translate-x-1/2 flex items-center justify-center h-5 w-5 rounded-full bg-accent border-[3px] border-white shadow-soft z-10" />
+                  <div className="absolute left-[15px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center h-5 w-5 rounded-full bg-accent border-[3px] border-white shadow-soft z-10" />
                   
                   {/* Timeline Card */}
                   <div className="w-full md:w-[45%] pl-10 md:pl-0 md:px-6">
