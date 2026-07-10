@@ -20,7 +20,7 @@ export default function ProductRail({
     <section className="section-y container-wide">
       <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
         <SectionHeading eyebrow={eyebrow} title={title} description={description} align="left" className="mx-0" />
-        <Link href={viewAllHref} className="text-sm font-semibold text-primary hover:underline shrink-0">
+        <Link href={viewAllHref} className="text-sm font-semibold text-accent hover:text-accent-600 hover:underline shrink-0 transition-colors">
           View all →
         </Link>
       </div>

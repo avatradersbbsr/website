@@ -13,7 +13,8 @@ const priceRanges = [
   { label: "Under ₹5,000", min: 0, max: 5000 },
   { label: "₹5,000 – ₹15,000", min: 5000, max: 15000 },
   { label: "₹15,000 – ₹50,000", min: 15000, max: 50000 },
-  { label: "Above ₹50,000", min: 50000, max: Infinity },
+  { label: "₹50,000 – ₹2,00,000", min: 50000, max: 200000 },
+  { label: "Above ₹2,00,000", min: 200000, max: Infinity },
 ];
 
 export default function ProductsCatalog() {
@@ -56,7 +57,7 @@ export default function ProductsCatalog() {
       <aside className={cn("lg:block", filtersOpen ? "block" : "hidden")}>
         <div className="rounded-2xl border border-secondary-100 bg-white p-5 sticky top-24">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-display font-semibold text-secondary-700">Filters</h2>
+            <h2 className="font-display font-bold text-secondary-700">Filters</h2>
             <button className="lg:hidden text-secondary-400" onClick={() => setFiltersOpen(false)} aria-label="Close filters">
               <X className="h-5 w-5" />
             </button>
@@ -70,7 +71,7 @@ export default function ProductsCatalog() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search products..."
-                className="w-full rounded-xl border border-secondary-200 pl-9 pr-3 py-2.5 text-sm focus:border-primary outline-none"
+                className="w-full rounded-xl border border-secondary-200 pl-9 pr-3 py-2.5 text-sm focus:border-primary outline-none transition-colors"
               />
             </div>
           </div>
@@ -130,7 +131,7 @@ export default function ProductsCatalog() {
             if (items.length === 0) return null;
             return (
               <div key={cat.slug} className="mb-12">
-                <h2 className="font-display text-xl font-semibold text-secondary-700 mb-4">{cat.name}</h2>
+                <h2 className="font-display text-xl font-bold text-secondary-700 mb-4">{cat.name}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                   {items.map((p) => (
                     <ProductCard key={p.id} product={p} />

@@ -8,6 +8,24 @@ import { siteConfig, telLink } from "@/lib/site-config";
 import { categories } from "@/data/categories";
 import { cn } from "@/lib/utils";
 
+function AVALogo({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 200 200" className={className} aria-hidden="true">
+      <circle cx="100" cy="100" r="96" fill="none" stroke="#1E2A78" strokeWidth="1.5" opacity="0.3" />
+      <path
+        d="M 30 140 Q 55 160, 75 90 Q 85 55, 100 100 Q 115 145, 130 90 Q 145 40, 170 140"
+        stroke="#1E2A78"
+        strokeWidth="10"
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <line x1="25" y1="100" x2="175" y2="85" stroke="#E63946" strokeWidth="5" strokeLinecap="round" />
+      <circle cx="105" cy="72" r="5" fill="#E63946" />
+    </svg>
+  );
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
@@ -17,12 +35,10 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full glass shadow-soft">
       <div className="container-wide flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
-          <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary text-white font-display font-bold text-lg">
-            A
-          </span>
+          <AVALogo className="h-11 w-11" />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-xl font-semibold text-secondary-700">
-              AVA <span className="text-primary">Traders</span>
+              AVA <span className="text-accent">Traders</span>
             </span>
             <span className="text-[11px] uppercase tracking-wide text-secondary-400 hidden sm:block">
               {siteConfig.tagline}
@@ -48,8 +64,8 @@ export default function Header() {
               Products <ChevronDown className="h-4 w-4" aria-hidden />
             </button>
             {megaOpen && (
-              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[560px]">
-                <div className="rounded-2xl bg-white shadow-card border border-secondary-100 p-6 grid grid-cols-2 gap-2">
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[480px]">
+                <div className="rounded-2xl bg-white shadow-card border border-secondary-100 p-6 grid grid-cols-1 gap-2">
                   {categories.map((cat) => (
                     <Link
                       key={cat.slug}
@@ -66,7 +82,7 @@ export default function Header() {
                   ))}
                   <Link
                     href="/products"
-                    className="col-span-2 text-center mt-1 text-sm font-semibold text-primary hover:underline py-2"
+                    className="text-center mt-1 text-sm font-semibold text-primary hover:underline py-2"
                   >
                     View all products →
                   </Link>

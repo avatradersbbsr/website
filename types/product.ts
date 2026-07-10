@@ -1,11 +1,7 @@
 export type CategorySlug =
   | "massage-chairs"
-  | "foot-massagers"
-  | "massage-guns"
-  | "neck-shoulder-massagers"
   | "leg-massagers"
-  | "fitness-equipment"
-  | "health-care-devices";
+  | "health-care-products";
 
 export interface Category {
   slug: CategorySlug;

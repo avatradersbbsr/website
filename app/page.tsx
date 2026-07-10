@@ -14,7 +14,7 @@ import { FAQSchema, LocalBusinessSchema } from "@/components/seo/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Massage Chairs, Massagers & Fitness Equipment in Bhubaneswar`,
+  title: `${siteConfig.name} | Massage Chairs, Leg Massagers & Health Care Products in Bhubaneswar`,
   description: siteConfig.description,
   alternates: { canonical: "/" },
 };
