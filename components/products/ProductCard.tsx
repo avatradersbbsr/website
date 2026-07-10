@@ -24,16 +24,16 @@ export default function ProductCard({ product }: { product: Product }) {
   };
 
   return (
-    <div className="group flex flex-col rounded-2xl bg-white border border-secondary-100 shadow-soft hover:shadow-card transition-shadow overflow-hidden">
+    <div className="group flex flex-col rounded-2xl bg-white border border-secondary-100 shadow-soft hover:shadow-card transition-all duration-300 overflow-hidden hover:border-primary-200">
       <Link href={`/products/${product.slug}`} className="block relative">
         <ProductImagePlaceholder category={product.category} className="aspect-square w-full" />
         {discount > 0 && (
-          <span className="absolute top-3 left-3 rounded-full bg-accent text-secondary-700 text-xs font-bold px-2.5 py-1">
+          <span className="absolute top-3 left-3 rounded-full bg-accent text-white text-xs font-bold px-2.5 py-1">
             {discount}% OFF
           </span>
         )}
         {product.bestSeller && (
-          <span className="absolute top-3 right-3 rounded-full bg-secondary-700 text-white text-[10px] font-semibold uppercase tracking-wide px-2.5 py-1">
+          <span className="absolute top-3 right-3 rounded-full bg-primary text-white text-[10px] font-semibold uppercase tracking-wide px-2.5 py-1">
             Best Seller
           </span>
         )}

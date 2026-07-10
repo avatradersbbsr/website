@@ -25,10 +25,32 @@
     @apply py-16 md:py-24;
   }
   .glass {
-    @apply bg-white/70 backdrop-blur-xl border border-white/40;
+    @apply bg-white/80 backdrop-blur-xl border border-primary-50/60;
+  }
+  .glass-dark {
+    @apply bg-secondary-700/80 backdrop-blur-xl border border-white/10;
   }
   .text-balance {
     text-wrap: balance;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-accent to-primary;
+    background-size: 200% auto;
+  }
+  .gradient-border {
+    position: relative;
+  }
+  .gradient-border::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1.5px;
+    background: linear-gradient(135deg, #1E2A78, #E63946, #1E2A78);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
   }
 }
 

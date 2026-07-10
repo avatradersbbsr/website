@@ -19,7 +19,7 @@ export default function FloatingActions() {
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           aria-label="Back to top"
-          className="flex h-11 w-11 items-center justify-center rounded-full bg-secondary-700 text-white shadow-card hover:bg-secondary-600 transition-colors"
+          className="flex h-11 w-11 items-center justify-center rounded-full bg-primary text-white shadow-card hover:bg-primary-600 transition-colors"
         >
           <ArrowUp className="h-5 w-5" />
         </button>
@@ -28,7 +28,7 @@ export default function FloatingActions() {
       <a
         href={telLink(siteConfig.contact.phonePrimary)}
         aria-label="Call AVA Traders"
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-secondary-700 text-white shadow-card hover:bg-secondary-600 transition-colors"
+        className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-card hover:bg-primary-600 transition-colors"
       >
         <Phone className="h-6 w-6" />
       </a>

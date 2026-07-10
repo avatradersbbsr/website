@@ -2,16 +2,18 @@ export const siteConfig = {
   name: "AVA Traders",
   tagline: "Complete Solution For Your Health & Fitness",
   description:
-    "AVA Traders is Bhubaneswar's trusted showroom for premium massage chairs, foot massagers, massage guns, and fitness equipment. Visit our Puri Bypass Road showroom or shop with confidence online.",
+    "AVA Traders is Bhubaneswar's trusted showroom for premium massage chairs, leg massagers, and health care products. Visit our Puri Bypass Road showroom or shop with confidence online.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.avatraders.in",
   ogImage: "/images/og-default.jpg",
   keywords: [
     "massage chair Bhubaneswar",
-    "foot massager Odisha",
-    "massage gun India",
-    "fitness equipment Bhubaneswar",
+    "leg massager Odisha",
+    "health care products Bhubaneswar",
+    "massage chair showroom Odisha",
     "AVA Traders",
     "body massager showroom Odisha",
+    "massage chair India",
+    "leg massager India",
   ],
   contact: {
     phonePrimary: process.env.NEXT_PUBLIC_PHONE_PRIMARY || "+917008636254",

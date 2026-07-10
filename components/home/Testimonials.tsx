@@ -4,7 +4,7 @@ import SectionHeading from "@/components/shared/SectionHeading";
 
 export default function Testimonials() {
   return (
-    <section className="section-y bg-primary-50/50">
+    <section className="section-y bg-primary-50/40">
       <div className="container-wide">
         <SectionHeading
           eyebrow="Customer Stories"
@@ -16,7 +16,7 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <figure
               key={t.name}
-              className="snap-start shrink-0 w-[300px] sm:w-[340px] rounded-2xl bg-white p-6 shadow-soft border border-secondary-100 flex flex-col gap-4"
+              className="snap-start shrink-0 w-[300px] sm:w-[340px] rounded-2xl bg-white p-6 shadow-soft border border-secondary-100 flex flex-col gap-4 hover:shadow-card transition-shadow duration-300"
             >
               <div className="flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
                 {Array.from({ length: 5 }).map((_, i) => (
