@@ -11,11 +11,11 @@ export const products: Product[] = [
     slug: "a-710-2-classic-premium-4d",
     name: "A-710-2 Classic Premium 4D Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Classic premium 4D massage chair with full-body airbag compression, zero-gravity recline and heat therapy.",
+    shortDescription: "Flagship 4D massage chair with 135cm S+L rail, 23 auto programs, graphene shawl heating, and 7-inch TFT color screen.",
     description: [
-      "The A-710-2 Classic Premium 4D Massage Chair is a flagship model in AVA Traders' massage chair range, combining advanced 4D roller technology with a classic design that fits seamlessly into any living room or office.",
-      "Equipped with L-track rollers that follow the natural curve of your spine from neck to glutes, this chair delivers precise, deep-tissue massage tailored to your body shape. The zero-gravity recline distributes your weight evenly, reducing spinal pressure while the built-in heat therapy soothes tense lower back muscles.",
-      "Every unit sold by AVA Traders is inspected at our Bhubaneswar showroom before dispatch. Our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
+      "The A-710-2 Classic Premium 4D Massage Chair represents the ultimate in therapeutic home recovery. Driven by AI massage robots with 1.5-21cm width and 12cm depth adjustments, it mimics human hand massage techniques to deliver precise deep-tissue relief.",
+      "Equipped with a 135cm S+L-track long rail, it covers your back from the neck down to the thighs. A unique graphene heated shawl assembly with a wormwood herb medicine bag provides targeted hot compress therapy for shoulders, back, waist, and abdomen.",
+      "Complete with 23 automatic programs, 3D digital audio, wireless charging, and a 20cm stretch footrest featuring calf kneading and foot roller scraping, the A-710-2 brings showroom-quality therapy directly to your space."
     ],
     images: [
       "/images/products/a-710-2-classic-premium-4d-1.jpg",
@@ -27,27 +27,29 @@ export const products: Product[] = [
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
-      "4D L-track rollers follow the natural curve of your spine from neck to glutes",
-      "Zero-gravity recline distributes body weight evenly to reduce spinal pressure",
-      "Full-body airbag compression across shoulders, arms, hips, calves and feet",
-      "Built-in heat therapy on lower back for deep muscle relaxation",
-      "Bluetooth speakers and touchscreen remote with 8 preset programs",
-      "Space-saving design — requires only 5 cm from wall"
+      "AI massage robots with 135cm S+L shape long rail tracking",
+      "23 types of automatic massage programs (AI intelligent, exclusive, relaxing)",
+      "Shawl hot compress with graphene heating and wormwood herb medicine bag",
+      "7-inch TFT colored touchscreen controller and armrest shortcut keys",
+      "Leg and foot massage with calf kneading and foot roller scraping",
+      "3D digital audio and mobile phone wireless charging function",
+      "20cm stretch range footrest for height adjustment"
     ],
     specifications: [
-      { label: "Track Type", value: "4D L-Track" },
-      { label: "Recline Angle", value: "Up to 170°" },
-      { label: "Airbags", value: "56" },
-      { label: "Heat Therapy", value: "Lower back, dual heat pads" },
-      { label: "Power", value: "220V, 280W" },
-      { label: "Dimensions (Reclined)", value: "195 x 80 x 75 cm" },
-      { label: "Weight Capacity", value: "150 kg" },
+      { label: "Model", value: "A710-2" },
+      { label: "Track Type", value: "135cm S+L Shape Long Rail" },
+      { label: "AI Robot Adjustment", value: "1.5-21cm width, 12cm depth" },
+      { label: "Power", value: "220W, 110-240V~ 50/60Hz" },
+      { label: "Noise Level", value: "≤60dB" },
+      { label: "Safety Structure", value: "Class I" },
+      { label: "Dimensions (Reclined)", value: "1760 x 850 x 880 mm" },
+      { label: "Weight (G.W)", value: "153.5 kg" },
       { label: "Warranty", value: "2 Years (1 Year Comprehensive + 1 Year Motor)" }
     ],
     benefits: [
-      "Relieves chronic back and shoulder pain with precision 4D rollers",
-      "Improves blood circulation after long work hours",
-      "Reduces daily stress with guided relaxation programs"
+      "Shawl hot compress warms chest and abdomen for deep relaxation",
+      "Ankle stretching and calf kneading relieve severe lower leg fatigue",
+      "23 auto programs provide customized relief for white-collar workers and athletes"
     ],
     faqs: [
       { question: "Is the A-710-2 covered under warranty?", answer: "Yes, it comes with a 2-year warranty (1 Year Comprehensive + 1 Year Motor). AVA Traders also provides local after-sales support from our Bhubaneswar showroom." },
@@ -58,7 +60,7 @@ export const products: Product[] = [
     featured: true,
     seo: {
       metaTitle: "A-710-2 Classic Premium 4D Massage Chair | Buy in Bhubaneswar | AVA Traders",
-      metaDescription: "Classic premium 4D massage chair with full-body airbag compression, zero-gravity recline and heat therapy. Shop at AVA Traders, Bhubaneswar — showroom visit, WhatsApp enquiry and home delivery available."
+      metaDescription: "Classic premium 4D massage chair with 135cm S+L rail, graphene shawl heating, 23 auto programs, and wireless charging. Visit AVA Traders showroom."
     }
   },
   {
@@ -66,11 +68,11 @@ export const products: Product[] = [
     slug: "z-91-ultra-luxury",
     name: "Z-91 Ultra Luxury Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Ultra luxury full-body massage chair with AI body scanning, voice control and dual-track roller system.",
+    shortDescription: "Ultra luxury full-body massage chair with 7-inch PAD touch screen, 24 auto programs, 10 valves 42 airbags, and wireless charging.",
     description: [
-      "The Z-91 Ultra Luxury Massage Chair represents the pinnacle of home wellness technology. Featuring an AI-powered body scanning system that automatically adjusts roller position and intensity to your body shape, every massage session feels custom-tailored.",
-      "With voice control, dual-track rollers that simultaneously work your back and legs, and a premium Bluetooth sound system built into the headrest, the Z-91 transforms your daily recovery into a luxury experience.",
-      "Every unit sold by AVA Traders is inspected at our Bhubaneswar showroom before dispatch. Our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
+      "The Z-91 Ultra Luxury Massage Chair is a high-class home therapy solution. It features an integrated SL track rail from neck to thigh and a 2D massage hand system with automatic shoulder detection, delivering precise neck and shoulder rubs.",
+      "The Z-91 is equipped with 10 valves and 42 airbags for complete body wrapping, and 24V carbon fiber heating on the backrest and footrest. Control is effortless via the 7-inch PAD touch screen, rotating navigation buttons, or intelligent voice commands.",
+      "The footrest uses leg electric telescopic technology to auto-detect height, offering a dedicated knee massage, 24 airbags for leg kneading, and a closed foot massage with 3 groups of rollers. The premium PU cover features 5 years hydrolysis resistance."
     ],
     images: [
       "/images/products/z-91-ultra-luxury-1.jpg",
@@ -82,31 +84,32 @@ export const products: Product[] = [
     availability: "limited-stock",
     warranty: "3 Years (2 Year Comprehensive + 1 Year Motor)",
     features: [
-      "AI body scanning automatically adjusts roller position and intensity",
-      "Voice control for hands-free operation",
-      "Dual-track roller system works back and legs simultaneously",
-      "Premium Bluetooth sound system built into headrest",
-      "Chromotherapy LED mood lighting",
-      "Zero-gravity and zero-wall space-saving design",
-      "12 automatic programs + manual mode"
+      "Integrated SL track rail and automatic shoulder detection",
+      "9 manual modes and 24 automatic modes",
+      "10 valves with 42 airbags wrapping shoulders, armrests, and footrest",
+      "7-inch PAD touch screen, rotating controls, and intelligent voice control",
+      "Electric telescopic leg rest with dedicated knee massage and foot rollers",
+      "24V safe voltage with carbon fiber heating on back and legs",
+      "Wireless charging on armrest and PU with 5 years hydrolysis resistance"
     ],
     specifications: [
-      { label: "Track Type", value: "Dual SL+Leg Track" },
-      { label: "Roller Technology", value: "AI 4D with body scan" },
-      { label: "Airbags", value: "72" },
-      { label: "Heat Therapy", value: "Full back + calves" },
-      { label: "Power", value: "220V, 350W" },
-      { label: "Dimensions (Reclined)", value: "205 x 85 x 80 cm" },
-      { label: "Weight Capacity", value: "150 kg" },
+      { label: "Model", value: "Z91 (High Class)" },
+      { label: "Track Type", value: "Integrated SL Track" },
+      { label: "Airbags & Valves", value: "10 Valves, 42 Airbags" },
+      { label: "Control Interface", value: "7\" Touch PAD & Voice Control" },
+      { label: "Power & Voltage", value: "180W, 220V" },
+      { label: "Dimensions", value: "1870 x 750 x 840 mm" },
+      { label: "Weight (G.W/N.W)", value: "125 kg / 110 kg" },
+      { label: "Material", value: "Anti-hydrolysis PU (5 Years Resistance)" },
       { label: "Warranty", value: "3 Years (2 Year Comprehensive + 1 Year Motor)" }
     ],
     benefits: [
-      "AI body scanning ensures every massage targets your specific pain points",
-      "Voice control makes operation effortless for elderly users",
-      "Chromotherapy enhances relaxation through light therapy"
+      "Automatic shoulder detection customizes neck massages",
+      "Dedicated electric knee massage helps reduce joint pain",
+      "5 years hydrolysis resistant PU ensures long-term cover durability"
     ],
     faqs: [
-      { question: "What makes the Z-91 'Ultra Luxury'?", answer: "The Z-91 features AI body scanning, voice control, chromotherapy lighting, and a dual-track system — technology typically found only in commercial-grade chairs, brought into a home format." },
+      { question: "What makes the Z-91 'Ultra Luxury'?", answer: "The Z-91 features 24 automatic modes, 10 valves, 42 airbags, a 7-inch touch PAD, and an electric telescopic leg rest with dedicated knee massage — commercial-grade details built for the home." },
       { question: "Can I try the Z-91 at the showroom?", answer: "Yes, the Z-91 is on display at our Puri Bypass Road showroom. We recommend calling ahead as it's a limited-stock model." },
       { question: "Is installation included?", answer: "Yes, for Bhubaneswar deliveries, our team handles complete setup and provides a walkthrough of all features including voice control setup." }
     ],
@@ -114,7 +117,7 @@ export const products: Product[] = [
     featured: true,
     seo: {
       metaTitle: "Z-91 Ultra Luxury Massage Chair | Buy in Bhubaneswar | AVA Traders",
-      metaDescription: "Ultra luxury massage chair with AI body scanning, voice control and dual-track roller system. Shop at AVA Traders, Bhubaneswar — showroom visit and home delivery available."
+      metaDescription: "High-class massage chair with 7-inch PAD screen, voice control, 24 auto programs, and knee massage. Shop at AVA Traders showroom."
     }
   },
   {
@@ -290,11 +293,11 @@ export const products: Product[] = [
     slug: "rc-1-economic",
     name: "RC-1 Economic Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Affordable full-body massage chair with 2D rollers, zero-gravity recline and basic airbag system.",
+    shortDescription: "Economic full-body massage chair with 18 auto programs, bionic manipulator, zero gravity and SL rail.",
     description: [
-      "The RC-1 Economic Massage Chair makes the benefits of a full-body massage chair accessible to budget-conscious families. With 2D roller technology, zero-gravity recline and a basic airbag system covering shoulders and calves, it delivers effective daily relief at a fraction of the cost of premium models.",
-      "Ideal as a first massage chair for families, the RC-1 includes 6 preset programs and manual mode, an extendable footrest, and a simple remote control that even elderly users find intuitive.",
-      "Every unit sold by AVA Traders is inspected at our Bhubaneswar showroom before dispatch. Our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
+      "The RC-1 Economic Massage Chair is a smart upgrade for budget-conscious buyers. It features an intelligent AI bionic manipulator that offers 3 frequency regulations, 3 massage strengths, and 8 massage techniques to relieve systemic soreness.",
+      "Equipped with an extended SL rail that follows the spine from head to toe, the RC-1 provides zero-gravity recline to make you feel like you are sleeping on the clouds. The handrail linkage and leg airbags ensure full-body wrapping.",
+      "Designed to save space (requires only 15cm from the wall), it includes bluetooth music, a USB charging port, heating function, and a large screen touchscreen controller. Best of all, it offers free installation out of the box."
     ],
     images: [
       "/images/products/rc-1-economic-1.jpg",
@@ -306,38 +309,39 @@ export const products: Product[] = [
     availability: "in-stock",
     warranty: "1 Year Comprehensive",
     features: [
-      "2D S-track rollers for neck-to-lower-back massage",
-      "Zero-gravity recline position",
-      "Basic airbag compression on shoulders and calves",
-      "6 preset programs + manual adjustment",
-      "Extendable footrest for different heights",
-      "Simple one-button remote control"
+      "Extended SL rail tracking from head to toe",
+      "AI bionic manipulator (3 speeds, 3 strengths, 8 techniques)",
+      "18 kinds of automatic programs for comfort and convenience",
+      "Zero gravity function for weightless recline (cloud sleep)",
+      "Large screen control, USB port, and Bluetooth music",
+      "Heating function, handrail linkage, and leg airbags wrapping",
+      "Space-saving design (requires only 15cm from wall)"
     ],
     specifications: [
-      { label: "Track Type", value: "2D S-Track" },
-      { label: "Recline Angle", value: "Up to 155°" },
-      { label: "Airbags", value: "24" },
-      { label: "Heat Therapy", value: "Lower back" },
-      { label: "Power", value: "220V, 180W" },
-      { label: "Dimensions (Reclined)", value: "185 x 75 x 70 cm" },
-      { label: "Weight Capacity", value: "120 kg" },
+      { label: "Track Type", value: "Extended SL-Track" },
+      { label: "Programs", value: "18 Auto Programs" },
+      { label: "Manipulator Adjustment", value: "3 Frequency, 3 Strength, 8 Techniques" },
+      { label: "Recline Angle", value: "Zero Gravity Position" },
+      { label: "Power", value: "180W, 220V" },
+      { label: "Wall Clearance", value: "15 cm Space Saving" },
+      { label: "Installation", value: "Free Installation Out of Box" },
       { label: "Warranty", value: "1 Year Comprehensive" }
     ],
     benefits: [
-      "Entry-level pricing makes massage chairs accessible to more families",
-      "Simple controls are ideal for elderly users",
-      "Compact size fits in smaller living rooms"
+      "18 auto programs provide complete convenience for everyday relief",
+      "Space-saving design fits in compact rooms needing only 15cm wall gap",
+      "Free out-of-box setup means no technical installation hassle"
     ],
     faqs: [
-      { question: "Is the RC-1 suitable for daily use?", answer: "Yes, the RC-1 is designed for daily 20-30 minute sessions. The auto power-off ensures the chair doesn't overheat." },
-      { question: "Can it fit in a small room?", answer: "The RC-1 has a compact footprint and needs about 60 cm of clearance behind it when reclined — smaller than most premium chairs." },
-      { question: "What's the weight limit?", answer: "The RC-1 supports users up to 120 kg." }
+      { question: "Is the RC-1 suitable for daily use?", answer: "Yes, the RC-1 is designed for daily 20-30 minute sessions. The auto timer and overheat protection ensure safe operation." },
+      { question: "Can it fit in a small room?", answer: "The RC-1 features a space-saving design that requires only 15cm of clearance from the wall when reclined." },
+      { question: "What is the out-of-box setup?", answer: "The RC-1 arrives as an all-in-one package. Our team delivers it and simply slides it out of the box — no complex assembly is needed." }
     ],
     bestSeller: false,
     featured: false,
     seo: {
-      metaTitle: "RC-1 Economic Massage Chair | Affordable Massage Chair in Bhubaneswar | AVA Traders",
-      metaDescription: "Affordable full-body massage chair with 2D rollers, zero-gravity recline and basic airbag system. Shop at AVA Traders, Bhubaneswar."
+      metaTitle: "RC-1 Economic Massage Chair | Affordable Massage Chair | AVA Traders",
+      metaDescription: "Affordable full-body massage chair with 18 auto programs, AI manipulator, extended SL rail, and zero gravity. Shop at AVA Traders Bhubaneswar."
     }
   },
   {
@@ -345,11 +349,11 @@ export const products: Product[] = [
     slug: "rc-2-economic-premium",
     name: "RC-2 Economic Premium Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Economic premium massage chair with 3D rollers, enhanced airbag system and heat therapy — the smart upgrade from the RC-1.",
+    shortDescription: "Economic premium massage chair with waist/back hot compress, 360° airbag wrap, and high leg care system.",
     description: [
-      "The RC-2 Economic Premium Massage Chair is the perfect step-up from entry-level models. It upgrades to 3D roller technology, adds a more comprehensive airbag system covering arms and hips, and includes enhanced heat therapy across the lower back and calves.",
-      "For families who want noticeably better massage quality without jumping to the ultra luxury price range, the RC-2 delivers the best value-for-money in our catalogue.",
-      "Every unit sold by AVA Traders is inspected at our Bhubaneswar showroom before dispatch. Our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
+      "The RC-2 Economic Premium Massage Chair (RC-02 model) is designed to offer maximum value with premium features. It features a constant temperature hot compress for the waist and back, providing deep warming and relaxation in cold weather.",
+      "Equipped with a 360° full-body airbag wrap, it delivers a human-like pinching and kneading sensation across the shoulders, arms, hips, and calves. The new high leg care system includes calf rollers, leg retraction, and foot airbags with sole scraping.",
+      "Control is simple via the extra-large screen controller with 6 automatic programs. Featuring zero gravity mode, immersive Bluetooth music surround, and all-in-one free installation out of the box, it is the best value upgrade in our showroom."
     ],
     images: [
       "/images/products/rc-2-economic-premium-1.jpg",
@@ -361,38 +365,39 @@ export const products: Product[] = [
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
-      "3D SL-track roller technology",
-      "Enhanced airbag system — 36 airbags covering arms, hips, shoulders and calves",
-      "Heat therapy on lower back and calves",
-      "Zero-gravity recline with smooth electric motor",
-      "8 preset programs + full manual control",
-      "Bluetooth speaker system"
+      "Waist and back hot compress (constant temp, overheat protection)",
+      "360° full-body airbag wrap (shoulders, arms, hips, calves, feet)",
+      "High leg care system with calf rollers, heel rubbing, and sole scraping",
+      "Extra-large screen controller and 6 automatic programs",
+      "Zero gravity mode for a floating relaxation experience",
+      "Immersive Bluetooth music surround speakers",
+      "All-in-one free installation out of the box"
     ],
     specifications: [
-      { label: "Track Type", value: "3D SL-Track" },
-      { label: "Recline Angle", value: "Up to 165°" },
-      { label: "Airbags", value: "36" },
-      { label: "Heat Therapy", value: "Lower back + calves" },
+      { label: "Model", value: "RC-02" },
+      { label: "Airbags", value: "360° Full Body Wrap (with Knee Airbags)" },
+      { label: "Heat Therapy", value: "Waist and Back Hot Compress" },
+      { label: "Leg Care", value: "Calf Rollers + Leg side rubbing + Sole Scraping" },
+      { label: "Programs", value: "6 Auto Programs" },
+      { label: "Installation", value: "All-in-one Free Installation" },
       { label: "Power", value: "220V, 220W" },
-      { label: "Dimensions (Reclined)", value: "190 x 78 x 72 cm" },
-      { label: "Weight Capacity", value: "130 kg" },
       { label: "Warranty", value: "2 Years (1 Year Comprehensive + 1 Year Motor)" }
     ],
     benefits: [
-      "3D rollers provide noticeably deeper massage than 2D models",
-      "Excellent value — premium features at an economic price",
-      "Bluetooth speakers let you listen to music during sessions"
+      "Constant temperature compress relieves chronic lower back soreness",
+      "High leg adjustment and leg retraction fits tall and short users perfectly",
+      "Pre-assembled out of the box design makes installation instant"
     ],
     faqs: [
-      { question: "What's the difference between RC-1 and RC-2?", answer: "The RC-2 upgrades to 3D rollers (vs 2D), has 36 airbags (vs 24), adds heat therapy on calves, includes Bluetooth speakers, and has 8 programs (vs 6). It's a significant upgrade for moderate extra investment." },
-      { question: "Is delivery free in Bhubaneswar?", answer: "Delivery charges vary by location. Please contact us on WhatsApp for a delivery quote to your address." },
-      { question: "Can I pay in instalments?", answer: "We can assist with financing options. Please contact us for available EMI plans." }
+      { question: "What's the difference between RC-1 and RC-2?", answer: "The RC-2 (RC-02 model) adds 360° airbag wrapping (including knee coverage), dedicated calf rollers, constant temperature back heating, and a larger screen controller." },
+      { question: "Is delivery free in Bhubaneswar?", answer: "Delivery charges vary by location. Please contact us on WhatsApp for a delivery and setup quote to your address." },
+      { question: "Can I pay in instalments?", answer: "We can assist with financing options. Please contact us for details on available EMI plans." }
     ],
     bestSeller: true,
     featured: false,
     seo: {
-      metaTitle: "RC-2 Economic Premium Massage Chair | Best Value in Bhubaneswar | AVA Traders",
-      metaDescription: "Economic premium massage chair with 3D rollers, enhanced airbag system and heat therapy. Shop at AVA Traders, Bhubaneswar — best value for money."
+      metaTitle: "RC-2 Economic Premium Massage Chair | Best Value | AVA Traders",
+      metaDescription: "Economic premium RC-02 massage chair with 360° airbag wrap, back hot compress, calf rollers, and zero gravity. Shop at AVA Traders Bhubaneswar."
     }
   },
 
