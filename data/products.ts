@@ -125,11 +125,11 @@ export const products: Product[] = [
     slug: "z-90-economic-premium-ultra-luxury",
     name: "Z-90 Economic Premium Ultra Luxury Massage Chair",
     category: "massage-chairs",
-    shortDescription: "The best of ultra luxury features at an accessible price — 4D rollers, zero gravity and full-body airbags.",
+    shortDescription: "Economic premium ultra luxury massage chair with 7-inch PAD touch screen, 20 auto programs, and 24V graphene heating.",
     description: [
-      "The Z-90 brings ultra luxury massage chair features into a more accessible price bracket without cutting corners on performance. With 4D L-track rollers, zero-gravity recline and full-body airbag compression, it delivers a comprehensive massage experience.",
-      "Designed for families who want premium quality without the premium price tag, the Z-90 includes heat therapy, Bluetooth connectivity and 10 preset programs that cover everything from gentle relaxation to deep tissue recovery.",
-      "Every unit sold by AVA Traders is inspected at our Bhubaneswar showroom before dispatch. Our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
+      "The Z-90 Economic Premium Ultra Luxury Massage Chair represents the perfect bridge between cost and luxury. Equipped with a 2D massage hand system and automatic shoulder detection, it adjusts dynamically to neck and shoulder heights.",
+      "Featuring an integrated SL track rail from neck to thigh, the Z-90 offers 20 automatic programs and 9 manual modes. Microfiber far-infrared graphene heating provides constant temperature warming on the waist and backrest to promote muscle relief.",
+      "The chair includes 15 valves with 54 airbags for full body wrapping, 4 valves with 8 airbags in the armrests, and wireless charging. The footrest has a knee massage function, electronic stretching, 34 footrest airbags, and 3 groups of sole rollers."
     ],
     images: [
       "/images/products/z-90-economic-premium-1.jpg",
@@ -141,39 +141,40 @@ export const products: Product[] = [
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
-      "4D L-track rollers for full spine coverage",
-      "Zero-gravity recline for optimal weight distribution",
-      "Full-body airbag compression — 48 airbags total",
-      "Heat therapy on lower back and calves",
-      "Bluetooth speakers with wireless connectivity",
-      "10 preset massage programs",
-      "Space-saving wall-hugger design"
+      "Integrated SL track rail and automatic shoulder detection",
+      "9 manual modes and 20 automatic massage programs",
+      "15 valves with 54 airbags for comprehensive full-body wrapping",
+      "7-inch PAD touch screen and rotating navigation control buttons",
+      "Electric telescopic leg rest with electronic stretching and sole rollers",
+      "24V graphene heating on waist and seat side (constant temperature)",
+      "Wireless charging on armrests and 5 years hydrolysis resistant PU"
     ],
     specifications: [
-      { label: "Track Type", value: "4D L-Track" },
-      { label: "Recline Angle", value: "Up to 170°" },
-      { label: "Airbags", value: "48" },
-      { label: "Heat Therapy", value: "Lower back + calves" },
-      { label: "Power", value: "220V, 260W" },
-      { label: "Dimensions (Reclined)", value: "198 x 78 x 72 cm" },
-      { label: "Weight Capacity", value: "130 kg" },
+      { label: "Model", value: "Z90 (High Class)" },
+      { label: "Track Type", value: "Integrated SL Track" },
+      { label: "Airbags & Valves", value: "15 Valves, 54 Airbags" },
+      { label: "Control Interface", value: "7\" PAD Touch Screen" },
+      { label: "Power & Voltage", value: "160W, 220V" },
+      { label: "Dimensions", value: "1970 x 760 x 850 mm" },
+      { label: "Weight (G.W/N.W)", value: "120 kg / 105 kg" },
+      { label: "Material", value: "Anti-hydrolysis PU (5 Years Resistance)" },
       { label: "Warranty", value: "2 Years (1 Year Comprehensive + 1 Year Motor)" }
     ],
     benefits: [
-      "Ultra luxury features at an economic price point",
-      "Full-body coverage from neck to feet",
-      "Space-saving design fits in compact living rooms"
+      "20 automatic programs provide customized relief for all family members",
+      "Graphene constant temperature heating speeds back and waist recovery",
+      "54 wrapping airbags mimic professional therapist pressure"
     ],
     faqs: [
-      { question: "How does the Z-90 compare to the Z-91?", answer: "The Z-90 offers most of the Z-91's features (4D rollers, zero gravity, heat therapy) at a lower price, but without AI body scanning and voice control. It's the ideal choice if you want premium performance on a budget." },
+      { question: "How does the Z-90 compare to the Z-91?", answer: "The Z-90 offers 20 auto programs and 54 airbags (compared to Z-91's 24 programs and 42 airbags) and shares the 7-inch touch PAD controller, but does not include voice control and electric telescopic knee massage." },
       { question: "Can I try the Z-90 before buying?", answer: "Yes, it's on display at our showroom. Visit us at Puri Bypass Road, Bhubaneswar." },
       { question: "Do you offer EMI options?", answer: "We can assist with financing options. Please contact us on WhatsApp or call for details on available EMI plans." }
     ],
     bestSeller: true,
     featured: true,
     seo: {
-      metaTitle: "Z-90 Economic Premium Ultra Luxury Massage Chair | AVA Traders Bhubaneswar",
-      metaDescription: "Ultra luxury features at an accessible price — 4D rollers, zero gravity and full-body airbags. Shop the Z-90 at AVA Traders, Bhubaneswar."
+      metaTitle: "Z-90 Economic Premium Ultra Luxury Massage Chair | AVA Traders",
+      metaDescription: "Economic premium ultra luxury massage chair with 7-inch PAD touch screen, 20 auto programs, 54 airbags, and zero gravity. Shop at AVA Traders Bhubaneswar."
     }
   },
   {
@@ -181,11 +182,11 @@ export const products: Product[] = [
     slug: "a-372-2-premium-ultra-luxury",
     name: "A-372-2 Premium Ultra Luxury Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Premium ultra luxury massage chair with SL-track, Thai stretch massage and calf kneading system.",
+    shortDescription: "Air suspension 3D massage chair with 9 techniques, 17 voice commands, and graphene waist/leg heating.",
     description: [
-      "The A-372-2 Premium Ultra Luxury Massage Chair combines sophisticated engineering with plush comfort. Its SL-track system ensures rollers reach from your neck all the way down to your hamstrings, while the Thai stretch function gently elongates your spine.",
-      "The built-in calf kneading system, combined with heated foot rollers, makes this chair especially popular with professionals who spend long hours standing or sitting. Airbag compression across shoulders, arms and hips completes the full-body experience.",
-      "Every unit sold by AVA Traders is inspected at our Bhubaneswar showroom before dispatch. Our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
+      "The A-372-2 Premium Ultra Luxury Massage Chair features an Air Suspension 3D Massage Manipulator. Designed to penetrate up to 12cm deep into the fascia layer, the rollers feature a 10.5cm forward stretch and a 3-21cm width adjustment.",
+      "The integrated SL extra long guide rail supports 9 distinct massage techniques (Knead, Tap, Knock, Shiatsu, Knead & Tap, 4D Knead, 4D Tap, 4D Knead & Tap, 4D Shiatsu) with 5 adjustable speeds, 3 widths, and 5 strength levels.",
+      "It features a 17-command voice control system, sleep music surround speakers, a 7-inch touch screen, and armrest controls. Complete with graphene waist and leg heating, whole-body airbags, palm magnetic therapy, and a 16cm extendable calf rest."
     ],
     images: [
       "/images/products/a-372-2-premium-ultra-luxury-1.jpg",
@@ -197,39 +198,40 @@ export const products: Product[] = [
     availability: "in-stock",
     warranty: "3 Years (2 Year Comprehensive + 1 Year Motor)",
     features: [
-      "SL-track rollers from neck to hamstrings",
-      "Thai stretch massage function for spinal elongation",
-      "Calf kneading system with heated foot rollers",
-      "Full-body airbag compression — 60 airbags",
-      "Automatic body shape detection",
-      "3D surround sound Bluetooth speakers",
-      "USB charging port on armrest"
+      "Air Suspension 3D Massage Manipulator with 12cm depth",
+      "9 advanced massage techniques (standard and 4D controls)",
+      "Voice control with 17 commands and sleep music speakers",
+      "7-inch touch screen controller and armrest shortcut keys",
+      "Graphene waist and leg heating for constant temperature compress",
+      "Whole body soft pressure airbags and palm magnetic therapy",
+      "Extendable calf rest (up to 16cm range) and sole rollers"
     ],
     specifications: [
-      { label: "Track Type", value: "SL-Track (135 cm)" },
-      { label: "Roller Technology", value: "3D/4D hybrid" },
-      { label: "Airbags", value: "60" },
-      { label: "Heat Therapy", value: "Lumbar + foot rollers" },
-      { label: "Power", value: "220V, 300W" },
-      { label: "Dimensions (Reclined)", value: "200 x 82 x 78 cm" },
-      { label: "Weight Capacity", value: "140 kg" },
+      { label: "Model", value: "A372-2" },
+      { label: "Roller Technology", value: "Air Suspension 3D Manipulator" },
+      { label: "Track Type", value: "SL Extra Long Guide Rail" },
+      { label: "Massage Customization", value: "5 Speed, 3 Width, 5 Strength levels" },
+      { label: "Power", value: "100W, 220-240V~ 50Hz/60Hz" },
+      { label: "Noise Level", value: "≤60dB" },
+      { label: "Weight (G.W/N.W)", value: "105 kg / 89 kg" },
+      { label: "Dimensions (Reclined)", value: "1807 x 760 x 830 mm" },
       { label: "Warranty", value: "3 Years (2 Year Comprehensive + 1 Year Motor)" }
     ],
     benefits: [
-      "Thai stretch helps relieve compressed discs and stiff joints",
-      "Heated foot rollers improve circulation in cold weather",
-      "Ideal for professionals with sedentary or standing jobs"
+      "12cm roller penetration delivers deep-tissue relief to spinal fascia",
+      "17-command voice control offers complete hands-free operation",
+      "Graphene thermostatic heat compress relieves waist and lower leg cramps"
     ],
     faqs: [
-      { question: "What is the Thai stretch function?", answer: "The chair gently stretches your body by holding your legs and shoulders while the backrest reclines, simulating the elongation movements of a traditional Thai massage." },
-      { question: "Is the A-372-2 suitable for elderly users?", answer: "Yes, its gentle modes and auto body detection make it safe and comfortable for elderly users. We recommend trying it at our showroom first." },
-      { question: "How much space does it need?", answer: "The A-372-2 needs approximately 1 metre of clearance behind when fully reclined. Our team can assess your space during a call." }
+      { question: "What is the Air Suspension Manipulator?", answer: "It is a flexible 3D massage head system that uses air suspension principles to regulate roller pressure against your body curve, providing deep massage without pain." },
+      { question: "Is the A-372-2 suitable for elderly users?", answer: "Yes, it features gentle automatic body curve detection and 5-levels of adjustable intensity, making it very comfortable and safe for elderly users." },
+      { question: "How much space does it need?", answer: "The A-372-2 reclines to a length of 1807mm. Our delivery team handles all setup and clearance requirements." }
     ],
     bestSeller: false,
     featured: true,
     seo: {
       metaTitle: "A-372-2 Premium Ultra Luxury Massage Chair | Buy in Bhubaneswar | AVA Traders",
-      metaDescription: "Premium ultra luxury massage chair with SL-track, Thai stretch massage and calf kneading system. Shop at AVA Traders, Bhubaneswar."
+      metaDescription: "Air suspension 3D massage chair with 9 techniques, 17 voice commands, graphene waist/leg heating, and touch screen. Shop at AVA Traders showroom."
     }
   },
   {
@@ -237,11 +239,11 @@ export const products: Product[] = [
     slug: "z-plus-100-premium-luxury",
     name: "Z+100 Premium Luxury Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Premium luxury massage chair with 3D SL-track, zero-gravity recline and full-body heated airbag system.",
+    shortDescription: "Premium luxury massage chair with 3D SL-track, 12 auto modes, voice control, and far-infrared waist heating.",
     description: [
-      "The Z+100 Premium Luxury Massage Chair strikes the perfect balance between advanced technology and everyday usability. Its 3D SL-track system adapts to your spine's natural curvature while the heated airbag system delivers warmth precisely where tension builds up.",
-      "With zero-gravity recline, Bluetooth audio and 8 preset programs ranging from gentle relaxation to deep-tissue intensity, the Z+100 suits everyone from desk workers to active retirees seeking daily relief.",
-      "Every unit sold by AVA Traders is inspected at our Bhubaneswar showroom before dispatch. Our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
+      "The Z+100 Premium Luxury Massage Chair (Z100 model) is designed with intelligent muted massage hands that move up and down, offering knead and flap functions. Its SL curved rail perfectly fits the spine from head to thigh.",
+      "The Z+100 features 12 automatic modes, 3 memory modes, and 17 voice control commands for complete hands-free operation. Adopting far-infrared microfiber heating, it delivers constant temperature warming to prevent waist muscle strain.",
+      "With full-body airbag wrapping (34 airbags total), 3D digital audio on the upper armrests, sole rollers, calftrest kneading, and a 3.5-inch color remote control, the Z+100 provides a quiet and deeply relaxing home therapy session."
     ],
     images: [
       "/images/products/z-plus-100-premium-luxury-1.jpg",
@@ -253,39 +255,99 @@ export const products: Product[] = [
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
-      "3D SL-track roller system adapts to spinal curvature",
-      "Zero-gravity recline with one-touch operation",
-      "Full-body heated airbag system — 52 airbags",
-      "Bluetooth audio and built-in speakers",
-      "8 preset programs from gentle to deep-tissue",
-      "Extendable footrest fits heights up to 6'2\"",
-      "Auto power-off timer for safety"
+      "SL curved rail technology from head to thigh",
+      "12 automatic massage modes and 3 memory modes",
+      "Voice control with detector inside left side speaker",
+      "Full body airbag compression system (34 airbags)",
+      "Far-infrared microfiber waist heating (muscle strain prevention)",
+      "3D digital music speakers and 3.5-inch TFT color remote",
+      "Sole roller and calftrest kneading massage"
     ],
     specifications: [
-      { label: "Track Type", value: "3D SL-Track" },
-      { label: "Recline Angle", value: "Up to 170°" },
-      { label: "Airbags", value: "52" },
-      { label: "Heat Therapy", value: "Lumbar + shoulder pads" },
-      { label: "Power", value: "220V, 270W" },
-      { label: "Dimensions (Reclined)", value: "200 x 80 x 76 cm" },
-      { label: "Weight Capacity", value: "140 kg" },
+      { label: "Model", value: "Z100" },
+      { label: "Track Type", value: "SL Curved Guide Rail" },
+      { label: "Airbag Count", value: "34 Airbags (with 3 strength levels)" },
+      { label: "Automatic Programs", value: "12 Auto Modes" },
+      { label: "Heat Therapy", value: "Far-Infrared Microfiber (Waist)" },
+      { label: "Power & Voltage", value: "150W, 220V-240V~ 50/60Hz" },
+      { label: "Safety Design", value: "Class I" },
+      { label: "Control System", value: "3.5\" TFT Color Remote & Voice" },
       { label: "Warranty", value: "2 Years (1 Year Comprehensive + 1 Year Motor)" }
     ],
     benefits: [
-      "Heated airbags target tension in shoulders and lower back simultaneously",
-      "Extendable footrest accommodates taller users",
-      "Auto power-off prevents overuse for elderly users"
+      "12 auto modes (including lady, worker, and easy-sleep) cover all profiles",
+      "Far-infrared heating warms deep back muscles to relieve fatigue",
+      "Muted rollers ensure a peaceful massage session without loud motor noise"
     ],
     faqs: [
-      { question: "What's the difference between 3D and 4D track?", answer: "3D rollers move in three directions (up-down, left-right, in-out), while 4D adds a speed variation dimension. The Z+100's 3D system provides excellent massage depth at a slightly lower price point than 4D models." },
-      { question: "Does it work on Indian voltage?", answer: "Yes, all our massage chairs are designed for 220V Indian power supply with appropriate surge protection." },
-      { question: "How heavy is the Z+100?", answer: "The chair weighs approximately 95 kg. Our delivery team handles all the lifting and setup." }
+      { question: "What voice commands does the Z+100 support?", answer: "It supports commands like 'Hi, what's up?', 'massage on', 'easy-sleep', 'hip shaping', and 'waist care' for complete hands-free navigation." },
+      { question: "Does it work on Indian voltage?", answer: "Yes, the Z+100 supports standard 220V-240V Indian power supply with Class I safety design." },
+      { question: "How heavy is the Z+100?", answer: "The chair is built in a solid all-in-one package. Our delivery team handles all setup and positioning in your room." }
     ],
     bestSeller: false,
     featured: false,
     seo: {
       metaTitle: "Z+100 Premium Luxury Massage Chair | Buy in Bhubaneswar | AVA Traders",
-      metaDescription: "Premium luxury massage chair with 3D SL-track, zero-gravity recline and full-body heated airbag system. Shop at AVA Traders, Bhubaneswar."
+      metaDescription: "Premium luxury Z100 massage chair with SL curved rail, 12 auto modes, voice control, and far-infrared waist heating. Shop at AVA Traders showroom."
+    }
+  },
+  {
+    id: "a-321-19-premium-luxury",
+    slug: "a-321-19-premium-luxury",
+    name: "A-321-19 Premium Luxury Massage Chair",
+    category: "massage-chairs",
+    shortDescription: "Premium luxury massage chair with 135cm SL guide rail, 8 auto programs, leg kneading, and voice control.",
+    description: [
+      "The A-321-19 Premium Luxury Massage Chair is an advanced home wellness system featuring an intelligent mechanical massage hand system. It collects curve data on the back to imitate professional finger pressing, kneading, and tapping.",
+      "Equipped with a super long 135cm SL-shape guide rail and zero-gravity recline, it distributes body pressure evenly to achieve full relaxation. The zero-space design slides forward to require only 5cm of clearance from the wall.",
+      "The A-321-19 includes 8 automatic programs, 28 air bags, leg kneading, palm magnetic therapy, carbon fiber back heating, and wireless Bluetooth music speakers."
+    ],
+    images: [
+      "/images/products/a-321-19-premium-luxury-1.jpg",
+      "/images/products/a-321-19-premium-luxury-2.jpg",
+      "/images/products/a-321-19-premium-luxury-3.jpg"
+    ],
+    mrp: 245000,
+    price: 179000,
+    availability: "in-stock",
+    warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
+    features: [
+      "135cm SL-shape curved guide rail tracking",
+      "Intelligent mechanical massage hands (kneading, tapping, finger press)",
+      "8 kinds of automatic massage programs (Back & Waist, Vertebral, Traction, etc.)",
+      "Intelligent voice control recognition and shortcut button",
+      "Zero gravity recline and 5cm space-saving wall slide",
+      "Leg kneading function and 20cm leg stretch adjustment",
+      "Carbon fiber back heating (40°C - 50°C) and palm magnetic therapy"
+    ],
+    specifications: [
+      { label: "Model", value: "A321-19" },
+      { label: "Track Type", value: "135cm SL-Shape Curved Rail" },
+      { label: "Airbag Count", value: "28 Airbags (with 3 intensity levels)" },
+      { label: "Automatic Programs", value: "8 Auto Programs" },
+      { label: "Control Interface", value: "Voice Control & LCD Color Remote" },
+      { label: "Power & Voltage", value: "150W, 110-240V~ 50/60Hz" },
+      { label: "Dimensions (Reclined)", value: "1740 x 760 x 710 mm" },
+      { label: "Weight (G.W/N.W)", value: "115 kg / 95 kg" },
+      { label: "Safety Design", value: "Class I" },
+      { label: "Noise Level", value: "≤60dB" },
+      { label: "Warranty", value: "2 Years (1 Year Comprehensive + 1 Year Motor)" }
+    ],
+    benefits: [
+      "5cm zero-space wall slide saves space in small rooms",
+      "Leg kneading and spring foot retraction adapts to all user heights",
+      "Carbon fiber heating penetrates deep tissue to relieve lumbar pain"
+    ],
+    faqs: [
+      { question: "Is the A-321-19 covered under warranty?", answer: "Yes, it comes with a 2-year warranty (1 Year Comprehensive + 1 Year Motor) backed by local showroom support." },
+      { question: "Can I see the A-321-19 in person before buying?", answer: "Yes, you can test it at our Bhubaneswar showroom." },
+      { question: "What is the leg kneading function?", answer: "It uses specialized compression wrappers to gently squeeze and knead calves, reducing stiffness from long hours of standing." }
+    ],
+    bestSeller: false,
+    featured: false,
+    seo: {
+      metaTitle: "A-321-19 Premium Luxury Massage Chair | Buy in Bhubaneswar | AVA Traders",
+      metaDescription: "Premium luxury A321-19 massage chair with SL curved rail, 8 auto modes, voice control, and leg kneading. Shop at AVA Traders showroom."
     }
   },
   {

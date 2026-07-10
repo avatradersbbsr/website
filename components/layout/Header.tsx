@@ -14,38 +14,6 @@ const categoryIcons = {
   "leg-massagers": Activity,
   "health-care-products": HeartPulse,
 };
-
-export function AVALogo({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 200 200" className={className} aria-hidden="true">
-      {/* Outer Circle */}
-      <circle cx="100" cy="100" r="95" fill="none" stroke="#22308E" strokeWidth="2.5" />
-      
-      {/* Blue AIA peaks (A and A) */}
-      <path
-        d="M 35,142 C 35,142 55,50 78,50 C 100,50 90,140 100,140 C 110,140 100,50 122,50 C 145,50 165,142 165,142"
-        stroke="#22308E"
-        strokeWidth="12"
-        fill="none"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      
-      {/* Red Cross Swoosh (tapering from left to right) */}
-      <path
-        d="M 15,108 C 50,96 100,78 185,82 C 100,73 50,88 15,100 Z"
-        fill="#E5191C"
-      />
-      
-      {/* Red "I" vertical stroke */}
-      <line x1="100" y1="140" x2="100" y2="76" stroke="#E5191C" strokeWidth="12" strokeLinecap="round" />
-      
-      {/* Red dot above the "I" */}
-      <circle cx="100" cy="62" r="10" fill="#E5191C" />
-    </svg>
-  );
-}
-
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
@@ -56,7 +24,11 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full glass-premium shadow-soft border-b border-primary-50">
       <div className="container-wide flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
-          <AVALogo className="h-11 w-11 hover:scale-105 transition-transform duration-300" />
+          <img
+            src="/images/logo.jpeg"
+            alt="AVA Traders Logo"
+            className="h-11 w-11 rounded-full object-cover border border-secondary-100 hover:scale-105 transition-transform duration-300"
+          />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-xl font-bold text-primary">
               AVA <span className="text-accent">Traders</span>
@@ -193,7 +165,11 @@ export default function Header() {
               {/* Drawer Header */}
               <div className="flex items-center justify-between pb-6 border-b border-secondary-100">
                 <div className="flex items-center gap-2">
-                  <AVALogo className="h-9 w-9" />
+                  <img
+                    src="/images/logo.jpeg"
+                    alt="AVA Traders Logo"
+                    className="h-9 w-9 rounded-full object-cover border border-secondary-100"
+                  />
                   <span className="font-display font-bold text-lg text-primary">
                     AVA <span className="text-accent">Traders</span>
                   </span>
