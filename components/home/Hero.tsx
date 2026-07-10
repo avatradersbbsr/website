@@ -1,106 +1,127 @@
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Star } from "lucide-react";
+import { ArrowRight, ShieldCheck, Star, Award, HeartHandshake, CheckCircle } from "lucide-react";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-secondary-700">
-      {/* Logo-inspired wave motif */}
-      <svg
-        className="absolute inset-0 h-full w-full opacity-[0.06]"
-        viewBox="0 0 1200 600"
-        preserveAspectRatio="none"
-        aria-hidden="true"
-      >
-        <path
-          d="M -100 400 Q 150 550, 300 250 Q 400 50, 500 300 Q 600 500, 750 200 Q 900 -50, 1100 300 Q 1200 450, 1350 200"
-          stroke="#1E2A78"
-          strokeWidth="160"
-          fill="none"
-        />
-        <line x1="-100" y1="300" x2="1350" y2="250" stroke="#E63946" strokeWidth="40" opacity="0.5" />
-      </svg>
+    <section className="relative overflow-hidden bg-secondary-900 py-24 lg:py-32">
+      {/* Decorative Brand SVG background */}
+      <div className="absolute inset-0 z-0 opacity-10">
+        <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <radialGradient id="grad1" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stopColor="#1E2A78" stopOpacity="1" />
+              <stop offset="100%" stopColor="#0D1440" stopOpacity="1" />
+            </radialGradient>
+          </defs>
+          <path d="M0,50 Q25,20 50,50 T100,50 L100,100 L0,100 Z" fill="url(#grad1)" />
+        </svg>
+      </div>
 
-      {/* Accent glow orbs */}
-      <div className="absolute top-10 right-20 w-72 h-72 bg-accent/10 rounded-full blur-3xl" aria-hidden />
-      <div className="absolute bottom-10 left-10 w-96 h-96 bg-primary-300/10 rounded-full blur-3xl" aria-hidden />
+      {/* Modern ambient lighting */}
+      <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-15%] left-[-10%] w-[60%] h-[60%] bg-primary/25 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="container-wide relative z-10 py-20 md:py-28 grid lg:grid-cols-2 gap-12 items-center">
-        <div className="animate-fade-up">
-          <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-1.5 text-xs font-semibold text-primary-200 tracking-wide uppercase backdrop-blur-sm border border-white/10">
-            <Star className="h-3.5 w-3.5 fill-accent text-accent" /> Bhubaneswar&apos;s Wellness Showroom Since 2010
-          </span>
+      <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        {/* Left copy column */}
+        <div className="lg:col-span-7 flex flex-col items-start animate-fade-up">
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-xs font-semibold text-accent tracking-wide uppercase backdrop-blur-md">
+            <Star className="h-3.5 w-3.5 fill-accent text-accent animate-pulse" /> Bhubaneswar&apos;s Premium Wellness Showroom
+          </div>
 
-          <h1 className="mt-6 text-4xl md:text-5xl lg:text-[3.4rem] font-display font-bold text-white leading-[1.1] text-balance">
-            Recovery, built into
+          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white leading-[1.05] tracking-tight text-balance">
+            Elevate your recovery.
             <br />
-            <span className="text-accent">your everyday</span> routine.
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary-200 to-accent bg-[length:200%_auto] animate-shimmer">
+              Reclaim your energy.
+            </span>
           </h1>
 
-          <p className="mt-6 text-secondary-200 text-lg leading-relaxed max-w-lg">
-            Massage chairs, leg massagers and health care products —
-            chosen, tested and stocked at our Bhubaneswar showroom, backed by a
-            team you can actually call.
+          <p className="mt-6 text-secondary-200 text-lg sm:text-xl leading-relaxed max-w-xl text-balance">
+            Experience Odisha&apos;s finest collection of zero-gravity massage chairs, 3D leg massagers, and targeted therapy devices. Tested by experts, backed by direct local warranty.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto">
             <Link
               href="/products"
-              className="inline-flex items-center gap-2 rounded-full bg-accent text-white px-6 py-3.5 font-semibold shadow-glow-accent hover:bg-accent-500 transition-colors"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white px-8 py-4 font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto text-center"
             >
-              Explore Products <ArrowRight className="h-4 w-4" />
+              Explore Collection <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
-              href={whatsappLink("Hi AVA Traders, I'd like some help choosing a product.")}
+              href={whatsappLink("Hi AVA Traders, I'd like to book a showroom visit to try your products.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 text-white px-6 py-3.5 font-semibold hover:bg-white/10 transition-colors backdrop-blur-sm"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/20 text-white px-8 py-4 font-bold hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto text-center"
             >
-              Chat on WhatsApp
+              Book Showroom Trial
             </a>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-secondary-300">
-            <span className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-accent-300" /> Showroom-tested products
-            </span>
-            <span className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-accent-300" /> Local after-sales support
-            </span>
-            <span className="flex items-center gap-2">
-              <ShieldCheck className="h-4 w-4 text-accent-300" /> 4.6★ rated showroom
-            </span>
+          <div className="mt-12 grid grid-cols-3 gap-6 w-full border-t border-white/10 pt-8 text-white/80">
+            <div className="flex flex-col gap-1">
+              <span className="font-display text-2xl font-bold text-accent">15+ Yrs</span>
+              <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Showroom Legacy</span>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="font-display text-2xl font-bold text-primary-200">22+</span>
+              <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Premium Models</span>
+            </div>
+            <div className="flex flex-col gap-1">
+              <span className="font-display text-2xl font-bold text-primary-200">4.6★</span>
+              <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Google Rating</span>
+            </div>
           </div>
         </div>
 
-        <div className="relative hidden lg:block">
-          <div className="aspect-[4/5] rounded-3xl bg-gradient-to-br from-primary-700/60 via-secondary-600 to-secondary-800 border border-white/10 shadow-card flex items-center justify-center overflow-hidden">
-            {/* Decorative accent arc */}
-            <div className="absolute -top-20 -right-20 w-80 h-80 border-[3px] border-accent/20 rounded-full" aria-hidden />
-            <div className="absolute -bottom-10 -left-10 w-60 h-60 border-[2px] border-primary-300/15 rounded-full" aria-hidden />
+        {/* Right graphical composition column */}
+        <div className="lg:col-span-5 relative lg:block flex items-center justify-center">
+          <div className="relative w-full max-w-[420px] aspect-[4/5] mx-auto">
+            {/* Background glowing card */}
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-800/40 via-secondary-700/50 to-secondary-900/80 border border-white/10 shadow-card backdrop-blur-md overflow-hidden transform hover:scale-[1.02] transition-transform duration-500">
+              <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(230,57,70,0.15), transparent 70%)" />
+              <div className="absolute inset-0 bg-radial-gradient(circle at 0% 100%, rgba(30,42,120,0.25), transparent 70%)" />
+            </div>
 
-            <div className="text-center px-8 relative z-10">
-              <p className="font-display text-6xl font-bold text-accent">15+</p>
-              <p className="text-secondary-300 mt-2 text-sm uppercase tracking-wide">
-                Years serving Bhubaneswar
-              </p>
-              <div className="mt-8 grid grid-cols-2 gap-4 text-left">
-                <StatTile value="22+" label="Products in catalogue" />
-                <StatTile value="4.6★" label="Google rating" />
+            {/* Overlapping glass stat panel 1 */}
+            <div className="absolute top-10 -left-6 rounded-2xl bg-white/10 border border-white/20 p-4 shadow-card backdrop-blur-xl animate-float flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-accent text-white shadow-glow-accent">
+                <Award className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-[10px] uppercase font-semibold text-secondary-300 tracking-wider">Showroom Tested</p>
+                <p className="text-xs font-bold text-white">100% Verified Quality</p>
+              </div>
+            </div>
+
+            {/* Overlapping glass stat panel 2 */}
+            <div className="absolute bottom-16 -right-6 rounded-2xl bg-white/10 border border-white/20 p-4 shadow-card backdrop-blur-xl animate-float [animation-delay:2s] flex items-center gap-3">
+              <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-glow">
+                <HeartHandshake className="h-5 w-5" />
+              </span>
+              <div>
+                <p className="text-[10px] uppercase font-semibold text-secondary-300 tracking-wider">After-Sales</p>
+                <p className="text-xs font-bold text-white">Direct Local Support</p>
+              </div>
+            </div>
+
+            {/* Center piece circle illustration placeholder / graphics overlay */}
+            <div className="absolute inset-12 rounded-full border border-white/10 bg-gradient-to-tr from-secondary-900 to-primary-950 flex flex-col items-center justify-center text-center p-6 shadow-glow">
+              <svg className="w-16 h-16 text-accent mb-3 animate-pulse" viewBox="0 0 200 200">
+                <path d="M 30 140 Q 55 160, 75 90 Q 85 55, 100 100 Q 115 145, 130 90 Q 145 40, 170 140" stroke="currentColor" strokeWidth="14" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                <line x1="25" y1="100" x2="175" y2="85" stroke="#ffffff" strokeWidth="10" strokeLinecap="round" />
+                <circle cx="105" cy="72" r="10" fill="#ffffff" />
+              </svg>
+              <h3 className="font-display font-bold text-white text-lg leading-tight">AVA Traders</h3>
+              <p className="text-xs text-secondary-300 mt-1 uppercase tracking-wider font-semibold">ESTD. 2010</p>
+              <div className="mt-4 flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1">
+                <CheckCircle className="h-3 w-3 text-accent" />
+                <span className="text-[10px] text-white font-medium uppercase tracking-wide">Authorized Dealer</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function StatTile({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="rounded-2xl bg-white/5 border border-white/10 p-4 backdrop-blur-sm">
-      <p className="text-2xl font-display font-bold text-white">{value}</p>
-      <p className="text-xs text-secondary-300 mt-1">{label}</p>
-    </div>
   );
 }

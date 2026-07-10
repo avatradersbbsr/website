@@ -3,10 +3,16 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, ChevronDown } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Armchair, Activity, HeartPulse } from "lucide-react";
 import { siteConfig, telLink } from "@/lib/site-config";
 import { categories } from "@/data/categories";
 import { cn } from "@/lib/utils";
+
+const categoryIcons = {
+  "massage-chairs": Armchair,
+  "leg-massagers": Activity,
+  "health-care-products": HeartPulse,
+};
 
 function AVALogo({ className }: { className?: string }) {
   return (
@@ -32,15 +38,15 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full glass shadow-soft">
+    <header className="sticky top-0 z-50 w-full glass-premium shadow-soft border-b border-primary-50">
       <div className="container-wide flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
-          <AVALogo className="h-11 w-11" />
+          <AVALogo className="h-11 w-11 hover:scale-105 transition-transform" />
           <span className="flex flex-col leading-tight">
-            <span className="font-display text-xl font-semibold text-secondary-700">
+            <span className="font-display text-xl font-bold text-primary">
               AVA <span className="text-accent">Traders</span>
             </span>
-            <span className="text-[11px] uppercase tracking-wide text-secondary-400 hidden sm:block">
+            <span className="text-[10px] uppercase tracking-wider font-semibold text-secondary-400 hidden sm:block">
               {siteConfig.tagline}
             </span>
           </span>
@@ -57,35 +63,48 @@ export default function Header() {
             onMouseLeave={() => setMegaOpen(false)}
           >
             <button
-              className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium text-secondary-600 hover:text-primary hover:bg-primary-50 transition-colors"
+              className="flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-semibold text-secondary-600 hover:text-primary hover:bg-primary-50 transition-colors"
               aria-expanded={megaOpen}
               aria-haspopup="true"
             >
-              Products <ChevronDown className="h-4 w-4" aria-hidden />
+              Products <ChevronDown className={cn("h-4 w-4 transition-transform", megaOpen && "rotate-180")} aria-hidden />
             </button>
             {megaOpen && (
-              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[480px]">
-                <div className="rounded-2xl bg-white shadow-card border border-secondary-100 p-6 grid grid-cols-1 gap-2">
-                  {categories.map((cat) => (
+              <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-[720px]">
+                <div className="rounded-2xl bg-white shadow-card border border-primary-50 p-6">
+                  <div className="grid grid-cols-3 gap-4">
+                    {categories.map((cat) => {
+                      const Icon = categoryIcons[cat.slug] || Armchair;
+                      return (
+                        <Link
+                          key={cat.slug}
+                          href={`/products?category=${cat.slug}`}
+                          className="flex flex-col gap-3 rounded-xl p-4 border border-secondary-50 hover:border-primary-100 hover:bg-primary-50/30 transition-all duration-300 group"
+                        >
+                          <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-50 text-primary group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                            <Icon className="h-5 w-5" />
+                          </span>
+                          <div>
+                            <p className="font-bold text-sm text-secondary-700 group-hover:text-primary transition-colors">
+                              {cat.name}
+                            </p>
+                            <p className="text-xs text-secondary-400 mt-1 line-clamp-2 leading-relaxed">
+                              {cat.description}
+                            </p>
+                          </div>
+                        </Link>
+                      );
+                    })}
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-secondary-50 flex items-center justify-between">
+                    <p className="text-xs text-secondary-400">Discover Bhubaneswar&apos;s best recovery tools.</p>
                     <Link
-                      key={cat.slug}
-                      href={`/products?category=${cat.slug}`}
-                      className="rounded-xl p-3 hover:bg-primary-50 transition-colors group"
+                      href="/products"
+                      className="text-xs font-bold text-accent hover:text-accent-600 hover:underline flex items-center gap-1"
                     >
-                      <p className="font-semibold text-sm text-secondary-700 group-hover:text-primary">
-                        {cat.name}
-                      </p>
-                      <p className="text-xs text-secondary-400 mt-0.5 line-clamp-1">
-                        {cat.description}
-                      </p>
+                      View all products →
                     </Link>
-                  ))}
-                  <Link
-                    href="/products"
-                    className="text-center mt-1 text-sm font-semibold text-primary hover:underline py-2"
-                  >
-                    View all products →
-                  </Link>
+                  </div>
                 </div>
               </div>
             )}
@@ -102,21 +121,21 @@ export default function Header() {
         <div className="hidden lg:flex items-center gap-3">
           <a
             href={telLink(siteConfig.contact.phonePrimary)}
-            className="inline-flex items-center gap-2 rounded-full bg-secondary-700 text-white px-4 py-2.5 text-sm font-semibold hover:bg-secondary-600 transition-colors"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-secondary-700 text-secondary-700 px-4 py-2 text-sm font-bold hover:bg-secondary-700 hover:text-white transition-all duration-300"
           >
             <Phone className="h-4 w-4" aria-hidden />
             Call Now
           </a>
           <Link
             href="/products"
-            className="inline-flex items-center gap-2 rounded-full bg-primary text-white px-5 py-2.5 text-sm font-semibold shadow-glow hover:bg-primary-600 transition-colors"
+            className="inline-flex items-center gap-2 rounded-full bg-accent text-white px-5 py-2.5 text-sm font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300"
           >
             Shop Products
           </Link>
         </div>
 
         <button
-          className="lg:hidden p-2 rounded-lg text-secondary-700"
+          className="lg:hidden p-2 rounded-lg text-secondary-700 hover:bg-secondary-50"
           onClick={() => setOpen(!open)}
           aria-expanded={open}
           aria-label={open ? "Close menu" : "Open menu"}
@@ -170,7 +189,7 @@ function NavLink({ href, active, children }: { href: string; active: boolean; ch
     <Link
       href={href}
       className={cn(
-        "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
+        "px-4 py-2 rounded-lg text-sm font-semibold transition-colors",
         active ? "text-primary bg-primary-50" : "text-secondary-600 hover:text-primary hover:bg-primary-50"
       )}
     >
