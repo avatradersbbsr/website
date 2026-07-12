@@ -5,7 +5,7 @@ import { Share2, MessageCircle } from "lucide-react";
 import { Product, discountPercent } from "@/types/product";
 import { formatINR } from "@/lib/utils";
 import { whatsappLink } from "@/lib/site-config";
-import ProductImagePlaceholder from "@/components/shared/ProductImagePlaceholder";
+import ProductImageWithFallback from "@/components/shared/ProductImageWithFallback";
 
 export default function ProductCard({ product }: { product: Product }) {
   const discount = discountPercent(product.mrp, product.price);
@@ -26,7 +26,12 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group flex flex-col rounded-2xl bg-white border border-secondary-100 shadow-soft hover:shadow-card transition-all duration-300 overflow-hidden hover:border-primary-200">
       <Link href={`/products/${product.slug}`} className="block relative">
-        <ProductImagePlaceholder category={product.category} className="aspect-square w-full" />
+        <ProductImageWithFallback
+          src={product.images[0]}
+          alt={product.name}
+          category={product.category}
+          className="aspect-square w-full object-cover"
+        />
         {discount > 0 && (
           <span className="absolute top-3 left-3 rounded-full bg-accent text-white text-xs font-bold px-2.5 py-1">
             {discount}% OFF

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Product } from "@/types/product";
-import ProductImagePlaceholder from "@/components/shared/ProductImagePlaceholder";
+import ProductImageWithFallback from "@/components/shared/ProductImageWithFallback";
 import { cn } from "@/lib/utils";
 
 export default function ProductGallery({ product }: { product: Product }) {
@@ -28,7 +28,12 @@ export default function ProductGallery({ product }: { product: Product }) {
           className={cn("h-full w-full transition-transform duration-200", zoom && "scale-[1.8]")}
           style={zoom ? { transformOrigin: `${pos.x}% ${pos.y}%` } : undefined}
         >
-          <ProductImagePlaceholder category={product.category} className="h-full w-full" />
+          <ProductImageWithFallback
+            src={product.images[active]}
+            alt={`${product.name} - View ${active + 1}`}
+            category={product.category}
+            className="h-full w-full object-cover"
+          />
         </div>
       </div>
 
@@ -43,7 +48,12 @@ export default function ProductGallery({ product }: { product: Product }) {
             )}
             aria-label={`View image ${i + 1} of ${product.name}`}
           >
-            <ProductImagePlaceholder category={product.category} className="h-full w-full" />
+            <ProductImageWithFallback
+              src={product.images[i]}
+              alt={`${product.name} Thumbnail ${i + 1}`}
+              category={product.category}
+              className="h-full w-full object-cover"
+            />
           </button>
         ))}
       </div>
