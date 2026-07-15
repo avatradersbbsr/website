@@ -1,10 +1,10 @@
 // AVA TRADERS — FINAL PRODUCT CATALOG
-// 22 products across 3 categories: Massage Chairs, Leg Massagers, Health Care Products
+// 26 products across 3 categories: Massage Chairs, Leg Massagers, Health Care Products
 import { Product } from "@/types/product";
 
 export const products: Product[] = [
   // ═══════════════════════════════════════════════
-  // MASSAGE CHAIRS (7 products)
+  // MASSAGE CHAIRS (10 products)
   // ═══════════════════════════════════════════════
   {
     id: "a-710-2-classic-premium-4d",
@@ -22,8 +22,8 @@ export const products: Product[] = [
       "/images/products/massage-chairs/a-710-2-classic-premium-4d/2.jpg",
       "/images/products/massage-chairs/a-710-2-classic-premium-4d/3.jpg"
     ],
-    mrp: 285000,
-    price: 199000,
+    mrp: 392000,
+    price: 280000,
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
@@ -79,8 +79,8 @@ export const products: Product[] = [
       "/images/products/massage-chairs/z-91-ultra-luxury/2.jpg",
       "/images/products/massage-chairs/z-91-ultra-luxury/3.jpg"
     ],
-    mrp: 450000,
-    price: 349000,
+    mrp: 308000,
+    price: 220000,
     availability: "limited-stock",
     warranty: "3 Years (2 Year Comprehensive + 1 Year Motor)",
     features: [
@@ -136,8 +136,8 @@ export const products: Product[] = [
       "/images/products/z-90-economic-premium/2.jpg",
       "/images/products/z-90-economic-premium/3.jpg"
     ],
-    mrp: 320000,
-    price: 235000,
+    mrp: 273000,
+    price: 195000,
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
@@ -193,8 +193,8 @@ export const products: Product[] = [
       "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/2.jpg",
       "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/3.jpg"
     ],
-    mrp: 395000,
-    price: 299000,
+    mrp: 266000,
+    price: 190000,
     availability: "in-stock",
     warranty: "3 Years (2 Year Comprehensive + 1 Year Motor)",
     features: [
@@ -250,8 +250,8 @@ export const products: Product[] = [
       "/images/products/massage-chairs/z-plus-100-premium-luxury/2.jpg",
       "/images/products/massage-chairs/z-plus-100-premium-luxury/3.jpg"
     ],
-    mrp: 345000,
-    price: 259000,
+    mrp: 245000,
+    price: 175000,
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
@@ -307,8 +307,8 @@ export const products: Product[] = [
       "/images/products/massage-chairs/a-321-19-premium-luxury/2.jpg",
       "/images/products/massage-chairs/a-321-19-premium-luxury/3.jpg"
     ],
-    mrp: 245000,
-    price: 179000,
+    mrp: 238000,
+    price: 170000,
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
@@ -366,8 +366,8 @@ export const products: Product[] = [
       "/images/products/massage-chairs/rc-1-economic/2.jpg",
       "/images/products/massage-chairs/rc-1-economic/3.jpg"
     ],
-    mrp: 95000,
-    price: 69999,
+    mrp: 105000,
+    price: 75000,
     availability: "in-stock",
     warranty: "1 Year Comprehensive",
     features: [
@@ -422,8 +422,8 @@ export const products: Product[] = [
       "/images/products/massage-chairs/rc-2-economic-premium/2.jpg",
       "/images/products/massage-chairs/rc-2-economic-premium/3.jpg"
     ],
-    mrp: 145000,
-    price: 109000,
+    mrp: 175000,
+    price: 125000,
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
@@ -463,6 +463,112 @@ export const products: Product[] = [
     }
   },
 
+  {
+    id: "elite-classic",
+    slug: "elite-classic",
+    name: "Elite Classic Massage Chair",
+    category: "massage-chairs",
+    shortDescription: "Elite classic full-body massage chair with 135cm SL guide rail, 8 auto programs, leg kneading, and voice control.",
+    description: [
+      "The Elite Classic Massage Chair is a premium home wellness system designed to deliver high-quality therapeutic relief. It features an intelligent mechanical massage hand system that adapts to your back curve, imitating professional finger pressing, kneading, and tapping.",
+      "Equipped with a long 135cm SL-shape guide rail and zero-gravity recline, it distributes body pressure evenly to achieve full relaxation. Its space-saving design slides forward to require minimal clearance from the wall.",
+      "Featuring 8 automatic programs, 28 air bags, leg kneading, palm magnetic therapy, carbon fiber back heating, and wireless Bluetooth music speakers."
+    ],
+    images: [
+      "/images/products/massage-chairs/elite-classic/1.png"
+    ],
+    mrp: 259000,
+    price: 185000,
+    availability: "in-stock",
+    warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
+    features: [
+      "135cm SL-shape curved guide rail tracking",
+      "Intelligent mechanical massage hands (kneading, tapping, finger press)",
+      "8 kinds of automatic massage programs (Back & Waist, Vertebral, Traction, etc.)",
+      "Intelligent voice control recognition and shortcut button",
+      "Zero gravity recline and space-saving wall slide",
+      "Leg kneading function and 20cm leg stretch adjustment",
+      "Carbon fiber back heating (40°C - 50°C) and palm magnetic therapy"
+    ],
+    specifications: [
+      { label: "Model", value: "Elite Classic" },
+      { label: "Track Type", value: "135cm SL-Shape Curved Rail" },
+      { label: "Airbag Count", value: "28 Airbags (with 3 intensity levels)" },
+      { label: "Automatic Programs", value: "8 Auto Programs" },
+      { label: "Control Interface", value: "Voice Control & LCD Color Remote" },
+      { label: "Power & Voltage", value: "150W, 110-240V~ 50/60Hz" },
+      { label: "Weight (G.W/N.W)", value: "115 kg / 95 kg" },
+      { label: "Warranty", value: "2 Years (1 Year Comprehensive + 1 Year Motor)" }
+    ],
+    benefits: [
+      "Zero-space wall slide saves space in small rooms",
+      "Leg kneading and spring foot retraction adapts to all user heights",
+      "Carbon fiber heating penetrates deep tissue to relieve lumbar pain"
+    ],
+    faqs: [
+      { question: "Is the Elite Classic covered under warranty?", answer: "Yes, it comes with a 2-year warranty (1 Year Comprehensive + 1 Year Motor) backed by local showroom support." },
+      { question: "Can I see the Elite Classic in person before buying?", answer: "Yes, you can test it at our showroom in Bhubaneswar." }
+    ],
+    bestSeller: false,
+    featured: false,
+    seo: {
+      metaTitle: "Elite Classic Massage Chair | Buy in Bhubaneswar | AVA Traders",
+      metaDescription: "Premium Elite Classic massage chair with SL curved rail, 8 auto modes, voice control, and leg kneading. Shop at AVA Traders showroom."
+    }
+  },
+  {
+    id: "am-599-luxury-premium",
+    slug: "am-599-luxury-premium",
+    name: "AM-599 Luxury Premium Massage Chair",
+    category: "massage-chairs",
+    shortDescription: "Futuristic luxury premium full-body massage chair with 7-inch PAD touch screen, 24 auto programs, 10 valves 42 airbags, and wireless charging.",
+    description: [
+      "The AM-599 Luxury Premium Massage Chair is a high-class home therapy solution. It features an integrated SL track rail from neck to thigh and a 3D massage hand system with automatic shoulder detection, delivering precise neck and shoulder rubs.",
+      "The AM-599 is equipped with 10 valves and 42 airbags for complete body wrapping, and 24V carbon fiber heating on the backrest and footrest. Control is effortless via the 7-inch PAD touch screen, rotating navigation buttons, or intelligent voice commands.",
+      "The footrest uses leg electric telescopic technology to auto-detect height, offering a dedicated knee massage, 24 airbags for leg kneading, and a closed foot massage with 3 groups of rollers. The premium PU cover features 5 years hydrolysis resistance."
+    ],
+    images: [
+      "/images/products/massage-chairs/am-599/1.png"
+    ],
+    mrp: 343000,
+    price: 245000,
+    availability: "in-stock",
+    warranty: "3 Years (2 Year Comprehensive + 1 Year Motor)",
+    features: [
+      "Integrated SL track rail and automatic shoulder detection",
+      "9 manual modes and 24 automatic modes",
+      "10 valves with 42 airbags wrapping shoulders, armrests, and footrest",
+      "7-inch PAD touch screen, rotating controls, and intelligent voice control",
+      "Electric telescopic leg rest with dedicated knee massage and foot rollers",
+      "24V safe voltage with carbon fiber heating on back and legs",
+      "Wireless charging on armrest and PU with 5 years hydrolysis resistance"
+    ],
+    specifications: [
+      { label: "Model", value: "AM-599" },
+      { label: "Track Type", value: "Integrated SL Track" },
+      { label: "Airbags & Valves", value: "10 Valves, 42 Airbags" },
+      { label: "Control Interface", value: "7\" Touch PAD & Voice Control" },
+      { label: "Power & Voltage", value: "180W, 220V" },
+      { label: "Weight (G.W/N.W)", value: "125 kg / 110 kg" },
+      { label: "Material", value: "Anti-hydrolysis PU (5 Years Resistance)" },
+      { label: "Warranty", value: "3 Years (2 Year Comprehensive + 1 Year Motor)" }
+    ],
+    benefits: [
+      "Automatic shoulder detection customizes neck massages",
+      "Dedicated electric knee massage helps reduce joint pain",
+      "5 years hydrolysis resistant PU ensures long-term cover durability"
+    ],
+    faqs: [
+      { question: "What makes the AM-599 'Luxury Premium'?", answer: "The AM-599 features 24 automatic modes, 10 valves, 42 airbags, a 7-inch touch PAD, and an electric telescopic leg rest with dedicated knee massage — commercial-grade details built for the home." },
+      { question: "Can I try the AM-599 at the showroom?", answer: "Yes, the AM-599 is on display at our showroom. We recommend calling ahead to confirm availability." }
+    ],
+    bestSeller: false,
+    featured: true,
+    seo: {
+      metaTitle: "AM-599 Luxury Premium Massage Chair | Buy in Bhubaneswar | AVA Traders",
+      metaDescription: "High-class massage chair with 7-inch PAD screen, voice control, 24 auto programs, and knee massage. Shop at AVA Traders showroom."
+    }
+  },
   // ═══════════════════════════════════════════════
   // LEG MASSAGERS (6 products)
   // ═══════════════════════════════════════════════
@@ -482,8 +588,8 @@ export const products: Product[] = [
       "/images/products/leg-massagers/kiyo-416-classic-premium/2.jpg",
       "/images/products/leg-massagers/kiyo-416-classic-premium/3.jpg"
     ],
-    mrp: 32000,
-    price: 24999,
+    mrp: 52500,
+    price: 37500,
     availability: "in-stock",
     warranty: "1 Year Comprehensive",
     features: [
@@ -536,8 +642,8 @@ export const products: Product[] = [
       "/images/products/leg-massagers/entuit-ultra-premium/2.jpg",
       "/images/products/leg-massagers/entuit-ultra-premium/3.jpg"
     ],
-    mrp: 48000,
-    price: 37999,
+    mrp: 49000,
+    price: 35000,
     availability: "in-stock",
     warranty: "1 Year Comprehensive",
     features: [
@@ -591,8 +697,8 @@ export const products: Product[] = [
       "/images/products/detachable-premium/2.jpg",
       "/images/products/detachable-premium/3.jpg"
     ],
-    mrp: 28000,
-    price: 21999,
+    mrp: 46900,
+    price: 33500,
     availability: "in-stock",
     warranty: "1 Year Comprehensive",
     features: [
@@ -645,8 +751,8 @@ export const products: Product[] = [
       "/images/products/leg-massagers/pedizen-economic-premium/2.jpg",
       "/images/products/leg-massagers/pedizen-economic-premium/3.jpg"
     ],
-    mrp: 18000,
-    price: 13999,
+    mrp: 38500,
+    price: 27500,
     availability: "in-stock",
     warranty: "1 Year Comprehensive",
     features: [
@@ -699,8 +805,8 @@ export const products: Product[] = [
       "/images/products/leg-massagers/kiyo-premium-classic-economic/2.jpg",
       "/images/products/leg-massagers/kiyo-premium-classic-economic/3.jpg"
     ],
-    mrp: 15000,
-    price: 10999,
+    mrp: 24500,
+    price: 17500,
     availability: "in-stock",
     warranty: "1 Year Comprehensive",
     features: [
@@ -753,8 +859,8 @@ export const products: Product[] = [
       "/images/products/leg-massagers/hattho-economic/2.jpg",
       "/images/products/leg-massagers/hattho-economic/3.jpg"
     ],
-    mrp: 8000,
-    price: 5999,
+    mrp: 21700,
+    price: 15500,
     availability: "in-stock",
     warranty: "6 Months",
     features: [
@@ -793,7 +899,7 @@ export const products: Product[] = [
   },
 
   // ═══════════════════════════════════════════════
-  // HEALTH CARE PRODUCTS (9 products)
+  // HEALTH CARE PRODUCTS (10 products)
   // ═══════════════════════════════════════════════
   {
     id: "teppid-back-massager",
@@ -811,8 +917,8 @@ export const products: Product[] = [
       "/images/products/health-care-products/teppid-back-massager/2.jpg",
       "/images/products/health-care-products/teppid-back-massager/3.jpg"
     ],
-    mrp: 5500,
-    price: 3999,
+    mrp: 6999,
+    price: 4999,
     availability: "in-stock",
     warranty: "6 Months",
     features: [
@@ -864,8 +970,8 @@ export const products: Product[] = [
       "/images/products/health-care-products/knee-massager/2.jpg",
       "/images/products/health-care-products/knee-massager/3.jpg"
     ],
-    mrp: 4500,
-    price: 3299,
+    mrp: 5250,
+    price: 3750,
     availability: "in-stock",
     warranty: "6 Months",
     features: [
@@ -916,8 +1022,8 @@ export const products: Product[] = [
       "/images/products/health-care-products/neck-shoulder-massager/2.jpg",
       "/images/products/health-care-products/neck-shoulder-massager/3.jpg"
     ],
-    mrp: 4000,
-    price: 2999,
+    mrp: 3499,
+    price: 2499,
     availability: "in-stock",
     warranty: "6 Months",
     features: [
@@ -969,8 +1075,8 @@ export const products: Product[] = [
       "/images/products/health-care-products/scalp-massager/2.jpg",
       "/images/products/health-care-products/scalp-massager/3.jpg"
     ],
-    mrp: 2500,
-    price: 1799,
+    mrp: 1399,
+    price: 999,
     availability: "in-stock",
     warranty: "6 Months",
     features: [
@@ -1022,8 +1128,8 @@ export const products: Product[] = [
       "/images/products/health-care-products/facial-gun/2.jpg",
       "/images/products/health-care-products/facial-gun/3.jpg"
     ],
-    mrp: 3500,
-    price: 2499,
+    mrp: 1750,
+    price: 1250,
     availability: "in-stock",
     warranty: "6 Months",
     features: [
@@ -1075,8 +1181,8 @@ export const products: Product[] = [
       "/images/products/health-care-products/massage-gun/2.jpg",
       "/images/products/health-care-products/massage-gun/3.jpg"
     ],
-    mrp: 6000,
-    price: 4299,
+    mrp: 3499,
+    price: 2499,
     availability: "in-stock",
     warranty: "6 Months",
     features: [
@@ -1130,8 +1236,8 @@ export const products: Product[] = [
       "/images/products/health-care-products/sauna-steam-bath/2.jpg",
       "/images/products/health-care-products/sauna-steam-bath/3.jpg"
     ],
-    mrp: 8000,
-    price: 5999,
+    mrp: 11900,
+    price: 8500,
     availability: "in-stock",
     warranty: "6 Months",
     features: [
@@ -1184,8 +1290,8 @@ export const products: Product[] = [
       "/images/products/health-care-products/hpm-physiotherapy/2.jpg",
       "/images/products/health-care-products/hpm-physiotherapy/3.jpg"
     ],
-    mrp: 12000,
-    price: 8999,
+    mrp: 20999,
+    price: 14999,
     availability: "in-stock",
     warranty: "1 Year Comprehensive",
     features: [
@@ -1236,8 +1342,8 @@ export const products: Product[] = [
       "/images/products/health-care-products/foldable-intelligent-sole-massager/2.jpg",
       "/images/products/health-care-products/foldable-intelligent-sole-massager/3.jpg"
     ],
-    mrp: 3500,
-    price: 2499,
+    mrp: 17500,
+    price: 12500,
     availability: "in-stock",
     warranty: "6 Months",
     features: [
@@ -1274,7 +1380,57 @@ export const products: Product[] = [
       metaDescription: "Foldable EMS sole massager with intelligent foot pad, multiple modes and portable design. Shop at AVA Traders, Bhubaneswar."
     }
   }
-];
+,
+  {
+    id: "healthmate",
+    slug: "healthmate",
+    name: "Healthmate",
+    category: "health-care-products",
+    shortDescription: "Premium Healthmate healthcare therapy device for pain management, muscle rehabilitation and recovery at home.",
+    description: [
+      "The Healthmate Healthcare Device brings premium clinical-grade physiotherapy and relaxation technology into your home. Using a combination of heat, percussion and micro-current stimulation, it assists with pain management, muscle rehabilitation and post-injury recovery.",
+      "Designed for reliable daily care, this device includes multiple treatment modes for different conditions — chronic pain, sports injuries, post-surgery recovery and everyday muscle stiffness.",
+      "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for support after your purchase."
+    ],
+    images: [
+      "/images/products/health-care-products/healthmate/1.png"
+    ],
+    mrp: 52500,
+    price: 37500,
+    availability: "in-stock",
+    warranty: "1 Year Comprehensive",
+    features: [
+      "Combined heat, percussion and micro-current therapy",
+      "Multiple treatment modes for different conditions",
+      "Adjustable intensity for safe, personalised use",
+      "Rechargeable battery — 4 hours per charge",
+      "Portable design — use at home, office or gym",
+      "LED display with treatment timer"
+    ],
+    specifications: [
+      { label: "Model", value: "Healthmate" },
+      { label: "Therapy Types", value: "Heat + percussion + micro-current" },
+      { label: "Treatment Modes", value: "6 preset + manual" },
+      { label: "Battery", value: "Rechargeable (4 hours)" },
+      { label: "Weight", value: "1.2 kg" },
+      { label: "Warranty", value: "1 Year Comprehensive" }
+    ],
+    benefits: [
+      "Clinical-grade physiotherapy technology for home use",
+      "Multiple treatment modes address different pain conditions",
+      "Portable enough to carry to the office or gym"
+    ],
+    faqs: [
+      { question: "Do I need a prescription to use it?", answer: "No prescription is needed for home use, but we recommend consulting your doctor or physiotherapist if you have specific medical conditions." },
+      { question: "Is it safe for elderly users?", answer: "Yes, with the lowest intensity setting and shorter sessions. We recommend supervised use for the first few sessions." }
+    ],
+    bestSeller: false,
+    featured: false,
+    seo: {
+      metaTitle: "Healthmate Healthcare Device | Home Therapy | AVA Traders",
+      metaDescription: "Healthmate healthcare device for pain management, muscle rehabilitation and post-injury recovery at home. Shop at AVA Traders, Bhubaneswar."
+    }
+  }];
 
 export function getProductBySlug(slug: string) {
   return products.find((p) => p.slug === slug);

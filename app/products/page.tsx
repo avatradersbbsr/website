@@ -23,7 +23,7 @@ export default function ProductsPage() {
             All Products
           </h1>
           <p className="mt-2 text-secondary-300 max-w-xl">
-            22 products across 3 categories — filter by type, price, or search directly.
+            26 products across 3 categories — filter by type, price, or search directly.
           </p>
         </div>
       </section>
