@@ -28,6 +28,7 @@ export default function EnquiryForm({
   compact?: boolean;
 }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
   const {
     register,
@@ -43,12 +44,31 @@ export default function EnquiryForm({
 
   const onSubmit = async (data: FormData) => {
     setStatus("submitting");
-    // NOTE: wire this up to your form endpoint of choice (Resend, Formspree,
-    // a custom API route, etc.) using the environment variables in .env.example.
-    // Left as a simulated request so the UI is fully functional out of the box.
-    await new Promise((r) => setTimeout(r, 900));
-    setStatus("success");
-    reset();
+    setErrorMsg(null);
+    try {
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          productName: productName || "General Inquiry",
+        }),
+      });
+
+      if (!response.ok) {
+        const errData = await response.json();
+        throw new Error(errData.message || "Failed to submit enquiry. Please try again.");
+      }
+
+      setStatus("success");
+      reset();
+    } catch (err: any) {
+      console.error(err);
+      setErrorMsg(err.message || "Something went wrong. Please check your connection or contact us on WhatsApp.");
+      setStatus("idle");
+    }
   };
 
   if (status === "success") {
@@ -118,6 +138,12 @@ export default function EnquiryForm({
           className="w-full rounded-xl border border-secondary-200 px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary-100 outline-none resize-none"
         />
       </Field>
+
+      {errorMsg && (
+        <span className="text-xs font-semibold text-red-600 bg-red-50 border border-red-200 rounded-xl p-3 text-center">
+          {errorMsg}
+        </span>
+      )}
 
       <button
         type="submit"

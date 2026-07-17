@@ -19,14 +19,14 @@ export const siteConfig = {
     phonePrimary: process.env.NEXT_PUBLIC_PHONE_PRIMARY || "+917008636254",
     phoneSecondary: process.env.NEXT_PUBLIC_PHONE_SECONDARY || "+919348359190",
     whatsapp: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917008636254",
-    email: process.env.NEXT_PUBLIC_EMAIL || "info@avatraders.in",
+    email: process.env.NEXT_PUBLIC_EMAIL || "avatraders.in@gmail.com",
     address:
       process.env.NEXT_PUBLIC_ADDRESS ||
       "Padmabati Complex, #3068/10236, Puri Bypass Road, Badagada, Bhubaneswar - 751018, Odisha, India",
     gstin: process.env.NEXT_PUBLIC_GSTIN || "21AHAPJ2875R1Z2",
     mapsEmbedSrc:
       process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_SRC ||
-      "https://www.google.com/maps?q=Ava+Traders+Padmabati+Complex+Puri+Bypass+Road+Bhubaneswar&output=embed",
+      "https://maps.google.com/maps?q=20.248739,85.8613237&z=17&output=embed",
     hours: [
       { day: "Monday – Saturday", time: "10:00 AM – 9:00 PM" },
       { day: "Sunday", time: "10:00 AM – 2:00 PM" },

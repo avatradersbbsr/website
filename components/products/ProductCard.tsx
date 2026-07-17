@@ -25,12 +25,12 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="group flex flex-col rounded-2xl bg-white border border-secondary-100 shadow-soft hover:shadow-card transition-all duration-300 overflow-hidden hover:border-primary-200">
-      <Link href={`/products/${product.slug}`} className="block relative">
+      <Link href={`/products/${product.slug}`} className="block relative overflow-hidden bg-secondary-50/20">
         <ProductImageWithFallback
           src={product.images[0]}
           alt={product.name}
           category={product.category}
-          className="aspect-square w-full object-cover"
+          className="aspect-square w-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
         />
         {discount > 0 && (
           <span className="absolute top-3 left-3 rounded-full bg-accent text-white text-xs font-bold px-2.5 py-1">

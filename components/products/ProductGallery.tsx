@@ -13,7 +13,7 @@ export default function ProductGallery({ product }: { product: Product }) {
   return (
     <div>
       <div
-        className="relative aspect-square rounded-2xl overflow-hidden border border-secondary-100 cursor-zoom-in"
+        className="relative aspect-square rounded-2xl overflow-hidden border border-secondary-100 cursor-zoom-in bg-white"
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
           setPos({
@@ -32,19 +32,19 @@ export default function ProductGallery({ product }: { product: Product }) {
             src={product.images[active]}
             alt={`${product.name} - View ${active + 1}`}
             category={product.category}
-            className="h-full w-full object-cover"
+            className="h-full w-full object-contain p-4"
           />
         </div>
       </div>
 
-      <div className="mt-4 grid grid-cols-3 gap-3">
+      <div className="mt-4 flex gap-3 overflow-x-auto pb-2 scrollbar-thin">
         {product.images.map((_, i) => (
           <button
             key={i}
             onClick={() => setActive(i)}
             className={cn(
-              "aspect-square rounded-xl overflow-hidden border-2 transition-colors",
-              active === i ? "border-primary" : "border-transparent"
+              "h-20 w-20 flex-shrink-0 rounded-xl overflow-hidden border-2 transition-colors bg-white",
+              active === i ? "border-primary" : "border-secondary-100"
             )}
             aria-label={`View image ${i + 1} of ${product.name}`}
           >
@@ -52,7 +52,7 @@ export default function ProductGallery({ product }: { product: Product }) {
               src={product.images[i]}
               alt={`${product.name} Thumbnail ${i + 1}`}
               category={product.category}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain p-1"
             />
           </button>
         ))}

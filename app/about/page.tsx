@@ -49,13 +49,39 @@ export default function AboutPage() {
           </div>
           
           <div className="lg:col-span-5 relative hidden lg:block">
-            <div className="w-full aspect-[4/3] rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-8 backdrop-blur-sm relative overflow-hidden">
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/10 rounded-full blur-2xl" />
-              <svg className="w-28 h-28 text-accent/30" viewBox="0 0 200 200">
-                <path d="M 30 140 Q 55 160, 75 90 Q 85 55, 100 100 Q 115 145, 130 90 Q 145 40, 170 140" stroke="currentColor" strokeWidth="10" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-                <line x1="25" y1="100" x2="175" y2="85" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
-                <circle cx="105" cy="72" r="6" fill="currentColor" />
-              </svg>
+            <div className="w-full aspect-[4/3] rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-6 backdrop-blur-sm relative overflow-hidden">
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/15 rounded-full blur-2xl" />
+              
+              {/* Product Showcase */}
+              <div className="w-[60%] aspect-square rounded-2xl bg-white p-4 shadow-2xl border border-secondary-100 flex items-center justify-center rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
+                <img 
+                  src="/images/products/massage-chairs/am-999/1.png" 
+                  alt="AM-999 Luxury Premium Massage Chair" 
+                  className="w-full h-full object-contain"
+                />
+              </div>
+
+              {/* Logo badge floating on top */}
+              <div className="absolute bottom-6 right-6 rounded-2xl bg-secondary-900/90 border border-white/20 p-4 shadow-2xl backdrop-blur-xl flex flex-col items-center gap-2 rotate-[6deg] hover:rotate-0 transition-transform duration-500 max-w-[140px] text-center">
+                <svg className="w-10 h-10" viewBox="0 0 200 200">
+                  <circle cx="100" cy="100" r="95" fill="none" stroke="#ffffff" strokeWidth="2.5" opacity="0.6" />
+                  <path
+                    d="M 35,142 C 35,142 55,50 78,50 C 100,50 90,140 100,140 C 110,140 100,50 122,50 C 145,50 165,142 165,142"
+                    stroke="#ffffff"
+                    strokeWidth="12"
+                    fill="none"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M 15,108 C 50,96 100,78 185,82 C 100,73 50,88 15,100 Z"
+                    fill="#E5191C"
+                  />
+                  <line x1="100" y1="140" x2="100" y2="76" stroke="#E5191C" strokeWidth="12" strokeLinecap="round" />
+                  <circle cx="100" cy="62" r="10" fill="#E5191C" />
+                </svg>
+                <span className="text-[10px] font-bold text-white uppercase tracking-widest mt-1">AVA Traders</span>
+              </div>
             </div>
           </div>
         </div>
