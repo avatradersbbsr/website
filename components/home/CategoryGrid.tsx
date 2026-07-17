@@ -3,6 +3,7 @@ import { Armchair, Activity, HeartPulse } from "lucide-react";
 import { categories } from "@/data/categories";
 import { products } from "@/data/products";
 import SectionHeading from "@/components/shared/SectionHeading";
+import ProductImageWithFallback from "@/components/shared/ProductImageWithFallback";
 
 const icons = {
   Armchair,
@@ -62,7 +63,12 @@ export default function CategoryGrid() {
                         className="group/prod flex flex-col items-center gap-1.5 flex-1 p-2 rounded-xl border border-secondary-100 bg-secondary-50/30 hover:bg-white hover:border-primary-300 hover:shadow-soft transition-all duration-300"
                       >
                         <div className="w-12 h-12 rounded-lg overflow-hidden bg-white border border-secondary-100 flex items-center justify-center p-1 shrink-0">
-                          <img src={prod.images[0]} alt={prod.name} className="w-full h-full object-contain" />
+                          <ProductImageWithFallback
+                            src={prod.images[0]}
+                            alt={prod.name}
+                            category={prod.category}
+                            className="w-full h-full object-contain"
+                          />
                         </div>
                         <span className="text-[10px] font-semibold text-secondary-600 truncate w-full text-center group-hover/prod:text-primary transition-colors">
                           {prod.name.replace(/Massage Chair|Leg Massager/i, "").trim().split(" ")[0]}

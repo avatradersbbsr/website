@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Star, Award, HeartHandshake, Armchair, HeartPulse, Activity } from "lucide-react";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
+import ProductImageWithFallback from "@/components/shared/ProductImageWithFallback";
 
 const heroChairs = [
   {
@@ -187,9 +188,10 @@ export default function Hero() {
                   {heroChairs[activeSlide].price}
                 </div>
 
-                <img
+                <ProductImageWithFallback
                   src={heroChairs[activeSlide].image}
                   alt={heroChairs[activeSlide].name}
+                  category="massage-chairs"
                   className="h-full w-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                 />
               </Link>
