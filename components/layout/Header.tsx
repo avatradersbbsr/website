@@ -148,13 +148,13 @@ export default function Header() {
       <AnimatePresence>
         {open && (
           <>
-            {/* Backdrop overlay */}
+             {/* Backdrop overlay */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.5 }}
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
-              className="fixed inset-0 z-50 bg-secondary-900 lg:hidden"
+              className="fixed inset-0 z-[60] bg-secondary-900 lg:hidden"
             />
 
             {/* Slide-in Menu Panel */}
@@ -163,7 +163,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed right-0 top-0 bottom-0 z-50 w-full max-w-xs sm:max-w-sm bg-white shadow-card p-6 flex flex-col lg:hidden overflow-y-auto"
+              className="fixed right-0 top-0 bottom-0 z-[70] w-full max-w-xs sm:max-w-sm bg-white shadow-card p-6 flex flex-col lg:hidden overflow-y-auto"
             >
               {/* Drawer Header */}
               <div className="flex items-center justify-between pb-6 border-b border-secondary-100">

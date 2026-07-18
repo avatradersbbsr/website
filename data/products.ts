@@ -586,7 +586,8 @@ export const products: Product[] = [
     images: [
       "/images/products/leg-massagers/kiyo-416-classic-premium/1.jpg",
       "/images/products/leg-massagers/kiyo-416-classic-premium/2.jpg",
-      "/images/products/leg-massagers/kiyo-416-classic-premium/3.jpg"
+      "/images/products/leg-massagers/kiyo-416-classic-premium/3.jpg",
+      "/images/products/leg-massagers/kiyo-416-classic-premium/4.jpg"
     ],
     mrp: 62500,
     price: 37500,
@@ -913,7 +914,13 @@ export const products: Product[] = [
       "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for support after your purchase."
     ],
     images: [
-      "/images/products/health-care-products/healthmate/1.png"
+      "/images/products/health-care-products/healthmate/1.jpg",
+      "/images/products/health-care-products/healthmate/2.jpg",
+      "/images/products/health-care-products/healthmate/3.jpg",
+      "/images/products/health-care-products/healthmate/4.jpg",
+      "/images/products/health-care-products/healthmate/5.jpg",
+      "/images/products/health-care-products/healthmate/6.jpg",
+      "/images/products/health-care-products/healthmate/7.jpg"
     ],
     mrp: 59500,
     price: 37500,
@@ -1018,7 +1025,10 @@ export const products: Product[] = [
     images: [
       "/images/products/health-care-products/knee-massager/1.jpg",
       "/images/products/health-care-products/knee-massager/2.jpg",
-      "/images/products/health-care-products/knee-massager/3.jpg"
+      "/images/products/health-care-products/knee-massager/3.jpg",
+      "/images/products/health-care-products/knee-massager/4.jpg",
+      "/images/products/health-care-products/knee-massager/5.jpg",
+      "/images/products/health-care-products/knee-massager/6.jpg"
     ],
     mrp: 6099,
     price: 3750,
@@ -1070,7 +1080,13 @@ export const products: Product[] = [
     images: [
       "/images/products/health-care-products/neck-shoulder-massager/1.jpg",
       "/images/products/health-care-products/neck-shoulder-massager/2.jpg",
-      "/images/products/health-care-products/neck-shoulder-massager/3.jpg"
+      "/images/products/health-care-products/neck-shoulder-massager/3.jpg",
+      "/images/products/health-care-products/neck-shoulder-massager/4.jpg",
+      "/images/products/health-care-products/neck-shoulder-massager/5.jpg",
+      "/images/products/health-care-products/neck-shoulder-massager/6.jpg",
+      "/images/products/health-care-products/neck-shoulder-massager/7.jpg",
+      "/images/products/health-care-products/neck-shoulder-massager/8.jpg",
+      "/images/products/health-care-products/neck-shoulder-massager/9.jpg"
     ],
     mrp: 3899,
     price: 2499,
@@ -1122,8 +1138,11 @@ export const products: Product[] = [
     ],
     images: [
       "/images/products/health-care-products/scalp-massager/1.jpg",
-      "/images/products/health-care-products/scalp-massager/2.jpg",
-      "/images/products/health-care-products/scalp-massager/3.jpg"
+      "/images/products/health-care-products/scalp-massager/2.webp",
+      "/images/products/health-care-products/scalp-massager/3.jpg",
+      "/images/products/health-care-products/scalp-massager/4.jpg",
+      "/images/products/health-care-products/scalp-massager/5.jpg",
+      "/images/products/health-care-products/scalp-massager/6.jpg"
     ],
     mrp: 1599,
     price: 999,
