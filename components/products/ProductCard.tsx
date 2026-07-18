@@ -26,13 +26,25 @@ export default function ProductCard({ product }: { product: Product }) {
   return (
     <div className="group flex flex-col rounded-3xl bg-white border border-secondary-100/80 shadow-soft hover:shadow-card hover:border-accent/20 transition-all duration-500 overflow-hidden">
       <Link href={`/products/${product.slug}`} className="block relative overflow-hidden bg-gradient-to-b from-secondary-50/20 to-transparent pt-6 px-6">
-        <div className="relative aspect-square w-full rounded-2xl bg-secondary-50/40 border border-secondary-100/30 flex items-center justify-center p-4 overflow-hidden group-hover:bg-white transition-colors duration-500">
-          <ProductImageWithFallback
-            src={product.images[0]}
-            alt={product.name}
-            category={product.category}
-            className="w-full h-full object-contain p-2 group-hover:scale-105 transition-transform duration-500"
-          />
+        <div className="relative aspect-square w-full rounded-2xl bg-secondary-50/40 border border-secondary-100/30 overflow-hidden group-hover:bg-white transition-colors duration-500 flex items-center justify-center">
+          <div className="absolute inset-0 p-6 flex items-center justify-center transition-opacity duration-500 ease-in-out group-hover:opacity-0">
+            <ProductImageWithFallback
+              src={product.images[0]}
+              alt={product.name}
+              category={product.category}
+              className="w-full h-full object-contain"
+            />
+          </div>
+          {product.images[1] && (
+            <div className="absolute inset-0 p-6 flex items-center justify-center opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100">
+              <ProductImageWithFallback
+                src={product.images[1]}
+                alt={product.name}
+                category={product.category}
+                className="w-full h-full object-contain"
+              />
+            </div>
+          )}
         </div>
         {discount > 0 && (
           <span className="absolute top-8 left-8 rounded-full bg-accent text-white text-[10px] font-extrabold px-3 py-1 shadow-sm uppercase tracking-wider">
