@@ -1,0 +1,17 @@
+{
+  "/api/enquiry/route": "/api/enquiry",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/icon.jpeg/route": "/icon.jpeg",
+  "/_not-found/page": "/_not-found",
+  "/disclaimer/page": "/disclaimer",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/return-refund-policy/page": "/return-refund-policy",
+  "/page": "/",
+  "/terms-and-conditions/page": "/terms-and-conditions",
+  "/shipping-policy/page": "/shipping-policy",
+  "/products/page": "/products",
+  "/privacy-policy/page": "/privacy-policy",
+  "/products/[slug]/page": "/products/[slug]"
+}

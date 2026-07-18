@@ -13,6 +13,7 @@ const schema = z.object({
     .min(10, "Enter a valid phone number")
     .regex(/^[0-9+\-\s]+$/, "Enter a valid phone number"),
   email: z.string().email("Enter a valid email").optional().or(z.literal("")),
+  category: z.string().optional(),
   message: z.string().min(5, "Please add a short message"),
   // honeypot field — real users never fill this in
   company: z.string().max(0, "Spam detected").optional(),
@@ -38,6 +39,7 @@ export default function EnquiryForm({
   } = useForm<FormData>({
     resolver: zodResolver(schema),
     defaultValues: {
+      category: "",
       message: productName ? `Hi, I'm interested in the ${productName}. Please share more details.` : "",
     },
   });
@@ -53,7 +55,7 @@ export default function EnquiryForm({
         },
         body: JSON.stringify({
           ...data,
-          productName: productName || "General Inquiry",
+          productName: productName || data.category || "General Inquiry",
         }),
       });
 
@@ -129,6 +131,21 @@ export default function EnquiryForm({
           />
         </Field>
       </div>
+
+      {!productName && (
+        <Field label="Product Category" error={errors.category?.message}>
+          <select
+            {...register("category")}
+            className="w-full rounded-xl border border-secondary-200 px-4 py-3 text-sm focus:border-primary focus:ring-2 focus:ring-primary-100 outline-none bg-white"
+          >
+            <option value="">Select a Category</option>
+            <option value="Massage Chairs">Massage Chairs</option>
+            <option value="Leg Massagers">Leg Massagers</option>
+            <option value="Health Care Products">Health Care Products</option>
+            <option value="General Inquiry">General Inquiry / Other</option>
+          </select>
+        </Field>
+      )}
 
       <Field label="Message" error={errors.message?.message}>
         <textarea
