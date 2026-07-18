@@ -40,12 +40,12 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % heroChairs.length);
-    }, 4000);
+    }, 4500);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-secondary-900 py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-secondary-900 pt-10 pb-16 lg:pt-16 lg:pb-24">
       {/* Decorative Brand SVG background */}
       <div className="absolute inset-0 z-0 opacity-10">
         <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -64,78 +64,78 @@ export default function Hero() {
       <div className="absolute bottom-[-15%] left-[-10%] w-[60%] h-[60%] bg-primary/25 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Category selector row at the top */}
-      <div className="container-wide relative z-10 mb-10 animate-fade-in">
-        <div className="flex flex-wrap items-center justify-center gap-4 py-3 px-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md max-w-4xl mx-auto">
-          <span className="text-xs font-semibold text-secondary-300 uppercase tracking-widest mr-2">Categories:</span>
+      <div className="container-wide relative z-10 mb-8 animate-fade-in">
+        <div className="flex flex-wrap items-center justify-center gap-3 py-2 px-5 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md max-w-3xl mx-auto">
+          <span className="text-[10px] font-extrabold text-secondary-300 uppercase tracking-widest mr-2">Top Categories:</span>
           <Link
             href="/products?category=massage-chairs"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-white/5 border border-white/10 hover:bg-accent hover:border-accent hover:shadow-glow-accent transition-all duration-300"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-white/5 border border-white/5 hover:bg-accent hover:border-accent hover:shadow-glow-accent transition-all duration-300"
           >
-            <Armchair className="h-4.5 w-4.5 text-accent" /> Massage Chairs
+            <Armchair className="h-3.5 w-3.5 text-accent" /> Massage Chairs
           </Link>
           <Link
             href="/products?category=leg-massagers"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-white/5 border border-white/10 hover:bg-accent hover:border-accent hover:shadow-glow-accent transition-all duration-300"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-white/5 border border-white/5 hover:bg-accent hover:border-accent hover:shadow-glow-accent transition-all duration-300"
           >
-            <Activity className="h-4.5 w-4.5 text-accent" /> Leg Massagers
+            <Activity className="h-3.5 w-3.5 text-accent" /> Leg Massagers
           </Link>
           <Link
             href="/products?category=health-care-products"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-white/5 border border-white/10 hover:bg-accent hover:border-accent hover:shadow-glow-accent transition-all duration-300"
+            className="flex items-center gap-2 px-3 py-1.5 rounded-xl text-xs font-bold text-white bg-white/5 border border-white/5 hover:bg-accent hover:border-accent hover:shadow-glow-accent transition-all duration-300"
           >
-            <HeartPulse className="h-4.5 w-4.5 text-accent" /> Health Care
+            <HeartPulse className="h-3.5 w-3.5 text-accent" /> Health Care Products
           </Link>
         </div>
       </div>
 
-      <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left copy column */}
         <div className="lg:col-span-7 flex flex-col items-start animate-fade-up">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-xs font-semibold text-accent tracking-wide uppercase backdrop-blur-md">
-            <Star className="h-3.5 w-3.5 fill-accent text-accent animate-pulse" /> Bhubaneswar&apos;s Premium Wellness Showroom
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-3.5 py-1 text-[11px] font-bold text-accent tracking-wider uppercase backdrop-blur-md">
+            <Star className="h-3.5 w-3.5 fill-accent text-accent animate-pulse" /> AVA Traders Bhubaneswar — Premium Wellness Showroom
           </div>
 
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white leading-[1.05] tracking-tight text-balance">
+          <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white leading-[1.05] tracking-tight text-balance">
             Elevate your recovery.
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary-200 to-accent bg-[length:200%_auto] animate-shimmer">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-amber-400 to-accent bg-[length:200%_auto] animate-shimmer">
               Reclaim your energy.
             </span>
           </h1>
 
-          <p className="mt-6 text-secondary-200 text-lg sm:text-xl leading-relaxed max-w-xl text-balance">
-            Experience Odisha&apos;s finest collection of zero-gravity massage chairs, 3D leg massagers, and targeted therapy devices. Tested by experts, backed by direct local warranty.
+          <p className="mt-5 text-secondary-200 text-base sm:text-lg leading-relaxed max-w-xl text-balance">
+            Experience Odisha&apos;s finest collection of zero-gravity massage chairs, 3D leg massagers, and targeted therapy devices. Tested by experts, backed by direct local warranty from AVA Traders.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+          <div className="mt-6 flex flex-wrap items-center gap-3 w-full sm:w-auto">
             <Link
               href="/products"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white px-8 py-4 font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto text-center"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white px-7 py-3.5 font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto text-center"
             >
-              Explore Collection <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              Explore Premium Models <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href={whatsappLink("Hi AVA Traders, I'd like to book a showroom visit to try your products.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/20 text-white px-8 py-4 font-bold hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto text-center"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/20 text-white px-7 py-3.5 font-bold hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto text-center"
             >
               Book Showroom Trial
             </a>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-6 w-full border-t border-white/10 pt-8 text-white/80">
-            <div className="flex flex-col gap-1">
-              <span className="font-display text-2xl font-bold text-accent">15+ Yrs</span>
-              <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Showroom Legacy</span>
+          <div className="mt-10 grid grid-cols-3 gap-4 w-full border-t border-white/10 pt-6 text-white/80">
+            <div className="flex flex-col gap-0.5">
+              <span className="font-display text-xl sm:text-2xl font-black text-accent">15+ Yrs</span>
+              <span className="text-[10px] text-secondary-300 uppercase tracking-widest font-bold">Showroom Legacy</span>
             </div>
-            <div className="flex flex-col gap-1">
-              <span className="font-display text-2xl font-bold text-primary-200">22+</span>
-              <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Premium Models</span>
+            <div className="flex flex-col gap-0.5">
+              <span className="font-display text-xl sm:text-2xl font-black text-amber-400">22+ Models</span>
+              <span className="text-[10px] text-secondary-300 uppercase tracking-widest font-bold">Tested & Ready</span>
             </div>
-            <div className="flex flex-col gap-1">
-              <span className="font-display text-2xl font-bold text-primary-200">4.6★</span>
-              <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Google Rating</span>
+            <div className="flex flex-col gap-0.5">
+              <span className="font-display text-xl sm:text-2xl font-black text-amber-400">4.8★ Rating</span>
+              <span className="text-[10px] text-secondary-300 uppercase tracking-widest font-bold">Bhubaneswar Trust</span>
             </div>
           </div>
         </div>
