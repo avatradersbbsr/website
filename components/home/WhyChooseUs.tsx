@@ -34,14 +34,16 @@ export default function WhyChooseUs() {
           description="We built our showroom around one idea: you should be able to test a product properly and talk to someone who'll still be there after you buy it."
         />
 
-        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {points.map((p) => (
-            <div key={p.title} className="group flex flex-col gap-3 rounded-2xl border border-secondary-50 p-6 hover:border-primary-100 hover:shadow-soft transition-all duration-300">
-              <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent-50 text-accent-600 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
-                <p.icon className="h-6 w-6" />
+            <div key={p.title} className="group flex flex-col gap-4 rounded-3xl border border-secondary-100/70 bg-white p-6 shadow-soft hover:shadow-card hover:border-accent/20 transition-all duration-500">
+              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary-50 text-secondary-700 group-hover:bg-accent group-hover:text-white group-hover:shadow-glow-accent transition-all duration-500">
+                <p.icon className="h-5 w-5" />
               </span>
-              <h3 className="font-display font-semibold text-secondary-700">{p.title}</h3>
-              <p className="text-sm text-secondary-400 leading-relaxed">{p.text}</p>
+              <div>
+                <h3 className="font-display font-bold text-secondary-800 text-base">{p.title}</h3>
+                <p className="text-xs text-secondary-400 leading-relaxed mt-1.5">{p.text}</p>
+              </div>
             </div>
           ))}
         </div>

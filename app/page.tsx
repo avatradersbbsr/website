@@ -14,7 +14,7 @@ import { FAQSchema, LocalBusinessSchema } from "@/components/seo/schema";
 import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: `${siteConfig.name} | Massage Chairs, Leg Massagers & Health Care Products in Bhubaneswar`,
+  title: "Best Massage Chair Showroom in Bhubaneswar, Odisha | AVA Traders",
   description: siteConfig.description,
   alternates: { canonical: "/" },
 };

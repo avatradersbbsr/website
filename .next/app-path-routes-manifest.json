@@ -1,17 +1,17 @@
 {
-  "/sitemap.xml/route": "/sitemap.xml",
   "/api/enquiry/route": "/api/enquiry",
-  "/icon.jpeg/route": "/icon.jpeg",
-  "/robots.txt/route": "/robots.txt",
   "/_not-found/page": "/_not-found",
-  "/privacy-policy/page": "/privacy-policy",
-  "/products/page": "/products",
-  "/contact/page": "/contact",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/robots.txt/route": "/robots.txt",
+  "/icon.jpeg/route": "/icon.jpeg",
   "/disclaimer/page": "/disclaimer",
-  "/return-refund-policy/page": "/return-refund-policy",
-  "/shipping-policy/page": "/shipping-policy",
-  "/terms-and-conditions/page": "/terms-and-conditions",
   "/page": "/",
   "/about/page": "/about",
-  "/products/[slug]/page": "/products/[slug]"
+  "/privacy-policy/page": "/privacy-policy",
+  "/shipping-policy/page": "/shipping-policy",
+  "/products/page": "/products",
+  "/return-refund-policy/page": "/return-refund-policy",
+  "/terms-and-conditions/page": "/terms-and-conditions",
+  "/products/[slug]/page": "/products/[slug]",
+  "/contact/page": "/contact"
 }

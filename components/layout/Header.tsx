@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown, Armchair, Activity, HeartPulse } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { siteConfig, telLink } from "@/lib/site-config";
 import { categories } from "@/data/categories";
 import { cn } from "@/lib/utils";
@@ -24,10 +25,12 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full glass-premium shadow-soft border-b border-primary-50">
       <div className="container-wide flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
-          <img
+          <Image
             src="/images/logo.jpeg"
             alt="AVA Traders Logo"
-            className="h-11 w-11 rounded-full object-cover border border-secondary-100 hover:scale-105 transition-transform duration-300"
+            width={44}
+            height={44}
+            className="rounded-full object-cover border border-secondary-100 hover:scale-105 transition-transform duration-300"
           />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-xl font-bold text-primary">
@@ -165,10 +168,12 @@ export default function Header() {
               {/* Drawer Header */}
               <div className="flex items-center justify-between pb-6 border-b border-secondary-100">
                 <div className="flex items-center gap-2">
-                  <img
+                  <Image
                     src="/images/logo.jpeg"
                     alt="AVA Traders Logo"
-                    className="h-9 w-9 rounded-full object-cover border border-secondary-100"
+                    width={36}
+                    height={36}
+                    className="rounded-full object-cover border border-secondary-100"
                   />
                   <span className="font-display font-bold text-lg text-primary">
                     AVA <span className="text-accent">Traders</span>

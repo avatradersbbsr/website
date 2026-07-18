@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, Clock, Facebook, Instagram, Youtube } from "lucide-react";
 import { siteConfig, telLink } from "@/lib/site-config";
 import { categories } from "@/data/categories";
@@ -9,10 +10,12 @@ export default function Footer() {
       <div className="container-wide py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <Link href="/" className="flex items-center gap-3">
-            <img
+            <Image
               src="/images/logo.jpeg"
               alt="AVA Traders Logo"
-              className="h-10 w-10 rounded-full object-cover border border-secondary-800"
+              width={40}
+              height={40}
+              className="rounded-full object-cover border border-secondary-800"
             />
             <span className="font-display text-lg font-bold text-white">
               AVA Traders

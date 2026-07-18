@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { ShieldCheck, Target, Eye, Award, Calendar, BadgePercent } from "lucide-react";
 import SectionHeading from "@/components/shared/SectionHeading";
 import { BreadcrumbSchema } from "@/components/seo/schema";
@@ -53,11 +54,12 @@ export default function AboutPage() {
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/15 rounded-full blur-2xl" />
               
               {/* Product Showcase */}
-              <div className="w-[60%] aspect-square rounded-2xl bg-white p-4 shadow-2xl border border-secondary-100 flex items-center justify-center rotate-[-3deg] hover:rotate-0 transition-transform duration-500">
-                <img 
+              <div className="w-[60%] aspect-square rounded-2xl bg-white p-4 shadow-2xl border border-secondary-100 flex items-center justify-center rotate-[-3deg] hover:rotate-0 transition-transform duration-500 relative">
+                <Image 
                   src="/images/products/massage-chairs/am-999/1.png" 
                   alt="AM-999 Luxury Premium Massage Chair" 
-                  className="w-full h-full object-contain"
+                  fill
+                  className="object-contain p-4"
                 />
               </div>
 
