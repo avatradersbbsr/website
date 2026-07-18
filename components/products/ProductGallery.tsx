@@ -32,6 +32,7 @@ export default function ProductGallery({ product }: { product: Product }) {
             src={product.images[active]}
             alt={`${product.name} - View ${active + 1}`}
             category={product.category}
+            priority
             className="h-full w-full object-contain p-4"
           />
         </div>

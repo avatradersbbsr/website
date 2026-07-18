@@ -12,6 +12,7 @@ import ProductCard from "@/components/products/ProductCard";
 import EnquiryForm from "@/components/shared/EnquiryForm";
 import FAQAccordion from "@/components/shared/FAQAccordion";
 import { ProductSchema, FAQSchema, BreadcrumbSchema } from "@/components/seo/schema";
+import PageAnimate from "@/components/shared/PageAnimate";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -51,7 +52,7 @@ export default async function ProductDetailPage({
   const discount = discountPercent(product.mrp, product.price);
 
   return (
-    <>
+    <PageAnimate>
       <ProductSchema product={product} />
       <FAQSchema faqs={product.faqs} />
       <BreadcrumbSchema
@@ -209,6 +210,6 @@ export default async function ProductDetailPage({
           </div>
         </section>
       )}
-    </>
+    </PageAnimate>
   );
 }

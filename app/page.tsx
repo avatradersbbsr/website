@@ -12,6 +12,7 @@ import { getFeaturedProducts, getBestSellers } from "@/data/products";
 import { siteFaqs } from "@/data/faqs";
 import { FAQSchema, LocalBusinessSchema } from "@/components/seo/schema";
 import { siteConfig } from "@/lib/site-config";
+import PageAnimate from "@/components/shared/PageAnimate";
 
 export const metadata: Metadata = {
   title: "Best Massage Chair Showroom in Bhubaneswar, Odisha | AVA Traders",
@@ -24,7 +25,7 @@ export default function HomePage() {
   const bestSellers = getBestSellers();
 
   return (
-    <>
+    <PageAnimate>
       <FAQSchema faqs={siteFaqs} />
       <LocalBusinessSchema />
 
@@ -61,6 +62,6 @@ export default function HomePage() {
 
       <CTASection />
       <MapSection />
-    </>
+    </PageAnimate>
   );
 }
