@@ -95,8 +95,9 @@ export default function Hero() {
       </div>
 
       {/* Modern ambient lighting */}
-      <div className="absolute top-[-10%] right-[-10%] w-[55%] h-[55%] bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-15%] left-[-10%] w-[60%] h-[60%] bg-primary/25 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-[-10%] right-[-10%] w-[55%] h-[55%] bg-accent/15 rounded-full blur-[120px] pointer-events-none animate-pulse" />
+      <div className="absolute bottom-[-15%] left-[-10%] w-[60%] h-[60%] bg-primary/20 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-[20%] right-[10%] w-[40%] h-[40%] bg-gold/10 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Category selector row at the top */}
       <div className="container-wide relative z-10 mb-8 animate-fade-in">
@@ -126,14 +127,14 @@ export default function Hero() {
       <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
         {/* Left copy column */}
         <div className="lg:col-span-7 flex flex-col items-start animate-fade-up">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-3.5 py-1 text-[11px] font-bold text-accent tracking-wider uppercase backdrop-blur-md">
-            <Star className="h-3.5 w-3.5 fill-accent text-accent animate-pulse" /> AVA Traders Bhubaneswar — Premium Wellness Showroom
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-gold-500/30 px-3.5 py-1 text-[11px] font-bold text-gold-300 tracking-wider uppercase backdrop-blur-md shadow-glow-gold/10">
+            <Star className="h-3.5 w-3.5 fill-gold text-gold animate-pulse" /> AVA Traders Bhubaneswar — Premium Wellness Showroom
           </div>
 
           <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white leading-[1.05] tracking-tight text-balance">
             Elevate your recovery.
             <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-amber-400 to-accent bg-[length:200%_auto] animate-shimmer">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-amber-200 to-gold bg-[length:200%_auto] animate-shimmer">
               Reclaim your energy.
             </span>
           </h1>
@@ -161,19 +162,19 @@ export default function Hero() {
 
           <div className="mt-10 grid grid-cols-3 gap-4 w-full border-t border-white/10 pt-6 text-white/80">
             <div className="flex flex-col gap-0.5">
-              <span className="font-display text-xl sm:text-2xl font-black text-accent">
+              <span className="font-display text-xl sm:text-2xl font-black text-gold-400">
                 <Counter target={15} suffix="+" /> Yrs
               </span>
               <span className="text-[10px] text-secondary-300 uppercase tracking-widest font-bold">Showroom Legacy</span>
             </div>
             <div className="flex flex-col gap-0.5">
-              <span className="font-display text-xl sm:text-2xl font-black text-amber-400">
+              <span className="font-display text-xl sm:text-2xl font-black text-gold-400">
                 <Counter target={22} suffix="+" /> Models
               </span>
               <span className="text-[10px] text-secondary-300 uppercase tracking-widest font-bold">Tested & Ready</span>
             </div>
             <div className="flex flex-col gap-0.5">
-              <span className="font-display text-xl sm:text-2xl font-black text-amber-400">
+              <span className="font-display text-xl sm:text-2xl font-black text-gold-400">
                 <DecimalCounter target={4.8} suffix="★" /> Rating
               </span>
               <span className="text-[10px] text-secondary-300 uppercase tracking-widest font-bold">Bhubaneswar Trust</span>
@@ -185,47 +186,47 @@ export default function Hero() {
         <div className="lg:col-span-5 relative flex items-center justify-center mt-10 lg:mt-0 animate-fade-in [animation-delay:200ms]">
           <div className="relative w-full max-w-[340px] sm:max-w-[420px] aspect-[4/5] mx-auto">
             {/* Background glowing card */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-800/40 via-secondary-700/50 to-secondary-900/80 border border-white/10 shadow-card backdrop-blur-md overflow-hidden">
-              <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(230,57,70,0.15), transparent 70%)" />
+            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-850 via-secondary-800 to-secondary-900 border border-gold-500/20 shadow-glow-gold/20 backdrop-blur-md overflow-hidden">
+              <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(197,168,128,0.15), transparent 70%)" />
               <div className="absolute inset-0 bg-radial-gradient(circle at 0% 100%, rgba(30,42,120,0.25), transparent 70%)" />
             </div>
 
             {/* Overlapping glass stat panel 1 */}
-            <div className="absolute top-6 left-2 sm:-left-6 rounded-2xl bg-white/10 border border-white/20 p-3 shadow-card backdrop-blur-xl animate-float flex items-center gap-3 z-20">
-              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent text-white shadow-glow-accent">
+            <div className="absolute top-6 left-2 sm:-left-6 rounded-2xl bg-white/10 border border-gold-500/20 p-3 shadow-glow-gold/10 backdrop-blur-xl animate-float flex items-center gap-3 z-20">
+              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gold text-primary-950 shadow-glow-gold">
                 <Award className="h-4 w-4" />
               </span>
               <div>
-                <p className="text-[9px] uppercase font-semibold text-secondary-300 tracking-wider">Showroom Tested</p>
+                <p className="text-[9px] uppercase font-semibold text-gold-300 tracking-wider">Showroom Tested</p>
                 <p className="text-[11px] font-bold text-white">100% Verified Quality</p>
               </div>
             </div>
 
             {/* Overlapping glass stat panel 2 */}
-            <div className="absolute bottom-12 right-2 sm:-right-6 rounded-2xl bg-white/10 border border-white/20 p-3 shadow-card backdrop-blur-xl animate-float [animation-delay:2s] flex items-center gap-3 z-20">
+            <div className="absolute bottom-12 right-2 sm:-right-6 rounded-2xl bg-white/10 border border-gold-500/20 p-3 shadow-glow-gold/10 backdrop-blur-xl animate-float [animation-delay:2s] flex items-center gap-3 z-20">
               <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary text-white shadow-glow">
                 <HeartHandshake className="h-4 w-4" />
               </span>
               <div>
-                <p className="text-[9px] uppercase font-semibold text-secondary-300 tracking-wider">After-Sales</p>
+                <p className="text-[9px] uppercase font-semibold text-gold-300 tracking-wider">After-Sales</p>
                 <p className="text-[11px] font-bold text-white">Direct Local Support</p>
               </div>
             </div>
 
             {/* Carousel Inner Enclosure */}
-            <div className="absolute inset-4 rounded-2xl bg-secondary-950/80 border border-white/5 flex flex-col justify-between p-4 overflow-hidden z-10">
+            <div className="absolute inset-4 rounded-2xl bg-secondary-950/90 border border-gold-500/10 flex flex-col justify-between p-4 overflow-hidden z-10">
               {/* Slide image area */}
               <Link 
                 href={`/products/${heroChairs[activeSlide].slug}`}
-                className="relative h-[72%] w-full bg-white rounded-xl overflow-hidden group shadow-inner flex items-center justify-center"
+                className="relative h-[72%] w-full bg-gradient-to-b from-white to-secondary-50 rounded-xl overflow-hidden group shadow-glow-gold/10 flex items-center justify-center border border-gold-500/20"
               >
                 {/* Floating model tag */}
-                <div className="absolute top-3 left-3 bg-secondary-900/90 border border-white/10 rounded-full px-3 py-1 text-[9px] font-bold text-accent uppercase tracking-wider backdrop-blur-sm z-30">
+                <div className="absolute top-3 left-3 bg-secondary-900/90 border border-gold-500/30 rounded-full px-3 py-1 text-[9px] font-bold text-gold uppercase tracking-wider backdrop-blur-sm z-30">
                   Featured Chair
                 </div>
                 
                 {/* Floating price */}
-                <div className="absolute bottom-3 right-3 bg-primary text-white rounded-full px-3 py-1 text-xs font-bold shadow-glow z-30">
+                <div className="absolute bottom-3 right-3 bg-gold text-primary-950 rounded-full px-3 py-1 text-xs font-black shadow-glow z-30">
                   {heroChairs[activeSlide].price}
                 </div>
 
@@ -248,7 +249,7 @@ export default function Hero() {
                   </h3>
                   <Link 
                     href={`/products/${heroChairs[activeSlide].slug}`}
-                    className="text-[11px] font-semibold text-accent hover:underline flex items-center gap-0.5 shrink-0"
+                    className="text-[11px] font-semibold text-gold hover:underline flex items-center gap-0.5 shrink-0"
                   >
                     View <ArrowRight className="h-3 w-3" />
                   </Link>
@@ -262,7 +263,7 @@ export default function Hero() {
                       onClick={() => setActiveSlide(idx)}
                       className={cn(
                         "h-1.5 rounded-full transition-all duration-300",
-                        activeSlide === idx ? "w-6 bg-accent" : "w-1.5 bg-white/20"
+                        activeSlide === idx ? "w-6 bg-gold" : "w-1.5 bg-white/20"
                       )}
                       aria-label={`Go to slide ${idx + 1}`}
                     />

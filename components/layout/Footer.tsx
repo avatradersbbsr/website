@@ -6,7 +6,7 @@ import { categories } from "@/data/categories";
 
 export default function Footer() {
   return (
-    <footer className="bg-secondary-900 text-secondary-350 border-t border-primary-950">
+    <footer className="bg-secondary-900 text-secondary-300 border-t border-primary-950">
       <div className="container-wide py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <Link href="/" className="flex items-center gap-3">
@@ -45,7 +45,7 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm">
             {categories.map((cat) => (
               <li key={cat.slug}>
-                <Link href={`/products?category=${cat.slug}`} className="hover:text-accent-300 transition-colors">
+                <Link href={`/products?category=${cat.slug}`} className="text-secondary-300 hover:text-white transition-colors">
                   {cat.name}
                 </Link>
               </li>
@@ -58,12 +58,12 @@ export default function Footer() {
             Company
           </h3>
           <ul className="space-y-2.5 text-sm">
-            <li><Link href="/about" className="hover:text-accent-300 transition-colors">About Us</Link></li>
-            <li><Link href="/products" className="hover:text-accent-300 transition-colors">All Products</Link></li>
-            <li><Link href="/contact" className="hover:text-accent-300 transition-colors">Contact Us</Link></li>
+            <li><Link href="/about" className="text-secondary-300 hover:text-white transition-colors">About Us</Link></li>
+            <li><Link href="/products" className="text-secondary-300 hover:text-white transition-colors">All Products</Link></li>
+            <li><Link href="/contact" className="text-secondary-300 hover:text-white transition-colors">Contact Us</Link></li>
             {siteConfig.legalNav.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="hover:text-accent-300 transition-colors">
+                <Link href={l.href} className="text-secondary-300 hover:text-white transition-colors">
                   {l.label}
                 </Link>
               </li>
