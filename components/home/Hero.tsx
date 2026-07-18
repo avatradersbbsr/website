@@ -192,24 +192,24 @@ export default function Hero() {
             </div>
 
             {/* Overlapping glass stat panel 1 */}
-            <div className="absolute top-6 left-2 sm:-left-6 rounded-2xl bg-white/10 border border-gold-500/20 p-3 shadow-glow-gold/10 backdrop-blur-xl animate-float flex items-center gap-3 z-20">
-              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-gold text-primary-950 shadow-glow-gold">
-                <Award className="h-4 w-4" />
+            <div className="absolute -top-3 left-4 sm:top-6 sm:-left-6 rounded-2xl bg-white/10 border border-gold-500/20 p-2.5 sm:p-3 shadow-glow-gold/10 backdrop-blur-xl animate-float flex items-center gap-2 sm:gap-3 z-20">
+              <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-xl bg-gold text-primary-950 shadow-glow-gold">
+                <Award className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               </span>
               <div>
-                <p className="text-[9px] uppercase font-semibold text-gold-300 tracking-wider">Showroom Tested</p>
-                <p className="text-[11px] font-bold text-white">100% Verified Quality</p>
+                <p className="text-[8px] sm:text-[9px] uppercase font-semibold text-gold-300 tracking-wider">Showroom Tested</p>
+                <p className="text-[10px] sm:text-[11px] font-bold text-white">100% Verified Quality</p>
               </div>
             </div>
 
             {/* Overlapping glass stat panel 2 */}
-            <div className="absolute bottom-12 right-2 sm:-right-6 rounded-2xl bg-white/10 border border-gold-500/20 p-3 shadow-glow-gold/10 backdrop-blur-xl animate-float [animation-delay:2s] flex items-center gap-3 z-20">
-              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary text-white shadow-glow">
-                <HeartHandshake className="h-4 w-4" />
+            <div className="absolute -bottom-3 right-4 sm:bottom-12 sm:-right-6 rounded-2xl bg-white/10 border border-gold-500/20 p-2.5 sm:p-3 shadow-glow-gold/10 backdrop-blur-xl animate-float [animation-delay:2s] flex items-center gap-2 sm:gap-3 z-20">
+              <span className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-xl bg-primary text-white shadow-glow">
+                <HeartHandshake className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
               </span>
               <div>
-                <p className="text-[9px] uppercase font-semibold text-gold-300 tracking-wider">After-Sales</p>
-                <p className="text-[11px] font-bold text-white">Direct Local Support</p>
+                <p className="text-[8px] sm:text-[9px] uppercase font-semibold text-gold-300 tracking-wider">After-Sales</p>
+                <p className="text-[10px] sm:text-[11px] font-bold text-white">Direct Local Support</p>
               </div>
             </div>
 
