@@ -4,14 +4,14 @@
   "/sitemap.xml/route": "/sitemap.xml",
   "/_not-found/page": "/_not-found",
   "/icon.jpeg/route": "/icon.jpeg",
-  "/contact/page": "/contact",
+  "/page": "/",
   "/disclaimer/page": "/disclaimer",
+  "/contact/page": "/contact",
   "/shipping-policy/page": "/shipping-policy",
+  "/return-refund-policy/page": "/return-refund-policy",
+  "/privacy-policy/page": "/privacy-policy",
+  "/about/page": "/about",
   "/products/page": "/products",
   "/terms-and-conditions/page": "/terms-and-conditions",
-  "/page": "/",
-  "/about/page": "/about",
-  "/products/[slug]/page": "/products/[slug]",
-  "/privacy-policy/page": "/privacy-policy",
-  "/return-refund-policy/page": "/return-refund-policy"
+  "/products/[slug]/page": "/products/[slug]"
 }
