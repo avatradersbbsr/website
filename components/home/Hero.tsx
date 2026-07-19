@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, Star, Award, HeartHandshake, Armchair, HeartPulse, Activity } from "lucide-react";
 import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 import ProductImageWithFallback from "@/components/shared/ProductImageWithFallback";
 
 const heroChairs = [
@@ -80,7 +81,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-900 via-primary-950 to-secondary-900 pt-6 pb-10 lg:pt-12 lg:pb-20 border-b border-primary-950">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary-900 via-primary-950 to-secondary-900 pt-3 pb-6 lg:pt-12 lg:pb-20 border-b border-primary-950">
       {/* Decorative Brand SVG background */}
       <div className="absolute inset-0 z-0 opacity-10">
         <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -124,14 +125,14 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-6 lg:gap-12 items-center">
+      <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-5 lg:gap-12 items-center">
         {/* Left copy column */}
         <div className="lg:col-span-7 flex flex-col items-center lg:items-start text-center lg:text-left animate-fade-up">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-gold-500/30 px-3 py-1 text-[9px] sm:text-[11px] font-bold text-gold-300 tracking-wider uppercase backdrop-blur-md shadow-glow-gold/10">
-            <Star className="h-3 w-3 sm:h-3.5 sm:w-3.5 fill-gold text-gold animate-pulse" /> AVA Traders — Premium Showroom
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-gold-500/30 px-3 py-0.5 sm:py-1 text-[8px] sm:text-[11px] font-bold text-gold-300 tracking-wider uppercase backdrop-blur-md shadow-glow-gold/10">
+            <Star className="h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 fill-gold text-gold animate-pulse" /> AVA Traders — Premium Showroom
           </div>
 
-          <h1 className="mt-4 text-3xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white leading-[1.1] tracking-tight text-balance">
+          <h1 className="mt-2.5 sm:mt-4 text-2xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white leading-[1.1] tracking-tight text-balance">
             Elevate your recovery.
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-gold-300 via-amber-200 to-gold bg-[length:200%_auto] animate-shimmer">
@@ -139,52 +140,52 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-4 text-secondary-200 text-sm sm:text-base lg:text-lg leading-relaxed max-w-xl text-balance">
+          <p className="mt-2 sm:mt-4 text-secondary-200 text-[11px] sm:text-base lg:text-lg leading-relaxed max-w-xl text-balance">
             Experience Odisha&apos;s finest collection of zero-gravity massage chairs, 3D leg massagers, and targeted therapy devices. Tested by experts, backed by direct local warranty from AVA Traders.
           </p>
 
-          <div className="mt-5 flex flex-row items-center justify-center lg:justify-start gap-3 w-full max-w-md lg:max-w-none">
+          <div className="mt-3.5 sm:mt-5 flex flex-row items-center justify-center lg:justify-start gap-2.5 sm:gap-3 w-full max-w-md lg:max-w-none">
             <Link
               href="/products"
-              className="group inline-flex flex-1 sm:flex-initial items-center justify-center gap-1.5 sm:gap-2 rounded-full bg-accent text-white px-5 sm:px-7 py-3 text-xs sm:text-sm font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300 text-center"
+              className="group inline-flex flex-1 sm:flex-initial items-center justify-center gap-1 sm:gap-2 rounded-full bg-accent text-white px-4 sm:px-7 py-2 sm:py-3 text-[10px] sm:text-sm font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300 text-center"
             >
-              Explore Models <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+              Explore Models <ArrowRight className="h-3 w-3 sm:h-3.5 sm:w-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <a
               href={whatsappLink("Hi AVA Traders, I'd like to book a showroom visit to try your products.")}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex flex-1 sm:flex-initial items-center justify-center gap-1.5 sm:gap-2 rounded-full bg-white/5 border border-white/20 text-white px-5 sm:px-7 py-3 text-xs sm:text-sm font-bold hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm text-center"
+              className="inline-flex flex-1 sm:flex-initial items-center justify-center gap-1 sm:gap-2 rounded-full bg-white/5 border border-white/20 text-white px-4 sm:px-7 py-2 sm:py-3 text-[10px] sm:text-sm font-bold hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm text-center"
             >
               Book Trial
             </a>
           </div>
 
-          <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-4 w-full border-t border-white/10 pt-5 text-white/80">
+          <div className="mt-5 sm:mt-8 grid grid-cols-3 gap-2 sm:gap-4 w-full border-t border-white/10 pt-4 sm:pt-5 text-white/80">
             <div className="flex flex-col gap-0.5">
-              <span className="font-display text-base sm:text-xl lg:text-2xl font-black text-gold-400">
+              <span className="font-display text-sm sm:text-xl lg:text-2xl font-black text-gold-400">
                 <Counter target={15} suffix="+" /> Yrs
               </span>
-              <span className="text-[8px] sm:text-[10px] text-secondary-300 uppercase tracking-wider font-bold">Showroom Legacy</span>
+              <span className="text-[7px] sm:text-[10px] text-secondary-300 uppercase tracking-wider font-bold">Showroom Legacy</span>
             </div>
             <div className="flex flex-col gap-0.5">
-              <span className="font-display text-base sm:text-xl lg:text-2xl font-black text-gold-400">
+              <span className="font-display text-sm sm:text-xl lg:text-2xl font-black text-gold-400">
                 <Counter target={22} suffix="+" /> Models
               </span>
-              <span className="text-[8px] sm:text-[10px] text-secondary-300 uppercase tracking-wider font-bold">Tested & Ready</span>
+              <span className="text-[7px] sm:text-[10px] text-secondary-300 uppercase tracking-wider font-bold">Tested & Ready</span>
             </div>
             <div className="flex flex-col gap-0.5">
-              <span className="font-display text-base sm:text-xl lg:text-2xl font-black text-gold-400">
+              <span className="font-display text-sm sm:text-xl lg:text-2xl font-black text-gold-400">
                 <DecimalCounter target={4.8} suffix="★" /> Rating
               </span>
-              <span className="text-[8px] sm:text-[10px] text-secondary-300 uppercase tracking-wider font-bold">Bhubaneswar Trust</span>
+              <span className="text-[7px] sm:text-[10px] text-secondary-300 uppercase tracking-wider font-bold">Bhubaneswar Trust</span>
             </div>
           </div>
         </div>
 
         {/* Right graphical composition column - interactive product carousel */}
-        <div className="lg:col-span-5 relative flex items-center justify-center mt-6 lg:mt-0 animate-fade-in [animation-delay:200ms]">
-          <div className="relative w-full max-w-[270px] sm:max-w-[420px] aspect-square sm:aspect-[4/5] mx-auto">
+        <div className="lg:col-span-5 relative flex items-center justify-center mt-3 lg:mt-0 animate-fade-in [animation-delay:200ms]">
+          <div className="relative w-full max-w-[215px] sm:max-w-[420px] aspect-square sm:aspect-[4/5] mx-auto">
             {/* Background glowing card */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-850 via-secondary-800 to-secondary-900 border border-gold-500/20 shadow-glow-gold/20 backdrop-blur-md overflow-hidden">
               <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(197,168,128,0.15), transparent 70%)" />
@@ -214,44 +215,53 @@ export default function Hero() {
             </div>
 
             {/* Carousel Inner Enclosure */}
-            <div className="absolute inset-2.5 sm:inset-4 rounded-2xl bg-secondary-950/90 border border-gold-500/10 flex flex-col justify-between p-3 sm:p-4 overflow-hidden z-10">
+            <div className="absolute inset-1.5 sm:inset-4 rounded-2xl bg-secondary-950/90 border border-gold-500/10 flex flex-col justify-between p-2 sm:p-4 overflow-hidden z-10">
               {/* Slide image area */}
               <Link 
                 href={`/products/${heroChairs[activeSlide].slug}`}
                 className="relative h-[72%] w-full bg-gradient-to-b from-white to-secondary-50 rounded-xl overflow-hidden group shadow-glow-gold/10 flex items-center justify-center border border-gold-500/20"
               >
                 {/* Floating model tag */}
-                <div className="absolute top-2 left-2 sm:top-3 sm:left-3 bg-secondary-900/90 border border-gold-500/30 rounded-full px-2 py-0.5 sm:px-3 sm:py-1 text-[8px] sm:text-[9px] font-bold text-gold uppercase tracking-wider backdrop-blur-sm z-30">
+                <div className="absolute top-1.5 left-1.5 sm:top-3 sm:left-3 bg-secondary-900/90 border border-gold-500/30 rounded-full px-1.5 py-0.5 sm:px-3 sm:py-1 text-[7px] sm:text-[9px] font-bold text-gold uppercase tracking-wider backdrop-blur-sm z-30">
                   Featured
                 </div>
                 
                 {/* Floating price */}
-                <div className="absolute bottom-2 right-2 sm:bottom-3 sm:right-3 bg-gold text-primary-950 rounded-full px-2.5 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs font-black shadow-glow z-30">
+                <div className="absolute bottom-1.5 right-1.5 sm:bottom-3 sm:right-3 bg-gold text-primary-950 rounded-full px-2 py-0.5 sm:px-3 sm:py-1 text-[9px] sm:text-xs font-black shadow-glow z-30">
                   {heroChairs[activeSlide].price}
                 </div>
 
-                <div className="relative w-full h-full p-4 sm:p-6 flex items-center justify-center">
-                  <ProductImageWithFallback
-                    src={heroChairs[activeSlide].image}
-                    alt={heroChairs[activeSlide].name}
-                    category="massage-chairs"
-                    priority
-                    className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeSlide}
+                    initial={{ opacity: 0, scale: 0.95, y: 5 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 0.95, y: -5 }}
+                    transition={{ duration: 0.35, ease: "easeInOut" }}
+                    className="relative w-full h-full p-2 sm:p-6 flex items-center justify-center"
+                  >
+                    <ProductImageWithFallback
+                      src={heroChairs[activeSlide].image}
+                      alt={heroChairs[activeSlide].name}
+                      category="massage-chairs"
+                      priority
+                      className="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </motion.div>
+                </AnimatePresence>
               </Link>
 
               {/* Slide controls and title */}
               <div className="flex flex-col gap-1.5 sm:gap-2 mt-1 sm:mt-2">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-display font-bold text-white text-[11px] sm:text-sm leading-tight truncate max-w-[80%]">
+                  <h3 className="font-display font-bold text-white text-[10px] sm:text-sm leading-tight truncate max-w-[80%]">
                     {heroChairs[activeSlide].name}
                   </h3>
                   <Link 
                     href={`/products/${heroChairs[activeSlide].slug}`}
-                    className="text-[10px] sm:text-[11px] font-semibold text-gold hover:underline flex items-center gap-0.5 shrink-0"
+                    className="text-[9px] sm:text-[11px] font-semibold text-gold hover:underline flex items-center gap-0.5 shrink-0"
                   >
-                    View <ArrowRight className="h-3 w-3" />
+                    View <ArrowRight className="h-2.5 w-2.5 sm:h-3 sm:w-3" />
                   </Link>
                 </div>
                 
