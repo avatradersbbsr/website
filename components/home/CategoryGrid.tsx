@@ -17,11 +17,11 @@ const icons = {
 export default function CategoryGrid() {
   const [offset, setOffset] = useState(0);
 
-  // Cycle the preview models every 4 seconds
+  // Cycle the preview models every 5 seconds (longer gap as requested)
   useEffect(() => {
     const timer = setInterval(() => {
       setOffset((prev) => prev + 1);
-    }, 4000);
+    }, 5000);
     return () => clearInterval(timer);
   }, []);
 
@@ -50,11 +50,12 @@ export default function CategoryGrid() {
         {categories.map((cat, i) => {
           const Icon = icons[cat.icon as keyof typeof icons] || Armchair;
           const previewItems = getCategoryPreviews(cat.slug);
+          const startIndex = (offset * 3) % (products.filter((p) => p.category === cat.slug).length || 1);
 
           return (
             <div
               key={cat.slug}
-              className="group relative flex flex-col justify-between rounded-2xl bg-white p-8 border border-secondary-100 shadow-soft hover-lift hover:border-primary-200 overflow-hidden min-h-[460px]"
+              className="group relative flex flex-col justify-between rounded-2xl bg-white p-8 border border-secondary-100 shadow-soft hover-lift hover:border-primary-200 overflow-hidden min-h-[490px]"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               {/* Subtle category gradients */}
@@ -82,18 +83,21 @@ export default function CategoryGrid() {
                     <p className="text-[10px] font-bold uppercase tracking-wider text-secondary-400 mb-3">
                       Popular Models
                     </p>
-                    <div className="flex gap-2">
+                    
+                    {/* The key={startIndex} forces a smooth slide transition when the products change */}
+                    <div key={startIndex} className="flex gap-2.5 animate-slide-in-right">
                       {previewItems.map((prod) => (
                         <Link
                           key={prod.id}
                           href={`/products/${prod.slug}`}
-                          className="group/prod flex flex-col items-center gap-2 flex-1 p-2.5 rounded-xl border border-secondary-100 bg-secondary-50/30 hover:bg-white hover:border-primary-300 hover:shadow-soft transition-all duration-300"
+                          className="group/prod flex flex-col items-center gap-2 flex-1 p-2 rounded-xl border border-secondary-100 bg-secondary-50/30 hover:bg-white hover:border-primary-300 hover:shadow-soft transition-all duration-300"
                         >
-                          <div className="w-18 h-18 sm:w-20 sm:h-20 rounded-lg overflow-hidden bg-white border border-secondary-100 flex items-center justify-center p-1.5 shrink-0">
+                          <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-lg overflow-hidden bg-white border border-secondary-100 flex items-center justify-center p-1 shrink-0">
                             <ProductImageWithFallback
                               src={prod.images[0]}
                               alt={prod.name}
                               category={prod.category}
+                              priority={true}
                               className="w-full h-full object-contain group-hover/prod:scale-110 transition-transform duration-300"
                             />
                           </div>
@@ -109,7 +113,7 @@ export default function CategoryGrid() {
 
               <Link
                 href={`/products?category=${cat.slug}`}
-                className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:text-accent transition-colors animate-fade-in"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:text-accent transition-colors"
               >
                 Explore Collection
                 <span className="transform group-hover:translate-x-1 transition-transform">→</span>
