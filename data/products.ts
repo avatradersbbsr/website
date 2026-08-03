@@ -1511,10 +1511,15 @@ products.forEach((p) => {
     });
 
     p.features = coreFeatures;
+
+    // Set highly descriptive title
+    p.seo.metaTitle = `${p.name} - Luxury Massage Chair, 4D Mechanism Roller System, Automatic Body & Leg Scanning, Zero Gravity, Graphene Heating, AI Voice Control`;
   } else if (p.category === "leg-massagers") {
     p.warranty = "3 Years (1 Year Comprehensive + 2 Years Motor)";
+    p.seo.metaTitle = `${p.name} - Premium Leg Massager, 3D Roller System, Airbag Compression, Heat Therapy, Reflexology Sole Scraping`;
   } else if (p.category === "health-care-products") {
     p.warranty = "1 Year Brand Warranty";
+    p.seo.metaTitle = `${p.name} - Premium Health Care Device, Targeted Pain Relief Therapy, Compact Home Wellness Equipment`;
   }
 });
 
