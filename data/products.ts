@@ -68,7 +68,7 @@ export const products: Product[] = [
     slug: "z-91-ultra-luxury",
     name: "Z-91 Ultra Luxury Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Ultra luxury full-body massage chair with 7-inch PAD touch screen, 24 auto programs, 10 valves 42 airbags, and wireless charging.",
+    shortDescription: "Ultra luxury full-body massage chair with 7-inch PAD touch screen, 20 auto programs, 10 valves 42 airbags, and wireless charging.",
     description: [
       "The Z-91 Ultra Luxury Massage Chair is a high-class home therapy solution. It features an integrated SL track rail from neck to thigh and a 2D massage hand system with automatic shoulder detection, delivering precise neck and shoulder rubs.",
       "The Z-91 is equipped with 10 valves and 42 airbags for complete body wrapping, and 24V carbon fiber heating on the backrest and footrest. Control is effortless via the 7-inch PAD touch screen, rotating navigation buttons, or intelligent voice commands.",
@@ -85,7 +85,7 @@ export const products: Product[] = [
     warranty: "3 Years (2 Year Comprehensive + 1 Year Motor)",
     features: [
       "Integrated SL track rail and automatic shoulder detection",
-      "9 manual modes and 24 automatic modes",
+      "20 automatic programs",
       "10 valves with 42 airbags wrapping shoulders, armrests, and footrest",
       "7-inch PAD touch screen, rotating controls, and intelligent voice control",
       "Electric telescopic leg rest with dedicated knee massage and foot rollers",
@@ -109,7 +109,7 @@ export const products: Product[] = [
       "5 years hydrolysis resistant PU ensures long-term cover durability"
     ],
     faqs: [
-      { question: "What makes the Z-91 'Ultra Luxury'?", answer: "The Z-91 features 24 automatic modes, 10 valves, 42 airbags, a 7-inch touch PAD, and an electric telescopic leg rest with dedicated knee massage — commercial-grade details built for the home." },
+      { question: "What makes the Z-91 'Ultra Luxury'?", answer: "The Z-91 features 20 automatic programs, 10 valves, 42 airbags, a 7-inch touch PAD, and an electric telescopic leg rest with dedicated knee massage — commercial-grade details built for the home." },
       { question: "Can I try the Z-91 at the showroom?", answer: "Yes, the Z-91 is on display at our Puri Bypass Road showroom. We recommend calling ahead as it's a limited-stock model." },
       { question: "Is installation included?", answer: "Yes, for Bhubaneswar deliveries, our team handles complete setup and provides a walkthrough of all features including voice control setup." }
     ],
@@ -117,7 +117,7 @@ export const products: Product[] = [
     featured: true,
     seo: {
       metaTitle: "Z-91 Ultra Luxury Massage Chair | Buy in Bhubaneswar | AVA Traders",
-      metaDescription: "High-class massage chair with 7-inch PAD screen, voice control, 24 auto programs, and knee massage. Shop at AVA Traders showroom."
+      metaDescription: "High-class massage chair with 7-inch PAD screen, voice control, 20 auto programs, and knee massage. Shop at AVA Traders showroom."
     }
   },
   {
@@ -128,7 +128,7 @@ export const products: Product[] = [
     shortDescription: "Economic premium ultra luxury massage chair with 7-inch PAD touch screen, 20 auto programs, and 24V graphene heating.",
     description: [
       "The Z-90 Economic Premium Ultra Luxury Massage Chair represents the perfect bridge between cost and luxury. Equipped with a 2D massage hand system and automatic shoulder detection, it adjusts dynamically to neck and shoulder heights.",
-      "Featuring an integrated SL track rail from neck to thigh, the Z-90 offers 20 automatic programs and 9 manual modes. Microfiber far-infrared graphene heating provides constant temperature warming on the waist and backrest to promote muscle relief.",
+      "Featuring an integrated SL track rail from neck to thigh, the Z-90 offers 20 automatic programs. Microfiber far-infrared graphene heating provides constant temperature warming on the waist and backrest to promote muscle relief.",
       "The chair includes 15 valves with 54 airbags for full body wrapping, 4 valves with 8 airbags in the armrests, and wireless charging. The footrest has a knee massage function, electronic stretching, 34 footrest airbags, and 3 groups of sole rollers."
     ],
     images: [
@@ -142,7 +142,7 @@ export const products: Product[] = [
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
       "Integrated SL track rail and automatic shoulder detection",
-      "9 manual modes and 20 automatic massage programs",
+      "20 automatic programs",
       "15 valves with 54 airbags for comprehensive full-body wrapping",
       "7-inch PAD touch screen and rotating navigation control buttons",
       "Electric telescopic leg rest with electronic stretching and sole rollers",
@@ -166,7 +166,7 @@ export const products: Product[] = [
       "54 wrapping airbags mimic professional therapist pressure"
     ],
     faqs: [
-      { question: "How does the Z-90 compare to the Z-91?", answer: "The Z-90 offers 20 auto programs and 54 airbags (compared to Z-91's 24 programs and 42 airbags) and shares the 7-inch touch PAD controller, but does not include voice control and electric telescopic knee massage." },
+      { question: "How does the Z-90 compare to the Z-91?", answer: "The Z-90 offers 20 auto programs and 54 airbags (compared to Z-91's 20 programs and 42 airbags) and shares the 7-inch touch PAD controller, but does not include voice control and electric telescopic knee massage." },
       { question: "Can I try the Z-90 before buying?", answer: "Yes, it's on display at our showroom. Visit us at Puri Bypass Road, Bhubaneswar." },
       { question: "Do you offer EMI options?", answer: "We can assist with financing options. Please contact us on WhatsApp or call for details on available EMI plans." }
     ],
