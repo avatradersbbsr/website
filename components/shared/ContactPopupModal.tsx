@@ -106,7 +106,7 @@ export default function ContactPopupModal() {
           </div>
 
           {/* Left Side: Product Carousel (Visible on Desktop) */}
-          <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-primary-900 to-secondary-900 text-white flex-col justify-between p-10 relative overflow-hidden">
+          <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-primary-900 to-secondary-900 text-white flex-col justify-between p-8 relative overflow-hidden">
             {/* Ambient glows */}
             <div className="absolute top-[-20%] right-[-20%] w-[80%] h-[80%] bg-accent/20 rounded-full blur-[100px] pointer-events-none" />
             <div className="absolute bottom-[-20%] left-[-20%] w-[80%] h-[80%] bg-primary-500/20 rounded-full blur-[100px] pointer-events-none" />
@@ -135,12 +135,12 @@ export default function ContactPopupModal() {
                   transition={{ duration: 0.5 }}
                   className="w-full h-full max-h-[300px] flex flex-col items-center justify-center"
                 >
-                  <div className="relative w-full h-[220px] bg-white/5 rounded-2xl p-1 flex items-center justify-center border border-white/10 shadow-inner">
+                  <div className="relative w-full h-[170px] bg-white/5 rounded-2xl p-1 flex items-center justify-center border border-white/10 shadow-inner">
                     <ProductImageWithFallback
                       src={carouselProducts[activeImageIdx].images[0]}
                       alt={carouselProducts[activeImageIdx].name}
                       category={carouselProducts[activeImageIdx].category}
-                      className="h-full w-full object-contain p-1 max-h-[200px]"
+                      className="h-full w-full object-contain p-1 max-h-[150px]"
                       priority={true}
                     />
                   </div>
@@ -157,7 +157,7 @@ export default function ContactPopupModal() {
             </div>
 
             {/* Slider Dots & Showroom Details */}
-            <div className="relative z-10 border-t border-white/10 pt-6 flex flex-col gap-4">
+            <div className="relative z-10 border-t border-white/10 pt-4 flex flex-col gap-2.5">
               <div className="flex justify-center gap-2">
                 {carouselProducts.map((_, idx) => (
                   <button
