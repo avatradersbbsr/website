@@ -13,7 +13,7 @@ import { cn } from "@/lib/utils";
 const carouselProducts = products.filter((p) => p.category === "massage-chairs").slice(0, 5);
 
 export default function ContactPopupModal() {
-  const { isOpen, productName, closeModal } = useContactModal();
+  const { isOpen, productName, openModal, closeModal } = useContactModal();
   const [activeImageIdx, setActiveImageIdx] = useState(0);
 
   // Auto-play the carousel inside the modal
@@ -24,6 +24,18 @@ export default function ContactPopupModal() {
     }, 3500);
     return () => clearInterval(interval);
   }, [isOpen]);
+
+  // Auto-open modal on website visit (only once per session)
+  useEffect(() => {
+    const hasSeenPopup = sessionStorage.getItem("hasSeenPromoPopup");
+    if (!hasSeenPopup) {
+      const timer = setTimeout(() => {
+        openModal();
+        sessionStorage.setItem("hasSeenPromoPopup", "true");
+      }, 3000); // 3 seconds delay after load
+      return () => clearTimeout(timer);
+    }
+  }, [openModal]);
 
   // Lock body scroll when modal is open
   useEffect(() => {
@@ -48,7 +60,7 @@ export default function ContactPopupModal() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           onClick={closeModal}
-          className="absolute inset-0 bg-secondary-900/80 backdrop-blur-md"
+          className="absolute inset-0 bg-secondary-900/85 backdrop-blur-md"
         />
 
         {/* Modal Container */}
@@ -62,11 +74,35 @@ export default function ContactPopupModal() {
           {/* Close button */}
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 z-50 p-2 rounded-full bg-secondary-50 text-secondary-500 hover:bg-secondary-100 hover:text-secondary-800 transition-colors"
+            className="absolute top-4 right-4 z-50 p-2 rounded-full bg-secondary-50 text-secondary-500 hover:bg-secondary-100 hover:text-secondary-800 transition-colors shadow-sm"
             aria-label="Close modal"
           >
             <X className="h-5 w-5" />
           </button>
+
+          {/* Mobile-Only Top Slide Banner (Stunning Visual on Mobile) */}
+          <div className="lg:hidden w-full bg-gradient-to-r from-primary-950 to-secondary-900 text-white p-5 flex items-center justify-between border-b border-secondary-800 relative overflow-hidden shrink-0 pr-14">
+            <div className="absolute top-[-25%] right-[-10%] w-[60%] h-[120%] bg-accent/25 rounded-full blur-[40px] pointer-events-none" />
+            <div className="relative z-10 flex flex-col gap-0.5">
+              <span className="inline-flex self-start items-center gap-1 px-2.5 py-0.5 rounded-full bg-accent/35 border border-accent/40 text-[9px] font-bold text-accent-100 uppercase tracking-widest">
+                ★ Flagship Offer
+              </span>
+              <h4 className="font-display text-sm font-extrabold leading-tight mt-1.5">
+                AVA Luxury Massage Chairs
+              </h4>
+              <p className="text-[10px] text-secondary-300">Book Showroom Trial in Bhubaneswar</p>
+            </div>
+            
+            {/* Slide Image Preview on Right */}
+            <div className="relative w-16 h-12 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center p-1 shrink-0 z-10">
+              <ProductImageWithFallback
+                src={carouselProducts[activeImageIdx].images[0]}
+                alt={carouselProducts[activeImageIdx].name}
+                category={carouselProducts[activeImageIdx].category}
+                className="h-full w-full object-contain"
+              />
+            </div>
+          </div>
 
           {/* Left Side: Product Carousel (Visible on Desktop) */}
           <div className="hidden lg:flex lg:w-1/2 bg-gradient-to-br from-primary-900 to-secondary-900 text-white flex-col justify-between p-10 relative overflow-hidden">
@@ -145,13 +181,13 @@ export default function ContactPopupModal() {
             </div>
           </div>
 
-          {/* Right Side: Contact Form */}
+          {/* Right/Bottom Side: Contact Form */}
           <div className="w-full lg:w-1/2 p-6 sm:p-10 flex flex-col overflow-y-auto">
             <div className="mb-6">
-              <h2 className="font-display text-2xl font-extrabold text-secondary-900 leading-tight">
+              <h2 className="font-display text-xl sm:text-2xl font-extrabold text-secondary-900 leading-tight">
                 {productName ? `Inquire About ${productName}` : "Book a Showroom Visit / Enquire"}
               </h2>
-              <p className="text-secondary-400 text-sm mt-1.5">
+              <p className="text-secondary-400 text-xs sm:text-sm mt-1.5">
                 Fill in the details below. Our team in Bhubaneswar will get in touch with you shortly.
               </p>
             </div>

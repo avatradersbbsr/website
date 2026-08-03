@@ -111,14 +111,7 @@ export default function Header() {
           <NavLink href="/about" active={pathname === "/about"}>
             About Us
           </NavLink>
-          <NavLink
-            href="/contact"
-            active={pathname === "/contact"}
-            onClick={(e) => {
-              e.preventDefault();
-              openModal();
-            }}
-          >
+          <NavLink href="/contact" active={pathname === "/contact"}>
             Contact
           </NavLink>
         </nav>
@@ -255,18 +248,16 @@ export default function Header() {
                   About Us
                 </Link>
 
-                <button
+                <Link
+                  href="/contact"
                   className={cn(
-                    "px-4 py-3 rounded-xl text-base font-bold transition-all text-left",
+                    "px-4 py-3 rounded-xl text-base font-bold transition-all",
                     pathname === "/contact" ? "bg-primary-50 text-primary" : "text-secondary-600 hover:bg-secondary-50"
                   )}
-                  onClick={() => {
-                    setOpen(false);
-                    openModal();
-                  }}
+                  onClick={() => setOpen(false)}
                 >
                   Contact
-                </button>
+                </Link>
               </nav>
 
               {/* Mobile Drawer Footer Actions */}
