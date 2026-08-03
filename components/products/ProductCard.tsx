@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { Share2, MessageCircle } from "lucide-react";
 import { Product, discountPercent } from "@/types/product";
@@ -9,6 +10,38 @@ import ProductImageWithFallback from "@/components/shared/ProductImageWithFallba
 
 export default function ProductCard({ product }: { product: Product }) {
   const discount = discountPercent(product.mrp, product.price);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  const startImageCycle = () => {
+    if (product.images.length <= 1) return;
+    
+    // Clear any existing interval before starting a new one
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+
+    intervalRef.current = setInterval(() => {
+      setCurrentImageIndex((prev) => (prev + 1) % product.images.length);
+    }, 3000);
+  };
+
+  const stopImageCycle = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+    setCurrentImageIndex(0);
+  };
+
+  // Clean up interval on component unmount
+  useEffect(() => {
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
+  }, []);
 
   const handleShare = async () => {
     const url = `${window.location.origin}/products/${product.slug}`;
@@ -27,6 +60,8 @@ export default function ProductCard({ product }: { product: Product }) {
 
   return (
     <div
+      onMouseEnter={startImageCycle}
+      onMouseLeave={stopImageCycle}
       className={cn(
         "group flex flex-col rounded-2xl bg-white transition-all duration-300 overflow-hidden",
         isMassageChair
@@ -36,7 +71,7 @@ export default function ProductCard({ product }: { product: Product }) {
     >
       <Link href={`/products/${product.slug}`} className="block relative overflow-hidden bg-secondary-50/20">
         <ProductImageWithFallback
-          src={product.images[0]}
+          src={product.images[currentImageIndex]}
           alt={product.name}
           category={product.category}
           className="aspect-square w-full object-contain p-1.5 group-hover:scale-105 transition-transform duration-500"
