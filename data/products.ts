@@ -1461,15 +1461,15 @@ products.forEach((p) => {
       const productDir = path.join(process.cwd(), "public", "images", "products", p.category, p.slug);
       if (fs.existsSync(productDir)) {
         const files = fs.readdirSync(productDir);
-        const imageFiles = files
-          .filter((file: string) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+        const mediaFiles = files
+          .filter((file: string) => /\.(jpg|jpeg|png|webp|mp4|webm)$/i.test(file))
           .sort((a: string, b: string) => {
             const numA = parseInt(a.match(/\d+/)?.[0] || "0", 10);
             const numB = parseInt(b.match(/\d+/)?.[0] || "0", 10);
             return numA - numB;
           });
-        if (imageFiles.length > 0) {
-          p.images = imageFiles.map((file: string) => `/images/products/${p.category}/${p.slug}/${file}`);
+        if (mediaFiles.length > 0) {
+          p.images = mediaFiles.map((file: string) => `/images/products/${p.category}/${p.slug}/${file}`);
         }
       }
     } catch (err) {
