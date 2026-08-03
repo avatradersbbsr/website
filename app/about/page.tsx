@@ -1,16 +1,10 @@
-import type { Metadata } from "next";
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { ShieldCheck, Target, Eye, Award, Calendar, BadgePercent } from "lucide-react";
+import { ShieldCheck, Target, Eye, Award, Calendar } from "lucide-react";
 import SectionHeading from "@/components/shared/SectionHeading";
 import { BreadcrumbSchema } from "@/components/seo/schema";
-import { siteConfig } from "@/lib/site-config";
-
-export const metadata: Metadata = {
-  title: "About Us",
-  description:
-    "AVA Traders has been Bhubaneswar's showroom for massage chairs, leg massagers and health care products since 2010. Learn our story, mission and values.",
-  alternates: { canonical: "/about" },
-};
 
 const values = [
   { icon: ShieldCheck, title: "Honest Recommendations", text: "We'd rather sell you the right product at a lower price than the most expensive one that doesn't fit your needs." },
@@ -25,6 +19,31 @@ const timeline = [
   { year: "2026", title: "Modern Premium Overhaul", desc: "Now Bhubaneswar's leading premium wellness retail showroom offering zero-gravity massage chairs and AI-powered massagers." },
 ];
 
+function CountUp({ end, duration = 1500, decimals = 0, suffix = "" }: { end: number; duration?: number; decimals?: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const currentCount = progress * end;
+      setCount(currentCount);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }, [end, duration]);
+
+  return (
+    <span>
+      {count.toFixed(decimals)}
+      {suffix}
+    </span>
+  );
+}
+
 export default function AboutPage() {
   return (
     <>
@@ -37,19 +56,19 @@ export default function AboutPage() {
         <div className="absolute bottom-0 left-0 w-[30%] h-[60%] bg-primary/20 rounded-full blur-[120px] pointer-events-none" />
 
         <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-8 items-center">
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 animate-fade-up">
             <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 border border-accent/20 px-3 py-1 text-xs font-semibold text-accent tracking-wide uppercase">
               Our Legacy
             </span>
             <h1 className="mt-4 text-4xl sm:text-5xl font-display font-extrabold text-white leading-tight">
               A showroom built around trying things before you buy them
             </h1>
-            <p className="mt-4 text-secondary-200 text-lg leading-relaxed max-w-xl">
+            <p className="mt-4 text-secondary-200 text-base sm:text-lg leading-relaxed max-w-xl">
               Since 2010, AVA Traders has helped the residents of Bhubaneswar find recovery and comfort in their daily routines.
             </p>
           </div>
           
-          <div className="lg:col-span-5 relative hidden lg:block">
+          <div className="lg:col-span-5 relative hidden lg:block animate-scale-in">
             <div className="w-full aspect-[4/3] rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center p-6 backdrop-blur-sm relative overflow-hidden">
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-accent/15 rounded-full blur-2xl" />
               
@@ -59,6 +78,7 @@ export default function AboutPage() {
                   src="/images/products/massage-chairs/am-999/1.png" 
                   alt="AM-999 Luxury Premium Massage Chair" 
                   fill
+                  priority
                   className="object-contain p-4"
                 />
               </div>
@@ -91,7 +111,7 @@ export default function AboutPage() {
 
       {/* Brand Story & Philosophy */}
       <section className="section-y container-wide grid lg:grid-cols-2 gap-12 items-start">
-        <div className="space-y-6 text-secondary-500 leading-relaxed text-base">
+        <div className="space-y-6 text-secondary-500 leading-relaxed text-base animate-fade-up">
           <h2 className="font-display text-3xl font-extrabold text-secondary-700">Our Story</h2>
           <p>
             AVA Traders started in 2010 as a proprietorship dealing in body massagers and basic
@@ -108,7 +128,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div className="grid gap-6">
+        <div className="grid gap-6 animate-slide-in-right">
           <div className="rounded-2xl bg-white p-6 border border-secondary-100 shadow-soft hover-lift">
             <h3 className="flex items-center gap-2 font-display font-bold text-secondary-700 text-lg">
               <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary-50 text-primary">
@@ -137,7 +157,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Interactive Timeline Section */}
+      {/* Timeline Section */}
       <section className="section-y bg-primary-50/30">
         <div className="container-wide">
           <SectionHeading eyebrow="Our Journey" title="The Story of Growth" />
@@ -148,7 +168,7 @@ export default function AboutPage() {
             
             <div className="space-y-12">
               {timeline.map((item, idx) => (
-                <div key={item.year} className={`relative flex flex-col md:flex-row items-start md:items-center ${idx % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
+                <div key={item.year} className={`relative flex flex-col md:flex-row items-start md:items-center ${idx % 2 === 0 ? "md:flex-row-reverse" : ""} animate-fade-up`}>
                   
                   {/* Timeline point */}
                   <div className="absolute left-[15px] md:left-1/2 transform -translate-x-1/2 flex items-center justify-center h-5 w-5 rounded-full bg-accent border-[3px] border-white shadow-soft z-10" />
@@ -175,8 +195,8 @@ export default function AboutPage() {
         <div className="container-wide">
           <SectionHeading eyebrow="What We Stand For" title="Our Core Values" />
           <div className="mt-12 grid sm:grid-cols-3 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="rounded-2xl bg-canvas border border-secondary-100 p-8 hover-lift">
+            {values.map((v, idx) => (
+              <div key={v.title} className="rounded-2xl bg-canvas border border-secondary-100 p-8 hover-lift animate-fade-up" style={{ animationDelay: `${idx * 150}ms` }}>
                 <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary">
                   <v.icon className="h-6 w-6" />
                 </span>
@@ -190,20 +210,26 @@ export default function AboutPage() {
 
       {/* Glassmorphic Stats Section */}
       <section className="section-y container-wide">
-        <div className="rounded-3xl bg-secondary-900 px-8 py-12 md:p-16 relative overflow-hidden">
+        <div className="rounded-3xl bg-secondary-900 px-8 py-12 md:p-16 relative overflow-hidden animate-fade-up">
           <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(230,57,70,0.1), transparent 60%)" />
           
           <div className="relative z-10 grid sm:grid-cols-3 gap-8 text-center">
             <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm hover:scale-[1.02] transition-transform duration-300">
-              <p className="font-display text-4xl font-extrabold text-accent">15+</p>
+              <p className="font-display text-4xl font-extrabold text-accent">
+                <CountUp end={15} suffix="+" />
+              </p>
               <p className="text-secondary-300 mt-2 text-sm font-semibold uppercase tracking-wider">Years of Trust</p>
             </div>
             <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm hover:scale-[1.02] transition-transform duration-300">
-              <p className="font-display text-4xl font-extrabold text-primary-200">3</p>
+              <p className="font-display text-4xl font-extrabold text-primary-200">
+                <CountUp end={3} />
+              </p>
               <p className="text-secondary-300 mt-2 text-sm font-semibold uppercase tracking-wider">Curated Categories</p>
             </div>
             <div className="rounded-2xl bg-white/5 border border-white/10 p-6 backdrop-blur-sm hover:scale-[1.02] transition-transform duration-300">
-              <p className="font-display text-4xl font-extrabold text-primary-200">4.6★</p>
+              <p className="font-display text-4xl font-extrabold text-primary-200">
+                <CountUp end={4.6} decimals={1} suffix="★" />
+              </p>
               <p className="text-secondary-300 mt-2 text-sm font-semibold uppercase tracking-wider">Google rating</p>
             </div>
           </div>
