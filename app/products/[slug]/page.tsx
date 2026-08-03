@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { CheckCircle2, ShieldCheck, MessageCircle, Phone } from "lucide-react";
+import { CheckCircle2, ShieldCheck, MessageCircle, Phone, Truck } from "lucide-react";
 import { products, getProductBySlug, getRelatedProducts } from "@/data/products";
 import { getCategoryBySlug } from "@/data/categories";
 import { discountPercent } from "@/types/product";
@@ -99,18 +99,23 @@ export default async function ProductDetailPage({
               </>
             )}
           </div>
-          <p className="mt-1 text-sm text-secondary-400">Inclusive of all taxes. Shipping calculated at enquiry.</p>
+          <div className="mt-5 flex flex-wrap items-center gap-2.5 text-xs sm:text-sm">
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-secondary-50 border border-secondary-100 text-secondary-700 font-semibold shadow-soft">
+              <span className={`h-2 w-2 rounded-full ${product.availability === "in-stock" ? "bg-primary" : "bg-accent"}`} />
+              {product.availability === "in-stock" ? "In Stock" : "Limited Stock"}
+            </div>
+            
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-accent-50 border border-accent-100 text-accent font-bold shadow-soft">
+              <ShieldCheck className="h-4 w-4" /> {product.warranty} Warranty
+            </div>
 
-          <div className="mt-5 flex items-center gap-2 text-sm">
-            <span className={`h-2 w-2 rounded-full ${product.availability === "in-stock" ? "bg-primary" : "bg-accent"}`} />
-            <span className="font-medium text-secondary-600">
-              {product.availability === "in-stock" ? "In Stock — Ready to Ship" : "Limited Stock"}
-            </span>
-            <span className="text-secondary-300">·</span>
-            <span className="flex items-center gap-1 text-secondary-500">
-              <ShieldCheck className="h-4 w-4 text-primary" /> {product.warranty} Warranty
-            </span>
+            <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary-50 border border-primary-100 text-primary font-bold shadow-soft">
+              <Truck className="h-4 w-4" /> Free Delivery & Installation*
+            </div>
           </div>
+          <p className="mt-2 text-[10px] text-secondary-400 italic">
+            *Free delivery and custom home installation available across major cities in Odisha. T&C Apply.
+          </p>
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a

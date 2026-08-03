@@ -1451,6 +1451,17 @@ export const products: Product[] = [
   }
 ];
 
+// Override warranties dynamically based on category
+products.forEach((p) => {
+  if (p.category === "massage-chairs") {
+    p.warranty = "6 Years (1 Year Comprehensive + 5 Years Motor)";
+  } else if (p.category === "leg-massagers") {
+    p.warranty = "3 Years (1 Year Comprehensive + 2 Years Motor)";
+  } else if (p.category === "health-care-products") {
+    p.warranty = "1 Year Brand Warranty";
+  }
+});
+
 export function getProductBySlug(slug: string) {
   return products.find((p) => p.slug === slug);
 }
