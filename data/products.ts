@@ -132,9 +132,9 @@ export const products: Product[] = [
       "The chair includes 15 valves with 54 airbags for full body wrapping, 4 valves with 8 airbags in the armrests, and wireless charging. The footrest has a knee massage function, electronic stretching, 34 footrest airbags, and 3 groups of sole rollers."
     ],
     images: [
-      "/images/products/z-90-economic-premium/1.jpg",
-      "/images/products/z-90-economic-premium/2.jpg",
-      "/images/products/z-90-economic-premium/3.jpg"
+      "/images/products/massage-chairs/z-90-economic-premium-ultra-luxury/1.jpg",
+      "/images/products/massage-chairs/z-90-economic-premium-ultra-luxury/2.jpg",
+      "/images/products/massage-chairs/z-90-economic-premium-ultra-luxury/3.jpg"
     ],
     mrp: 305000,
     price: 195000,
