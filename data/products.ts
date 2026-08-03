@@ -1453,6 +1453,30 @@ export const products: Product[] = [
 
 // Override warranties and key features dynamically
 products.forEach((p) => {
+  // Dynamically scan product directory for images to show all available photos (Server-side only)
+  if (typeof window === "undefined") {
+    try {
+      const fs = require("fs");
+      const path = require("path");
+      const productDir = path.join(process.cwd(), "public", "images", "products", p.category, p.slug);
+      if (fs.existsSync(productDir)) {
+        const files = fs.readdirSync(productDir);
+        const imageFiles = files
+          .filter((file: string) => /\.(jpg|jpeg|png|webp)$/i.test(file))
+          .sort((a: string, b: string) => {
+            const numA = parseInt(a.match(/\d+/)?.[0] || "0", 10);
+            const numB = parseInt(b.match(/\d+/)?.[0] || "0", 10);
+            return numA - numB;
+          });
+        if (imageFiles.length > 0) {
+          p.images = imageFiles.map((file: string) => `/images/products/${p.category}/${p.slug}/${file}`);
+        }
+      }
+    } catch (err) {
+      // Ignore during client-side packaging
+    }
+  }
+
   if (p.category === "massage-chairs") {
     p.warranty = "6 Years (1 Year Comprehensive + 5 Years Motor)";
     
