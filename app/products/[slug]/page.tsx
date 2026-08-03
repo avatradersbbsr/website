@@ -132,10 +132,22 @@ export default async function ProductDetailPage({
             >
               <Phone className="h-4 w-4" /> Call Now
             </a>
-            {(product.id === "z-91-ultra-luxury" || product.id === "z-90-economic-premium-ultra-luxury") && (
+            {(product.id === "z-91-ultra-luxury" || product.id === "z-90-economic-premium-ultra-luxury" || product.id === "z-plus-100-premium-luxury") && (
               <a
-                href={product.id === "z-91-ultra-luxury" ? "/Z91 MASSAGE CHAIR.pdf" : "/Z90 MASSAGE CHAIR.pdf"}
-                download={product.id === "z-91-ultra-luxury" ? "Z91 MASSAGE CHAIR.pdf" : "Z90 MASSAGE CHAIR.pdf"}
+                href={
+                  product.id === "z-91-ultra-luxury"
+                    ? "/Z91 MASSAGE CHAIR.pdf"
+                    : product.id === "z-90-economic-premium-ultra-luxury"
+                    ? "/Z90 MASSAGE CHAIR.pdf"
+                    : "/Z100 MASSAGE CHAIR.pdf"
+                }
+                download={
+                  product.id === "z-91-ultra-luxury"
+                    ? "Z91 MASSAGE CHAIR.pdf"
+                    : product.id === "z-90-economic-premium-ultra-luxury"
+                    ? "Z90 MASSAGE CHAIR.pdf"
+                    : "Z100 MASSAGE CHAIR.pdf"
+                }
                 className="inline-flex items-center gap-2 rounded-full border-2 border-primary text-primary px-6 py-3.5 font-bold hover:bg-primary hover:text-white transition-all w-full sm:w-auto justify-center"
               >
                 <Download className="h-4 w-4" /> Download Specification
