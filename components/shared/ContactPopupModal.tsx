@@ -94,12 +94,13 @@ export default function ContactPopupModal() {
             </div>
             
             {/* Slide Image Preview on Right */}
-            <div className="relative w-16 h-12 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center p-1 shrink-0 z-10">
+            <div className="relative w-16 h-12 bg-white/5 rounded-xl border border-white/10 flex items-center justify-center p-0.5 shrink-0 z-10">
               <ProductImageWithFallback
                 src={carouselProducts[activeImageIdx].images[0]}
                 alt={carouselProducts[activeImageIdx].name}
                 category={carouselProducts[activeImageIdx].category}
                 className="h-full w-full object-contain"
+                priority={true}
               />
             </div>
           </div>
@@ -134,12 +135,13 @@ export default function ContactPopupModal() {
                   transition={{ duration: 0.5 }}
                   className="w-full h-full max-h-[300px] flex flex-col items-center justify-center"
                 >
-                  <div className="relative w-full h-[220px] bg-white/5 rounded-2xl p-4 flex items-center justify-center border border-white/10 shadow-inner">
+                  <div className="relative w-full h-[220px] bg-white/5 rounded-2xl p-1 flex items-center justify-center border border-white/10 shadow-inner">
                     <ProductImageWithFallback
                       src={carouselProducts[activeImageIdx].images[0]}
                       alt={carouselProducts[activeImageIdx].name}
                       category={carouselProducts[activeImageIdx].category}
-                      className="h-full w-full object-contain p-2 max-h-[190px]"
+                      className="h-full w-full object-contain p-1 max-h-[200px]"
+                      priority={true}
                     />
                   </div>
                   <div className="mt-4 text-center">

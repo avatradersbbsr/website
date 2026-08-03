@@ -39,7 +39,7 @@ export default function ProductCard({ product }: { product: Product }) {
           src={product.images[0]}
           alt={product.name}
           category={product.category}
-          className="aspect-square w-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+          className="aspect-square w-full object-contain p-1.5 group-hover:scale-105 transition-transform duration-500"
         />
         {discount > 0 && (
           <span className="absolute top-3 left-3 rounded-full bg-accent text-white text-xs font-bold px-2.5 py-1 z-10">

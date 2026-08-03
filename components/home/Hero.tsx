@@ -192,7 +192,8 @@ export default function Hero() {
                   src={heroChairs[activeSlide].image}
                   alt={heroChairs[activeSlide].name}
                   category="massage-chairs"
-                  className="h-full w-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                  className="h-full w-full object-contain p-1 group-hover:scale-105 transition-transform duration-500"
+                  priority={true}
                 />
               </Link>
 
