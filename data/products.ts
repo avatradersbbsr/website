@@ -1451,10 +1451,42 @@ export const products: Product[] = [
   }
 ];
 
-// Override warranties dynamically based on category
+// Override warranties and key features dynamically
 products.forEach((p) => {
   if (p.category === "massage-chairs") {
     p.warranty = "6 Years (1 Year Comprehensive + 5 Years Motor)";
+    
+    // Remove references to 3D sound / audio / speakers
+    const cleanFeatures = p.features.filter(
+      (f) => !/audio|sound|speaker|3d digital/i.test(f)
+    );
+
+    // Detect 3D or 4D from name or description
+    const is4D =
+      /4D/i.test(p.name) ||
+      /4D/i.test(p.shortDescription) ||
+      (p.description && p.description.some((d) => /4D/i.test(d)));
+    const robotTech = is4D
+      ? "Advanced 4D AI Massage Robot Technology"
+      : "Premium 3D AI Massage Robot Technology";
+
+    // Setup standard highlighted core features
+    const coreFeatures = [
+      robotTech,
+      "Full-Body Airbag Compression (Shoulders, Arms, Hips & Feet)",
+      "Ergonomic S+L Shape Long Rail Tracking",
+      "Bluetooth Connection & Smart Mobile Device Sync",
+    ];
+
+    // Append other non-duplicated features
+    cleanFeatures.forEach((f) => {
+      const isDuplicate = /4D|3D|S\+L|SL|track|rail|airbag|bluetooth|mobile/i.test(f);
+      if (!isDuplicate) {
+        coreFeatures.push(f);
+      }
+    });
+
+    p.features = coreFeatures;
   } else if (p.category === "leg-massagers") {
     p.warranty = "3 Years (1 Year Comprehensive + 2 Years Motor)";
   } else if (p.category === "health-care-products") {
