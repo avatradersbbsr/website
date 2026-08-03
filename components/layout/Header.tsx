@@ -5,10 +5,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Phone, ChevronDown, Armchair, Activity, HeartPulse } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
 import { siteConfig, telLink } from "@/lib/site-config";
 import { categories } from "@/data/categories";
 import { cn } from "@/lib/utils";
+import { useContactModal } from "@/components/shared/ContactModalContext";
 
 const categoryIcons = {
   "massage-chairs": Armchair,
@@ -20,18 +20,16 @@ export default function Header() {
   const [megaOpen, setMegaOpen] = useState(false);
   const [mobileCategoriesOpen, setMobileCategoriesOpen] = useState(false);
   const pathname = usePathname();
+  const { openModal } = useContactModal();
 
   return (
-    <>
-      <header className="sticky top-0 z-50 w-full glass-premium shadow-soft border-b border-primary-50">
+    <header className="sticky top-0 z-50 w-full glass-premium shadow-soft border-b border-primary-50">
       <div className="container-wide flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
-          <Image
+          <img
             src="/images/logo.jpeg"
             alt="AVA Traders Logo"
-            width={44}
-            height={44}
-            className="rounded-full object-cover border border-secondary-100 hover:scale-105 transition-transform duration-300"
+            className="h-11 w-11 rounded-full object-cover border border-secondary-100 hover:scale-105 transition-transform duration-300"
           />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-xl font-bold text-primary">
@@ -113,7 +111,14 @@ export default function Header() {
           <NavLink href="/about" active={pathname === "/about"}>
             About Us
           </NavLink>
-          <NavLink href="/contact" active={pathname === "/contact"}>
+          <NavLink
+            href="/contact"
+            active={pathname === "/contact"}
+            onClick={(e) => {
+              e.preventDefault();
+              openModal();
+            }}
+          >
             Contact
           </NavLink>
         </nav>
@@ -145,152 +150,173 @@ export default function Header() {
         </button>
       </div>
 
-    </header>
+      {/* Mobile drawer menu */}
+      <AnimatePresence>
+        {open && (
+          <>
+            {/* Backdrop overlay */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setOpen(false)}
+              className="fixed inset-0 z-50 bg-secondary-900 lg:hidden"
+            />
 
-    {/* Mobile drawer menu rendered outside sticky header context to prevent clipping */}
-    <AnimatePresence>
-      {open && (
-        <>
-           {/* Backdrop overlay */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setOpen(false)}
-            className="fixed inset-0 z-[60] bg-secondary-900 lg:hidden"
-          />
-
-          {/* Slide-in Menu Panel */}
-          <motion.div
-            initial={{ x: "100%" }}
-            animate={{ x: 0 }}
-            exit={{ x: "100%" }}
-            transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="fixed right-0 top-0 bottom-0 z-[70] w-full max-w-xs sm:max-w-sm bg-white shadow-card p-6 flex flex-col lg:hidden overflow-y-auto"
-          >
-            {/* Drawer Header */}
-            <div className="flex items-center justify-between pb-6 border-b border-secondary-100">
-              <div className="flex items-center gap-2">
-                <Image
-                  src="/images/logo.jpeg"
-                  alt="AVA Traders Logo"
-                  width={36}
-                  height={36}
-                  className="rounded-full object-cover border border-secondary-100"
-                />
-                <span className="font-display font-bold text-lg text-primary">
-                  AVA <span className="text-accent">Traders</span>
-                </span>
-              </div>
-              <button
-                onClick={() => setOpen(false)}
-                className="p-2 rounded-xl text-secondary-500 hover:bg-secondary-50 hover:text-secondary-700 transition-colors"
-                aria-label="Close menu"
-              >
-                <X className="h-6 w-6" />
-              </button>
-            </div>
-
-            {/* Navigation links */}
-            <nav className="flex flex-col gap-1 py-6 flex-1">
-              <Link
-                href="/"
-                className={cn(
-                  "px-4 py-3 rounded-xl text-base font-bold transition-all",
-                  pathname === "/" ? "bg-primary-50 text-primary" : "text-secondary-600 hover:bg-secondary-50"
-                )}
-                onClick={() => setOpen(false)}
-              >
-                Home
-              </Link>
-
-              {/* Collapsible Categories Section */}
-              <div className="flex flex-col">
+            {/* Slide-in Menu Panel */}
+            <motion.div
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "spring", damping: 25, stiffness: 200 }}
+              className="fixed right-0 top-0 bottom-0 z-50 w-full max-w-xs sm:max-w-sm bg-white shadow-card p-6 flex flex-col lg:hidden overflow-y-auto"
+            >
+              {/* Drawer Header */}
+              <div className="flex items-center justify-between pb-6 border-b border-secondary-100">
+                <div className="flex items-center gap-2">
+                  <img
+                    src="/images/logo.jpeg"
+                    alt="AVA Traders Logo"
+                    className="h-9 w-9 rounded-full object-cover border border-secondary-100"
+                  />
+                  <span className="font-display font-bold text-lg text-primary">
+                    AVA <span className="text-accent">Traders</span>
+                  </span>
+                </div>
                 <button
-                  onClick={() => setMobileCategoriesOpen(!mobileCategoriesOpen)}
-                  className="flex items-center justify-between px-4 py-3 rounded-xl text-base font-bold text-secondary-600 hover:bg-secondary-50 text-left transition-colors"
+                  onClick={() => setOpen(false)}
+                  className="p-2 rounded-xl text-secondary-500 hover:bg-secondary-50 hover:text-secondary-700 transition-colors"
+                  aria-label="Close menu"
                 >
-                  <span>Products</span>
-                  <ChevronDown className={cn("h-5 w-5 transition-transform text-secondary-400", mobileCategoriesOpen && "rotate-180")} />
+                  <X className="h-6 w-6" />
                 </button>
-                <AnimatePresence>
-                  {mobileCategoriesOpen && (
-                    <motion.div
-                      initial={{ height: 0, opacity: 0 }}
-                      animate={{ height: "auto", opacity: 1 }}
-                      exit={{ height: 0, opacity: 0 }}
-                      className="pl-4 flex flex-col gap-1 overflow-hidden"
-                    >
-                      {categories.map((cat) => (
+              </div>
+
+              {/* Navigation links */}
+              <nav className="flex flex-col gap-1 py-6 flex-1">
+                <Link
+                  href="/"
+                  className={cn(
+                    "px-4 py-3 rounded-xl text-base font-bold transition-all",
+                    pathname === "/" ? "bg-primary-50 text-primary" : "text-secondary-600 hover:bg-secondary-50"
+                  )}
+                  onClick={() => setOpen(false)}
+                >
+                  Home
+                </Link>
+
+                {/* Collapsible Categories Section */}
+                <div className="flex flex-col">
+                  <button
+                    onClick={() => setMobileCategoriesOpen(!mobileCategoriesOpen)}
+                    className="flex items-center justify-between px-4 py-3 rounded-xl text-base font-bold text-secondary-600 hover:bg-secondary-50 text-left transition-colors"
+                  >
+                    <span>Products</span>
+                    <ChevronDown className={cn("h-5 w-5 transition-transform text-secondary-400", mobileCategoriesOpen && "rotate-180")} />
+                  </button>
+                  <AnimatePresence>
+                    {mobileCategoriesOpen && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        className="pl-4 flex flex-col gap-1 overflow-hidden"
+                      >
+                        {categories.map((cat) => (
+                          <Link
+                            key={cat.slug}
+                            href={`/products?category=${cat.slug}`}
+                            className="px-4 py-2.5 rounded-lg text-sm font-semibold text-secondary-500 hover:text-primary hover:bg-primary-50 transition-all"
+                            onClick={() => setOpen(false)}
+                          >
+                            {cat.name}
+                          </Link>
+                        ))}
                         <Link
-                          key={cat.slug}
-                          href={`/products?category=${cat.slug}`}
-                          className="px-4 py-2.5 rounded-lg text-sm font-semibold text-secondary-500 hover:text-primary hover:bg-primary-50 transition-all"
+                          href="/products"
+                          className="px-4 py-2.5 rounded-lg text-sm font-bold text-accent hover:underline"
                           onClick={() => setOpen(false)}
                         >
-                          {cat.name}
+                          View All Products →
                         </Link>
-                      ))}
-                      <Link
-                        href="/products"
-                        className="px-4 py-2.5 rounded-lg text-sm font-bold text-accent hover:underline"
-                        onClick={() => setOpen(false)}
-                      >
-                        View All Products →
-                      </Link>
-                    </motion.div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+
+                <Link
+                  href="/about"
+                  className={cn(
+                    "px-4 py-3 rounded-xl text-base font-bold transition-all",
+                    pathname === "/about" ? "bg-primary-50 text-primary" : "text-secondary-600 hover:bg-secondary-50"
                   )}
-                </AnimatePresence>
+                  onClick={() => setOpen(false)}
+                >
+                  About Us
+                </Link>
+
+                <button
+                  className={cn(
+                    "px-4 py-3 rounded-xl text-base font-bold transition-all text-left",
+                    pathname === "/contact" ? "bg-primary-50 text-primary" : "text-secondary-600 hover:bg-secondary-50"
+                  )}
+                  onClick={() => {
+                    setOpen(false);
+                    openModal();
+                  }}
+                >
+                  Contact
+                </button>
+              </nav>
+
+              {/* Mobile Drawer Footer Actions */}
+              <div className="pt-6 border-t border-secondary-100 flex flex-col gap-3">
+                <a
+                  href={telLink(siteConfig.contact.phonePrimary)}
+                  className="flex items-center justify-center gap-2 rounded-full border-2 border-secondary-750 py-3 text-sm font-bold text-secondary-700 hover:bg-secondary-50 transition-all"
+                >
+                  <Phone className="h-4 w-4" /> Call Showroom
+                </a>
+                <Link
+                  href="/products"
+                  className="flex items-center justify-center gap-2 rounded-full bg-accent text-white py-3.5 text-sm font-bold shadow-glow-accent hover:bg-accent-600 transition-all"
+                  onClick={() => setOpen(false)}
+                >
+                  Shop Products
+                </Link>
               </div>
-
-              <Link
-                href="/about"
-                className={cn(
-                  "px-4 py-3 rounded-xl text-base font-bold transition-all",
-                  pathname === "/about" ? "bg-primary-50 text-primary" : "text-secondary-600 hover:bg-secondary-50"
-                )}
-                onClick={() => setOpen(false)}
-              >
-                About Us
-              </Link>
-
-              <Link
-                href="/contact"
-                className={cn(
-                  "px-4 py-3 rounded-xl text-base font-bold transition-all",
-                  pathname === "/contact" ? "bg-primary-50 text-primary" : "text-secondary-600 hover:bg-secondary-50"
-                )}
-                onClick={() => setOpen(false)}
-              >
-                Contact
-              </Link>
-            </nav>
-
-            {/* Mobile Drawer Footer Actions */}
-            <div className="pt-6 border-t border-secondary-100 flex flex-col gap-3">
-              <a
-                href={telLink(siteConfig.contact.phonePrimary)}
-                className="flex items-center justify-center gap-2 rounded-full border-2 border-secondary-750 py-3 text-sm font-bold text-secondary-700 hover:bg-secondary-50 transition-all"
-              >
-                <Phone className="h-4 w-4" /> Call Showroom
-              </a>
-              <Link
-                href="/products"
-                className="flex items-center justify-center gap-2 rounded-full bg-accent text-white py-3.5 text-sm font-bold shadow-glow-accent hover:bg-accent-600 transition-all"
-                onClick={() => setOpen(false)}
-              >
-                Shop Products
-              </Link>
-            </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
-    </>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+    </header>
   );
 }
 
-function NavLink({ href, active, children }: { href: string; active: boolean; children: React.ReactNode }) {
+function NavLink({
+  href,
+  active,
+  onClick,
+  children,
+}: {
+  href: string;
+  active: boolean;
+  onClick?: (e: React.MouseEvent) => void;
+  children: React.ReactNode;
+}) {
+  if (onClick) {
+    return (
+      <button
+        onClick={onClick}
+        className={cn(
+          "px-4 py-2 rounded-lg text-sm font-bold transition-colors text-left",
+          active ? "text-primary bg-primary-50" : "text-secondary-600 hover:text-primary hover:bg-primary-50"
+        )}
+      >
+        {children}
+      </button>
+    );
+  }
   return (
     <Link
       href={href}

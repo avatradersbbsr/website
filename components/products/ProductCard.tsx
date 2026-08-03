@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { Share2, MessageCircle, ArrowUpRight } from "lucide-react";
+import { Share2, MessageCircle } from "lucide-react";
 import { Product, discountPercent } from "@/types/product";
-import { formatINR } from "@/lib/utils";
+import { formatINR, cn } from "@/lib/utils";
 import { whatsappLink } from "@/lib/site-config";
 import ProductImageWithFallback from "@/components/shared/ProductImageWithFallback";
 
@@ -23,84 +23,83 @@ export default function ProductCard({ product }: { product: Product }) {
     }
   };
 
+  const isMassageChair = product.category === "massage-chairs";
+
   return (
-    <div className="group flex flex-col rounded-3xl bg-white border border-secondary-100/80 shadow-soft hover:shadow-card hover:border-accent/20 transition-all duration-500 overflow-hidden">
-      <Link href={`/products/${product.slug}`} className="block relative overflow-hidden bg-gradient-to-b from-secondary-50/20 to-transparent pt-6 px-6">
-        <div className="relative aspect-square w-full rounded-2xl bg-secondary-50/40 border border-secondary-100/30 overflow-hidden group-hover:bg-white transition-colors duration-500 flex items-center justify-center">
-          <div className="absolute inset-0 p-6 flex items-center justify-center transition-opacity duration-500 ease-in-out group-hover:opacity-0">
-            <ProductImageWithFallback
-              src={product.images[0]}
-              alt={product.name}
-              category={product.category}
-              className="w-full h-full object-contain"
-            />
-          </div>
-          {product.images[1] && (
-            <div className="absolute inset-0 p-6 flex items-center justify-center opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100">
-              <ProductImageWithFallback
-                src={product.images[1]}
-                alt={product.name}
-                category={product.category}
-                className="w-full h-full object-contain"
-              />
-            </div>
-          )}
-        </div>
+    <div
+      className={cn(
+        "group flex flex-col rounded-2xl bg-white transition-all duration-300 overflow-hidden",
+        isMassageChair
+          ? "border-2 border-gold/70 shadow-glow-gold hover:border-primary ring-1 ring-gold/20"
+          : "border border-secondary-100 shadow-soft hover:shadow-card hover:border-primary-200"
+      )}
+    >
+      <Link href={`/products/${product.slug}`} className="block relative overflow-hidden bg-secondary-50/20">
+        <ProductImageWithFallback
+          src={product.images[0]}
+          alt={product.name}
+          category={product.category}
+          className="aspect-square w-full object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+        />
         {discount > 0 && (
-          <span className="absolute top-8 left-8 rounded-full bg-accent text-white text-[10px] font-extrabold px-3 py-1 shadow-sm uppercase tracking-wider">
+          <span className="absolute top-3 left-3 rounded-full bg-accent text-white text-xs font-bold px-2.5 py-1 z-10">
             {discount}% OFF
           </span>
         )}
-        {product.bestSeller && (
-          <span className="absolute top-8 right-8 rounded-full bg-primary text-white text-[9px] font-extrabold uppercase tracking-widest px-3 py-1 shadow-sm">
-            Top Seller
+        {isMassageChair ? (
+          <span className="absolute top-3 right-3 rounded-full bg-gradient-to-r from-gold-600 to-gold-700 text-white text-[9px] font-bold uppercase tracking-wider px-3 py-1 shadow-sm border border-gold-400/20 z-10">
+            ★ Flagship Series
           </span>
-        )}
+        ) : product.bestSeller ? (
+          <span className="absolute top-3 right-3 rounded-full bg-primary text-white text-[10px] font-semibold uppercase tracking-wide px-2.5 py-1 z-10">
+            Best Seller
+          </span>
+        ) : null}
       </Link>
 
-      <div className="flex flex-col gap-2 p-5 flex-1">
-        <div>
-          <span className="text-[10px] font-extrabold uppercase tracking-widest text-accent/80">
-            {product.category.replace("-", " ")}
-          </span>
-          <Link href={`/products/${product.slug}`}>
-            <h3 className="mt-1 font-display font-bold text-secondary-700 text-[15px] sm:text-base leading-snug hover:text-primary transition-colors line-clamp-2">
-              {product.name}
-            </h3>
-          </Link>
-        </div>
-        
-        <p className="text-xs text-secondary-400/90 line-clamp-2 leading-relaxed">
-          {product.shortDescription}
-        </p>
+      <div className="flex flex-col gap-2 p-4 flex-1">
+        <Link href={`/products/${product.slug}`}>
+          <h3 className="font-display font-semibold text-secondary-700 leading-snug hover:text-primary transition-colors line-clamp-2">
+            {product.name}
+          </h3>
+        </Link>
+        <p className="text-sm text-secondary-400 line-clamp-2">{product.shortDescription}</p>
 
-        <div className="flex items-baseline gap-2 mt-auto pt-3 border-t border-secondary-100/50">
-          <span className="text-lg font-extrabold text-secondary-700">{formatINR(product.price)}</span>
+        <div className="flex items-baseline gap-2 mt-1">
+          <span className="text-lg font-bold text-secondary-700">{formatINR(product.price)}</span>
           {discount > 0 && (
-            <span className="text-xs text-secondary-300 line-through font-semibold">{formatINR(product.mrp)}</span>
+            <span className="text-sm text-secondary-300 line-through">{formatINR(product.mrp)}</span>
           )}
         </div>
 
-        <div className="mt-4 flex items-center gap-2">
+        <p
+          className={`text-xs font-medium ${
+            product.availability === "in-stock" ? "text-primary" : "text-accent-600"
+          }`}
+        >
+          {product.availability === "in-stock" ? "In Stock — Ready to Ship" : "Limited Stock"}
+        </p>
+
+        <div className="mt-3 flex items-center gap-2">
           <Link
             href={`/products/${product.slug}`}
-            className="flex-1 inline-flex items-center justify-center gap-1.5 rounded-full bg-secondary-900 text-white text-xs font-bold py-3 hover:bg-accent transition-colors duration-300"
+            className="flex-1 text-center rounded-full border border-secondary-200 text-secondary-700 text-sm font-semibold py-2 hover:border-primary hover:text-primary transition-colors"
           >
-            Explore <ArrowUpRight className="h-3.5 w-3.5" />
+            View Details
           </Link>
           <a
-            href={whatsappLink(`Hi, I'm interested in the ${product.name} (${formatINR(product.price)}). Please share details.`)}
+            href={whatsappLink(`Hi, I'm interested in the ${product.name} (${formatINR(product.price)}). Please share more details.`)}
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Enquire about ${product.name} on WhatsApp`}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white hover:shadow-lg hover:scale-105 transition-all duration-300"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white hover:brightness-95 transition-all"
           >
-            <MessageCircle className="h-4.5 w-4.5" />
+            <MessageCircle className="h-4 w-4" />
           </a>
           <button
             onClick={handleShare}
             aria-label={`Share ${product.name}`}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-secondary-200 text-secondary-500 hover:bg-secondary-50 hover:text-primary transition-all duration-300"
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-secondary-200 text-secondary-500 hover:border-primary hover:text-primary transition-colors"
           >
             <Share2 className="h-4 w-4" />
           </button>

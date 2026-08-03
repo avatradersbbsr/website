@@ -5,6 +5,8 @@ import { siteConfig } from "@/lib/site-config";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingActions from "@/components/layout/FloatingActions";
+import { ContactModalProvider } from "@/components/shared/ContactModalContext";
+import ContactPopupModal from "@/components/shared/ContactPopupModal";
 
 const display = Outfit({
   subsets: ["latin"],
@@ -23,7 +25,7 @@ const body = Inter({
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#1E2A78",
+  themeColor: "#322A90",
 };
 
 export const metadata: Metadata = {
@@ -86,20 +88,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <body>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:top-4 focus:left-4"
-        >
-          Skip to main content
-        </a>
-        <Header />
-        <main id="main-content">{children}</main>
-        <Footer />
-        <FloatingActions />
+        <ContactModalProvider>
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          />
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:bg-primary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:top-4 focus:left-4"
+          >
+            Skip to main content
+          </a>
+          <Header />
+          <main id="main-content">{children}</main>
+          <Footer />
+          <FloatingActions />
+          <ContactPopupModal />
+        </ContactModalProvider>
       </body>
     </html>
   );

@@ -16,30 +16,30 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#0F1A3C", // Deep Midnight Sapphire
-          50: "#F4F6FC",
-          100: "#E6EBF8",
-          200: "#C2CEEE",
-          300: "#9EAFE3",
-          400: "#5773CD",
-          500: "#0F1A3C",
-          600: "#0B122C",
-          700: "#080D21",
-          800: "#050916",
-          900: "#03050B",
+          DEFAULT: "#322A90", // Deep Blue / Indigo (from logo)
+          50: "#F0F1FA",
+          100: "#E0E3F5",
+          200: "#C1C6EB",
+          300: "#A1A9E1",
+          400: "#626FD2",
+          500: "#322A90",
+          600: "#282173",
+          700: "#1E1956",
+          800: "#14113A",
+          900: "#0A081D",
         },
         accent: {
-          DEFAULT: "#BE1E2D", // Rich Crimson Red (from logo)
-          50: "#FDF2F3",
-          100: "#FBE3E5",
-          200: "#F6C8CB",
-          300: "#ED8F95",
-          400: "#E35660",
-          500: "#BE1E2D",
-          600: "#9A1824",
-          700: "#76121B",
-          800: "#520D13",
-          900: "#2E070B",
+          DEFAULT: "#DD1C16", // Bright Red (from logo)
+          50: "#FDF2F2",
+          100: "#FBE3E2",
+          200: "#F7C7C5",
+          300: "#F38D8B",
+          400: "#EE5250",
+          500: "#DD1C16",
+          600: "#B11612",
+          700: "#85110E",
+          800: "#590B09",
+          900: "#2C0605",
         },
         gold: {
           DEFAULT: "#C5A880", // Premium Champagne Gold
@@ -82,7 +82,7 @@ const config: Config = {
         soft: "0 4px 30px -4px rgba(8,14,38,0.04)",
         card: "0 12px 40px -12px rgba(8,14,38,0.08)",
         glow: "0 0 0 1px rgba(15,26,60,0.1), 0 12px 30px -4px rgba(15,26,60,0.15)",
-        "glow-accent": "0 0 0 1px rgba(190,30,45,0.1), 0 12px 30px -4px rgba(190,30,45,0.2)",
+        "glow-accent": "0 0 0 1px rgba(221,28,22,0.1), 0 12px 30px -4px rgba(221,28,22,0.2)",
         "glow-gold": "0 0 0 1px rgba(197,168,128,0.15), 0 12px 30px -4px rgba(197,168,128,0.25)",
       },
       keyframes: {
