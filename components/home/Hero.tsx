@@ -92,7 +92,7 @@ export default function Hero() {
 
       <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         {/* Left copy column */}
-        <div className="lg:col-span-7 flex flex-col items-start animate-fade-up">
+        <div className="lg:col-span-5 flex flex-col items-start animate-fade-up">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-xs font-semibold text-accent tracking-wide uppercase backdrop-blur-md">
             <Star className="h-3.5 w-3.5 fill-accent text-accent animate-pulse" /> Bhubaneswar&apos;s Premium Wellness Showroom
           </div>
@@ -141,8 +141,8 @@ export default function Hero() {
         </div>
 
         {/* Right graphical composition column - interactive product carousel */}
-        <div className="lg:col-span-5 relative flex items-center justify-center mt-10 lg:mt-0 animate-fade-in [animation-delay:200ms]">
-          <div className="relative w-full max-w-[280px] sm:max-w-[340px] aspect-[4/5] mx-auto">
+        <div className="lg:col-span-7 relative flex items-center justify-center mt-10 lg:mt-0 animate-fade-in [animation-delay:200ms]">
+          <div className="relative w-full max-w-[360px] sm:max-w-[460px] lg:max-w-[500px] aspect-[4/5] mx-auto">
             {/* Background glowing card */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-800/40 via-secondary-700/50 to-secondary-900/80 border border-white/10 shadow-card backdrop-blur-md overflow-hidden">
               <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(230,57,70,0.15), transparent 70%)" />
