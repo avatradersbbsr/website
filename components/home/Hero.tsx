@@ -47,7 +47,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-secondary-900 py-20 lg:py-28">
+    <section className="relative overflow-hidden bg-secondary-900 py-10 lg:py-14">
       {/* Decorative Brand SVG background */}
       <div className="absolute inset-0 z-0 opacity-10">
         <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -66,7 +66,7 @@ export default function Hero() {
       <div className="absolute bottom-[-15%] left-[-10%] w-[60%] h-[60%] bg-primary/25 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Category selector row at the top */}
-      <div className="container-wide relative z-10 mb-10 animate-fade-in">
+      <div className="container-wide relative z-10 mb-6 animate-fade-in">
         <div className="flex flex-wrap items-center justify-center gap-4 py-3 px-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md max-w-4xl mx-auto">
           <span className="text-xs font-semibold text-secondary-300 uppercase tracking-widest mr-2">Categories:</span>
           <Link
@@ -97,7 +97,7 @@ export default function Hero() {
             <Star className="h-3.5 w-3.5 fill-accent text-accent animate-pulse" /> Bhubaneswar&apos;s Premium Wellness Showroom
           </div>
 
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-display font-extrabold text-white leading-[1.05] tracking-tight text-balance">
+          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-5xl font-display font-extrabold text-white leading-[1.05] tracking-tight text-balance">
             Bhubaneswar&apos;s Finest
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary-200 to-accent bg-[length:200%_auto] animate-shimmer">
@@ -105,11 +105,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-6 text-secondary-200 text-lg sm:text-xl leading-relaxed max-w-xl text-balance">
+          <p className="mt-3 text-secondary-200 text-sm sm:text-base leading-relaxed max-w-xl text-balance">
             Discover Odisha&apos;s ultimate collection of premium 3D/4D zero-gravity massage chairs, wellness equipment, and elite body massagers. Visit our Puri Bypass Road showroom for a free trial.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+          <div className="mt-5 flex flex-wrap items-center gap-4 w-full sm:w-auto">
             <Link
               href="/products?category=massage-chairs"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white px-8 py-4 font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto text-center"
@@ -124,7 +124,7 @@ export default function Hero() {
             </button>
           </div>
 
-          <div className="mt-12 grid grid-cols-3 gap-6 w-full border-t border-white/10 pt-8 text-white/80">
+          <div className="mt-6 grid grid-cols-3 gap-6 w-full border-t border-white/10 pt-4 text-white/80">
             <div className="flex flex-col gap-1">
               <span className="font-display text-2xl font-bold text-accent">15+ Yrs</span>
               <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Showroom Legacy</span>
@@ -142,7 +142,7 @@ export default function Hero() {
 
         {/* Right graphical composition column - interactive product carousel */}
         <div className="lg:col-span-5 relative flex items-center justify-center mt-10 lg:mt-0 animate-fade-in [animation-delay:200ms]">
-          <div className="relative w-full max-w-[340px] sm:max-w-[420px] aspect-[4/5] mx-auto">
+          <div className="relative w-full max-w-[280px] sm:max-w-[340px] aspect-[4/5] mx-auto">
             {/* Background glowing card */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-800/40 via-secondary-700/50 to-secondary-900/80 border border-white/10 shadow-card backdrop-blur-md overflow-hidden">
               <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(230,57,70,0.15), transparent 70%)" />
