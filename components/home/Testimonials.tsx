@@ -1,10 +1,23 @@
-import { Star } from "lucide-react";
+"use client";
+
+import { useState, useEffect } from "react";
+import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { testimonials } from "@/data/testimonials";
 import SectionHeading from "@/components/shared/SectionHeading";
 
 export default function Testimonials() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Auto-play interval
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % testimonials.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section className="section-y bg-primary-50/40">
+    <section className="section-y bg-primary-50/40 overflow-hidden">
       <div className="container-wide">
         <SectionHeading
           eyebrow="Customer Stories"
@@ -12,29 +25,76 @@ export default function Testimonials() {
           description="Real feedback from people who've visited our Bhubaneswar showroom."
         />
 
-        <div className="mt-12 flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory -mx-5 px-5 sm:mx-0 sm:px-0">
-          {testimonials.map((t) => (
-            <figure
-              key={t.name}
-              className="snap-start shrink-0 w-[300px] sm:w-[340px] rounded-2xl bg-white p-6 shadow-soft border border-secondary-100 flex flex-col gap-4 hover:shadow-card transition-shadow duration-300"
-            >
-              <div className="flex gap-0.5" aria-label={`${t.rating} out of 5 stars`}>
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    className={`h-4 w-4 ${i < t.rating ? "fill-accent text-accent" : "text-secondary-200"}`}
-                  />
-                ))}
+        {/* Carousel Wrapper */}
+        <div className="relative mt-12 max-w-3xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl bg-white p-8 sm:p-10 border border-secondary-100 shadow-soft">
+            <div className="min-h-[160px] flex flex-col justify-between">
+              
+              {/* Current Testimonial Slide */}
+              <div key={activeIndex} className="animate-fade-in flex flex-col gap-4">
+                <div className="flex gap-0.5" aria-label={`${testimonials[activeIndex].rating} out of 5 stars`}>
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      className={`h-4.5 w-4.5 ${
+                        i < testimonials[activeIndex].rating
+                          ? "fill-accent text-accent animate-pulse"
+                          : "text-secondary-200"
+                      }`}
+                    />
+                  ))}
+                </div>
+
+                <blockquote className="text-base sm:text-lg text-secondary-600 italic leading-relaxed font-medium">
+                  &ldquo;{testimonials[activeIndex].quote}&rdquo;
+                </blockquote>
+
+                <div className="mt-4 flex items-center justify-between">
+                  <div>
+                    <cite className="not-italic font-display font-bold text-secondary-800 text-sm sm:text-base block">
+                      {testimonials[activeIndex].name}
+                    </cite>
+                    <span className="text-xs text-secondary-400">
+                      {testimonials[activeIndex].location}
+                    </span>
+                  </div>
+
+                  {/* Navigation Arrows */}
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => setActiveIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length)}
+                      className="flex h-8 w-8 items-center justify-center rounded-full border border-secondary-200 text-secondary-500 hover:border-primary hover:text-primary transition-colors bg-white shadow-sm"
+                      aria-label="Previous testimonial"
+                    >
+                      <ChevronLeft className="h-4.5 w-4.5" />
+                    </button>
+                    <button
+                      onClick={() => setActiveIndex((prev) => (prev + 1) % testimonials.length)}
+                      className="flex h-8 w-8 items-center justify-center rounded-full border border-secondary-200 text-secondary-500 hover:border-primary hover:text-primary transition-colors bg-white shadow-sm"
+                      aria-label="Next testimonial"
+                    >
+                      <ChevronRight className="h-4.5 w-4.5" />
+                    </button>
+                  </div>
+                </div>
               </div>
-              <blockquote className="text-sm text-secondary-500 leading-relaxed flex-1">
-                &ldquo;{t.quote}&rdquo;
-              </blockquote>
-              <figcaption>
-                <p className="font-semibold text-secondary-700 text-sm">{t.name}</p>
-                <p className="text-xs text-secondary-400">{t.location}</p>
-              </figcaption>
-            </figure>
-          ))}
+
+            </div>
+          </div>
+
+          {/* Dot Indicators */}
+          <div className="mt-6 flex justify-center gap-2">
+            {testimonials.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveIndex(i)}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  activeIndex === i ? "bg-accent w-6" : "bg-secondary-200 w-2.5 hover:bg-secondary-300"
+                }`}
+                aria-label={`Go to testimonial ${i + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
