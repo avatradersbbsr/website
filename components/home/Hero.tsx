@@ -8,6 +8,31 @@ import { cn } from "@/lib/utils";
 import ProductImageWithFallback from "@/components/shared/ProductImageWithFallback";
 import { useContactModal } from "@/components/shared/ContactModalContext";
 
+function CountUp({ end, duration = 1500, decimals = 0, suffix = "" }: { end: number; duration?: number; decimals?: number; suffix?: string }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTimestamp: number | null = null;
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const currentCount = progress * end;
+      setCount(currentCount);
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }, [end, duration]);
+
+  return (
+    <span>
+      {count.toFixed(decimals)}
+      {suffix}
+    </span>
+  );
+}
+
 const heroChairs = [
   {
     name: "AM-999 Luxury Premium Massage Chair",
@@ -126,15 +151,21 @@ export default function Hero() {
 
           <div className="mt-6 grid grid-cols-3 gap-6 w-full border-t border-white/10 pt-4 text-white/80">
             <div className="flex flex-col gap-1">
-              <span className="font-display text-2xl font-bold text-accent">15+ Yrs</span>
+              <span className="font-display text-2xl font-bold text-accent">
+                <CountUp end={15} suffix="+ Yrs" />
+              </span>
               <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Showroom Legacy</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="font-display text-2xl font-bold text-primary-200">22+</span>
+              <span className="font-display text-2xl font-bold text-primary-200">
+                <CountUp end={22} suffix="+" />
+              </span>
               <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Premium Models</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="font-display text-2xl font-bold text-primary-200">4.6★</span>
+              <span className="font-display text-2xl font-bold text-primary-200">
+                <CountUp end={4.6} decimals={1} suffix="★" />
+              </span>
               <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Google Rating</span>
             </div>
           </div>
