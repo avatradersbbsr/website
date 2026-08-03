@@ -63,9 +63,9 @@ export default function ProductCard({ product }: { product: Product }) {
       onMouseEnter={startImageCycle}
       onMouseLeave={stopImageCycle}
       className={cn(
-        "group flex flex-col rounded-2xl bg-white transition-all duration-300 overflow-hidden",
+        "group flex flex-col rounded-2xl bg-white transition-all duration-300 overflow-hidden hover-lift",
         isMassageChair
-          ? "border-2 border-gold/70 shadow-glow-gold hover:border-primary ring-1 ring-gold/20"
+          ? "border-2 border-gold/70 glow-gold-pulse hover:border-primary ring-1 ring-gold/20"
           : "border border-secondary-100 shadow-soft hover:shadow-card hover:border-primary-200"
       )}
     >

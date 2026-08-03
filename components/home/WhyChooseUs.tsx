@@ -36,7 +36,7 @@ export default function WhyChooseUs() {
 
         <div className="mt-10 grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {points.map((p) => (
-            <div key={p.title} className="group flex flex-col gap-4 rounded-3xl border border-secondary-100/70 bg-white p-6 shadow-soft hover:shadow-card hover:border-accent/20 transition-all duration-500">
+            <div key={p.title} className="group flex flex-col gap-4 rounded-3xl border border-secondary-100/70 bg-white p-6 shadow-soft hover-lift hover:border-accent/20 transition-all duration-500">
               <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-secondary-50 text-secondary-700 group-hover:bg-accent group-hover:text-white group-hover:shadow-glow-accent transition-all duration-500">
                 <p.icon className="h-5 w-5" />
               </span>
