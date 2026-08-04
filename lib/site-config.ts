@@ -3,7 +3,7 @@ export const siteConfig = {
   tagline: "Complete Solution For Your Health & Fitness",
   description:
     "AVA Traders is the best massage chair showroom in Bhubaneswar, Odisha. Explore premium 3D/4D zero-gravity massage chairs, leg and foot massagers, and healthcare equipment with local warranty.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.avatraders.in",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://avahealthcare.in",
   ogImage: "/images/og-default.jpg",
   keywords: [
     "best massage chair in Bhubaneswar",
