@@ -8,6 +8,8 @@ import FloatingActions from "@/components/layout/FloatingActions";
 import { ContactModalProvider } from "@/components/shared/ContactModalContext";
 import ContactPopupModal from "@/components/shared/ContactPopupModal";
 
+import Script from "next/script";
+
 const display = Outfit({
   subsets: ["latin"],
   variable: "--font-display",
@@ -87,6 +89,21 @@ const organizationSchema = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
+      <head>
+        {/* Google Analytics Tag */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-HEJKNNKE2E"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-HEJKNNKE2E');
+          `}
+        </Script>
+      </head>
       <body>
         <ContactModalProvider>
           <script
