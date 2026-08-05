@@ -353,13 +353,13 @@ export const products: Product[] = [
   {
     id: "a-321-19-premium-luxury",
     slug: "a-321-19-premium-luxury",
-    name: "A-321-19 Premium Luxury Massage Chair",
+    name: "A-321 Premium 3D Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Premium luxury massage chair with 135cm SL guide rail, 8 auto programs, leg kneading, and voice control.",
+    shortDescription: "SL-A321 full body massage chair is built with intelligent features designed for daily relaxation, pain relief, and total body rejuvenation.",
     description: [
-      "The A-321-19 Premium Luxury Massage Chair is an advanced home wellness system featuring an intelligent mechanical massage hand system. It collects curve data on the back to imitate professional finger pressing, kneading, and tapping.",
-      "Equipped with a super long 135cm SL-shape guide rail and zero-gravity recline, it distributes body pressure evenly to achieve full relaxation. The zero-space design slides forward to require only 5cm of clearance from the wall.",
-      "The A-321-19 includes 8 automatic programs, 28 air bags, leg kneading, palm magnetic therapy, carbon fiber back heating, and wireless Bluetooth music speakers."
+      "Full body massage chair price reflects true value when technology meets comfort. The SL-A321 full body massage chair is built with intelligent features designed for daily relaxation, pain relief, and total body rejuvenation.",
+      "Explore its smart functions that enhance your wellness experience and make it one of the most affordable massage chairs in India with high-end performance. Its SL-shape curved rail provides a full back-to-thigh massage while the bionic mechanical hands mimic professional finger pressing, kneading, tapping, and knocking, covering cervical, thoracic, and lumbar vertebrae with precision.",
+      "Features a zero gravity recline (118°–135° tilt) to reduce spinal pressure, a calf/leg stretch function, air pressure massage with adjustable intensity, built-in Bluetooth audio surround, and zero space reclining which needs only 5 cm from the wall. Includes eight one-touch automatic programs combining spine alignment and deep tissue techniques to deliver premium value at a competitive massage chair price."
     ],
     images: [
       "/images/products/massage-chairs/a-321-19-premium-luxury/1.jpg",
@@ -371,16 +371,25 @@ export const products: Product[] = [
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
-      "135cm SL-shape curved guide rail tracking",
-      "Intelligent mechanical massage hands (kneading, tapping, finger press)",
-      "8 kinds of automatic massage programs (Back & Waist, Vertebral, Traction, etc.)",
-      "Intelligent voice control recognition and shortcut button",
-      "Zero gravity recline and 5cm space-saving wall slide",
-      "Leg kneading function and 20cm leg stretch adjustment",
-      "Carbon fiber back heating (40°C - 50°C) and palm magnetic therapy"
+      "SL-shape curved rail provides full back-to-thigh massage",
+      "Intelligent mechanical massage hands mimic professional techniques",
+      "3D massage action with finger pressing, kneading, tapping, and knocking",
+      "Covers cervical, thoracic, and lumbar vertebrae with precision",
+      "Zero gravity recline with 118°–135° tilt reduces spinal pressure",
+      "Leg stretch function adapts to different heights with telescopic adjustment",
+      "Air pressure massage with adjustable intensity",
+      "Multiple levels of speed, strength, and air pressure control",
+      "Shortcut control panel for quick operation",
+      "Intelligent voice control for hands-free use",
+      "LCD remote with multiple preset options",
+      "Built-in Bluetooth speaker for wireless audio",
+      "USB slot and device holder for charging and convenience",
+      "Zero space reclining – needs only 5 cm from the wall",
+      "Artistic LED lighting on side panels",
+      "Eight One-Touch Automatic Programs for complete relaxation"
     ],
     specifications: [
-      { label: "Model", value: "A321-19" },
+      { label: "Model", value: "iRest SL-A321 3D" },
       { label: "Track Type", value: "135cm SL-Shape Curved Rail" },
       { label: "Airbag Count", value: "28 Airbags (with 3 intensity levels)" },
       { label: "Automatic Programs", value: "8 Auto Programs" },
@@ -393,20 +402,20 @@ export const products: Product[] = [
       { label: "Warranty", value: "2 Years (1 Year Comprehensive + 1 Year Motor)" }
     ],
     benefits: [
-      "5cm zero-space wall slide saves space in small rooms",
-      "Leg kneading and spring foot retraction adapts to all user heights",
-      "Carbon fiber heating penetrates deep tissue to relieve lumbar pain"
+      "Zero space reclining needs only 5 cm from the wall, maximizing modern space",
+      "3D mechanical massage hands cover cervical, thoracic, and lumbar areas with precision",
+      "Zero gravity tilt (118°–135°) reduces spinal pressure and enhances respiratory comfort"
     ],
     faqs: [
-      { question: "Is the A-321-19 covered under warranty?", answer: "Yes, it comes with a 2-year warranty (1 Year Comprehensive + 1 Year Motor) backed by local showroom support." },
-      { question: "Can I see the A-321-19 in person before buying?", answer: "Yes, you can test it at our Bhubaneswar showroom." },
-      { question: "What is the leg kneading function?", answer: "It uses specialized compression wrappers to gently squeeze and knead calves, reducing stiffness from long hours of standing." }
+      { question: "Is the iRest SL-A321 covered under warranty?", answer: "Yes, it comes with a 6-year local showroom warranty (1 Year Comprehensive + 5 Years Motor) backed by our Bhubaneswar service team." },
+      { question: "Can I see the iRest SL-A321 in person before buying?", answer: "Yes, you can test it and see it live at our showroom in Bhubaneswar." },
+      { question: "How many automatic programs does it have?", answer: "It features 8 one-touch automatic programs combining spine alignment, air pressure, and deep tissue rollers." }
     ],
     bestSeller: false,
     featured: false,
     seo: {
-      metaTitle: "A-321-19 Premium Luxury Massage Chair | Buy in Bhubaneswar | AVA Traders",
-      metaDescription: "Premium luxury A321-19 massage chair with SL curved rail, 8 auto modes, voice control, and leg kneading. Shop at AVA Traders showroom."
+      metaTitle: "iRest SL-A321 Premium 3D Massage Chair | Buy in Bhubaneswar | AVA Traders",
+      metaDescription: "Buy iRest SL-A321 3D full body massage chair at best price in Bhubaneswar. Features 135cm SL rail, 28 airbags, 8 auto programs, and zero space design."
     }
   },
   {
