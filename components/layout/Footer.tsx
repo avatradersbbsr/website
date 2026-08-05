@@ -7,8 +7,8 @@ import { categories } from "@/data/categories";
 export default function Footer() {
   return (
     <footer className="bg-secondary-900 text-secondary-300 border-t border-primary-950">
-      <div className="container-wide py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
-        <div>
+      <div className="container-wide py-10 md:py-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-10">
+        <div className="col-span-2 md:col-span-1">
           <Link href="/" className="flex items-center gap-3">
             <Image
               src="/images/logo.jpeg"

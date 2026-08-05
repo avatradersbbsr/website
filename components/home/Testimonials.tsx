@@ -26,8 +26,8 @@ export default function Testimonials() {
         />
 
         {/* Carousel Wrapper */}
-        <div className="relative mt-12 max-w-3xl mx-auto">
-          <div className="relative overflow-hidden rounded-2xl bg-white p-8 sm:p-10 border border-secondary-100 shadow-soft">
+        <div className="relative mt-6 max-w-3xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl bg-white p-6 sm:p-8 md:p-10 border border-secondary-100 shadow-soft">
             <div className="min-h-[160px] flex flex-col justify-between">
               
               {/* Current Testimonial Slide */}

@@ -5,7 +5,7 @@ import { whatsappLink } from "@/lib/site-config";
 export default function CTASection() {
   return (
     <section className="container-wide">
-      <div className="rounded-3xl bg-gradient-to-br from-secondary-700 via-primary-700 to-secondary-700 px-8 py-12 md:px-16 md:py-16 flex flex-col md:flex-row items-center justify-between gap-8 overflow-hidden relative">
+      <div className="rounded-2xl sm:rounded-3xl bg-gradient-to-br from-secondary-700 via-primary-700 to-secondary-700 px-5 py-8 sm:px-8 sm:py-12 md:px-16 md:py-16 flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 overflow-hidden relative">
         {/* Decorative accent orb */}
         <div className="absolute -right-10 -top-10 h-64 w-64 bg-accent/15 rounded-full blur-2xl" aria-hidden />
         <div className="absolute -left-20 -bottom-20 h-48 w-48 bg-primary-300/10 rounded-full blur-2xl" aria-hidden />

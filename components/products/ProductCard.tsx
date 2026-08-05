@@ -118,7 +118,7 @@ export default function ProductCard({ product }: { product: Product }) {
         <div className="mt-3 flex items-center gap-2">
           <Link
             href={`/products/${product.slug}`}
-            className="flex-1 text-center rounded-full border border-secondary-200 text-secondary-700 text-sm font-semibold py-2 hover:border-primary hover:text-primary transition-colors"
+            className="flex-1 text-center rounded-full border border-secondary-200 text-secondary-700 text-sm font-semibold py-2.5 hover:border-primary hover:text-primary transition-colors min-h-[44px] flex items-center justify-center"
           >
             View Details
           </Link>
@@ -127,14 +127,14 @@ export default function ProductCard({ product }: { product: Product }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Enquire about ${product.name} on WhatsApp`}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white hover:brightness-95 transition-all"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white hover:brightness-95 transition-all"
           >
             <MessageCircle className="h-4 w-4" />
           </a>
           <button
             onClick={handleShare}
             aria-label={`Share ${product.name}`}
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-secondary-200 text-secondary-500 hover:border-primary hover:text-primary transition-colors"
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-secondary-200 text-secondary-500 hover:border-primary hover:text-primary transition-colors"
           >
             <Share2 className="h-4 w-4" />
           </button>

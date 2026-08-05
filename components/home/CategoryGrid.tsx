@@ -55,7 +55,7 @@ export default function CategoryGrid() {
           return (
             <div
               key={cat.slug}
-              className="group relative flex flex-col justify-between rounded-2xl bg-white p-6 sm:p-8 md:p-5 lg:p-6 xl:p-8 border border-secondary-100 shadow-soft hover:shadow-glow hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 hover:border-primary/45 overflow-hidden min-h-[510px]"
+              className="group relative flex flex-col justify-between rounded-2xl bg-white p-5 sm:p-6 md:p-5 lg:p-6 xl:p-8 border border-secondary-100 shadow-soft hover:shadow-glow hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 hover:border-primary/45 overflow-hidden md:min-h-[510px]"
               style={{ animationDelay: `${i * 100}ms` }}
             >
               {/* Premium glowing background gradient */}
@@ -84,15 +84,15 @@ export default function CategoryGrid() {
                       Popular Models
                     </p>
                     
-                    {/* Slide transition container */}
-                    <div key={startIndex} className="flex gap-2.5 animate-slide-in-right">
+                    {/* Uniform grid container */}
+                    <div key={startIndex} className="grid grid-cols-3 gap-2.5 animate-slide-in-right">
                       {previewItems.map((prod) => (
                         <Link
                           key={prod.id}
                           href={`/products/${prod.slug}`}
-                          className="group/prod flex flex-col items-center gap-2 flex-1 p-2 rounded-2xl border border-secondary-100 bg-secondary-50/30 hover:bg-white hover:border-primary-400 hover:shadow-card transition-all duration-300 min-w-0"
+                          className="group/prod flex flex-col items-center gap-1.5 p-2 rounded-2xl border border-secondary-100 bg-secondary-50/30 hover:bg-white hover:border-primary-400 hover:shadow-card transition-all duration-300"
                         >
-                          <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-24 lg:h-24 xl:w-28 xl:h-28 rounded-xl overflow-hidden bg-white border border-secondary-100 flex items-center justify-center p-1.5 shrink-0 shadow-sm transition-transform duration-300 group-hover/prod:scale-[1.04]">
+                          <div className="aspect-square w-full rounded-xl overflow-hidden bg-white border border-secondary-100 flex items-center justify-center p-2 shadow-sm transition-transform duration-300 group-hover/prod:scale-[1.03]">
                             <ProductImageWithFallback
                               src={prod.images[0]}
                               alt={prod.name}
@@ -101,7 +101,7 @@ export default function CategoryGrid() {
                               className="w-full h-full object-contain group-hover/prod:scale-110 transition-transform duration-300"
                             />
                           </div>
-                          <span className="text-[11px] font-bold text-secondary-600 truncate w-full text-center group-hover/prod:text-primary transition-colors px-0.5">
+                          <span className="text-[11px] font-bold text-secondary-600 truncate w-full text-center group-hover/prod:text-primary transition-colors px-0.5 h-4 leading-4">
                             {prod.name.replace(/Massage Chair|Leg Massager/i, "").trim().split(" ")[0]}
                           </span>
                         </Link>
@@ -113,7 +113,7 @@ export default function CategoryGrid() {
 
               <Link
                 href={`/products?category=${cat.slug}`}
-                className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:text-accent transition-colors relative overflow-hidden"
+                className="mt-4 inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:text-accent transition-colors relative overflow-hidden"
               >
                 <span>Explore Collection</span>
                 <span className="transform group-hover:translate-x-1.5 transition-transform duration-300">→</span>

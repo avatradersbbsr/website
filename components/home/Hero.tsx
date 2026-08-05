@@ -72,7 +72,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-secondary-900 pt-6 pb-8 lg:pt-8 lg:pb-10">
+    <section className="relative overflow-hidden bg-secondary-900 pt-4 pb-6 sm:pt-6 sm:pb-8 lg:pt-8 lg:pb-10">
       {/* Decorative Brand SVG background */}
       <div className="absolute inset-0 z-0 opacity-10">
         <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -90,14 +90,14 @@ export default function Hero() {
       <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-15%] left-[-10%] w-[60%] h-[60%] bg-primary/25 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+      <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-6 lg:gap-6 items-center">
         {/* Left copy column */}
         <div className="lg:col-span-5 flex flex-col items-start animate-fade-up">
           <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-3.5 py-1 text-[11px] font-semibold text-accent tracking-wide uppercase backdrop-blur-md">
             <Star className="h-3 w-3 fill-accent text-accent animate-pulse" /> Bhubaneswar&apos;s Premium Wellness Showroom
           </div>
 
-          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-display font-extrabold text-white leading-[1.1] tracking-tight text-balance">
+          <h1 className="mt-3 text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-display font-extrabold text-white leading-[1.1] tracking-tight text-balance">
             Bhubaneswar&apos;s Finest
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary-200 to-accent bg-[length:200%_auto] animate-shimmer">
@@ -105,11 +105,11 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-2.5 text-secondary-200 text-sm leading-relaxed max-w-xl text-balance">
+          <p className="mt-2 text-secondary-200 text-xs sm:text-sm leading-relaxed max-w-xl text-balance">
             Discover Odisha&apos;s ultimate collection of premium 3D/4D zero-gravity massage chairs, wellness equipment, and elite body massagers. Visit our Puri Bypass Road showroom for a free trial.
           </p>
 
-          <div className="mt-4 flex flex-wrap items-center gap-3 w-full sm:w-auto">
+          <div className="mt-3 flex flex-wrap items-center gap-2.5 w-full sm:w-auto">
             <Link
               href="/products?category=massage-chairs"
               className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white px-6 py-3 text-sm font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto text-center"
@@ -125,7 +125,7 @@ export default function Hero() {
           </div>
 
           {/* Premium Trust Highlights */}
-          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-[11px] font-semibold text-secondary-300">
+          <div className="mt-2.5 flex flex-wrap gap-x-3 gap-y-1 text-[10px] sm:text-[11px] font-semibold text-secondary-300">
             <span className="flex items-center gap-1">
               <span className="text-accent text-[12px]">★</span> Showroom Tested Quality
             </span>
@@ -137,21 +137,21 @@ export default function Hero() {
             </span>
           </div>
 
-          <div className="mt-5 grid grid-cols-3 gap-4 w-full border-t border-white/10 pt-3.5 text-white/80">
+          <div className="mt-3 sm:mt-5 grid grid-cols-3 gap-3 sm:gap-4 w-full border-t border-white/10 pt-3 text-white/80">
             <div className="flex flex-col gap-0.5">
-              <span className="font-display text-xl sm:text-2xl font-bold text-accent">
+              <span className="font-display text-lg sm:text-xl md:text-2xl font-bold text-accent">
                 <CountUp end={15} suffix="+ Yrs" />
               </span>
               <span className="text-[10px] text-secondary-300 uppercase tracking-wider font-semibold">Showroom Legacy</span>
             </div>
             <div className="flex flex-col gap-0.5">
-              <span className="font-display text-xl sm:text-2xl font-bold text-primary-200">
+              <span className="font-display text-lg sm:text-xl md:text-2xl font-bold text-primary-200">
                 <CountUp end={22} suffix="+" />
               </span>
               <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Premium Models</span>
             </div>
             <div className="flex flex-col gap-1">
-              <span className="font-display text-2xl font-bold text-primary-200">
+              <span className="font-display text-lg sm:text-xl md:text-2xl font-bold text-primary-200">
                 <CountUp end={4.6} decimals={1} suffix="★" />
               </span>
               <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Google Rating</span>

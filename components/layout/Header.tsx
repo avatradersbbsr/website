@@ -24,7 +24,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full glass-premium shadow-soft border-b border-primary-50">
-      <div className="container-wide flex items-center justify-between h-20">
+      <div className="container-wide flex items-center justify-between h-16 lg:h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
           <img
             src="/images/logo.jpeg"
