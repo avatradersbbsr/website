@@ -163,13 +163,13 @@ export default function Hero() {
         <div className="lg:col-span-7 relative flex items-center justify-center mt-8 lg:mt-0 animate-fade-in [animation-delay:200ms]">
           <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[380px] xl:max-w-[420px] aspect-[4/5] mx-auto">
             {/* Background glowing card */}
-            <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-800/40 via-secondary-700/50 to-secondary-900/80 border border-white/10 shadow-card backdrop-blur-md overflow-hidden">
-              <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(230,57,70,0.15), transparent 70%)" />
-              <div className="absolute inset-0 bg-radial-gradient(circle at 0% 100%, rgba(30,42,120,0.25), transparent 70%)" />
+            <div className="absolute inset-0 rounded-3xl bg-white border border-secondary-200/50 shadow-glow overflow-hidden">
+              <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(221,28,22,0.05), transparent 70%)" />
+              <div className="absolute inset-0 bg-radial-gradient(circle at 0% 100%, rgba(50,42,120,0.05), transparent 70%)" />
             </div>
 
             {/* Carousel Inner Enclosure */}
-            <div className="absolute inset-4 rounded-2xl bg-secondary-950/80 border border-white/5 flex flex-col justify-between p-4 overflow-hidden z-10">
+            <div className="absolute inset-4 rounded-2xl bg-secondary-50/40 border border-secondary-100 flex flex-col justify-between p-4 overflow-hidden z-10">
               {/* Slide image area */}
               <div className="relative flex-1 w-full bg-white rounded-xl overflow-hidden group shadow-inner">
                 {heroChairs.map((slide, idx) => (
@@ -177,19 +177,19 @@ export default function Hero() {
                     key={idx}
                     href={`/products/${slide.slug}`}
                     className={cn(
-                      "absolute inset-0 w-full h-full flex items-center justify-center transition-all duration-750 ease-in-out p-4",
+                      "absolute inset-0 w-full h-full flex items-center justify-center transition-all duration-750 ease-in-out p-4 bg-white",
                       activeSlide === idx 
                         ? "opacity-100 scale-100 pointer-events-auto z-10" 
                         : "opacity-0 scale-95 pointer-events-none z-0"
                     )}
                   >
                     {/* Floating model tag */}
-                    <div className="absolute top-3 left-3 bg-secondary-900/90 border border-white/10 rounded-full px-3 py-1 text-[9px] font-bold text-accent uppercase tracking-wider backdrop-blur-sm z-30">
+                    <div className="absolute top-3 left-3 bg-secondary-900 text-white rounded-full px-3 py-1 text-[9px] font-bold uppercase tracking-wider z-30 shadow-sm">
                       Featured Chair
                     </div>
                     
                     {/* Floating price */}
-                    <div className="absolute bottom-3 right-3 bg-primary text-white rounded-full px-3 py-1 text-xs font-bold shadow-glow z-30">
+                    <div className="absolute bottom-3 right-3 bg-accent text-white rounded-full px-3 py-1 text-xs font-bold shadow-glow-accent z-30">
                       {slide.price}
                     </div>
 
@@ -208,7 +208,7 @@ export default function Hero() {
               {/* Slide controls and title */}
               <div className="mt-4 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-display font-bold text-white text-xs sm:text-sm leading-tight truncate max-w-[80%]">
+                  <h3 className="font-display font-bold text-secondary-800 text-xs sm:text-sm leading-tight truncate max-w-[80%]">
                     {heroChairs[activeSlide].name}
                   </h3>
                   <Link 
@@ -227,7 +227,7 @@ export default function Hero() {
                       onClick={() => setActiveSlide(idx)}
                       className={cn(
                         "h-1.5 rounded-full transition-all duration-300",
-                        activeSlide === idx ? "w-6 bg-accent" : "w-1.5 bg-white/20"
+                        activeSlide === idx ? "w-6 bg-accent" : "w-1.5 bg-secondary-300"
                       )}
                       aria-label={`Go to slide ${idx + 1}`}
                     />
