@@ -917,20 +917,20 @@ export const products: Product[] = [
     }
   },
   {
-    id: "hattho-economic",
-    slug: "hattho-economic",
-    name: "Hattho Economic Leg Massager",
+    id: "healtho-economic",
+    slug: "healtho-economic",
+    name: "Healtho Economic Leg Massager",
     category: "leg-massagers",
     shortDescription: "Entry-level economic leg massager with basic air compression — affordable daily relief for tired feet and calves.",
     description: [
-      "The Hattho Economic Leg Massager is the most affordable option in our leg massager range. With basic air compression covering feet and lower calves, it provides gentle relief after a long day — perfect for first-time users or as a thoughtful, budget-friendly gift.",
+      "The Healtho Economic Leg Massager is the most affordable option in our leg massager range. With basic air compression covering feet and lower calves, it provides gentle relief after a long day — perfect for first-time users or as a thoughtful, budget-friendly gift.",
       "Its compact design takes up minimal space and weighs just 4 kg, making it easy to move around the house. Simple one-button controls mean anyone can use it right out of the box.",
       "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
     ],
     images: [
-      "/images/products/leg-massagers/hattho-economic/1.jpg",
-      "/images/products/leg-massagers/hattho-economic/2.jpg",
-      "/images/products/leg-massagers/hattho-economic/3.jpg"
+      "/images/products/leg-massagers/healtho-economic/1.jpg",
+      "/images/products/leg-massagers/healtho-economic/2.jpg",
+      "/images/products/leg-massagers/healtho-economic/3.jpg"
     ],
     mrp: 25000,
     price: 15500,
@@ -959,14 +959,14 @@ export const products: Product[] = [
       "Weighs just 4 kg — carry it anywhere in the house"
     ],
     faqs: [
-      { question: "Is this good enough for daily use?", answer: "Yes, for basic foot and lower calf relief, the Hattho works well for daily 15-minute sessions. For deeper massage or full-calf coverage, consider the Pedizen or Kiyo-416." },
+      { question: "Is this good enough for daily use?", answer: "Yes, for basic foot and lower calf relief, the Healtho works well for daily 15-minute sessions. For deeper massage or full-calf coverage, consider the Pedizen or Kiyo-416." },
       { question: "Is it a good gift for parents?", answer: "Yes — its simplicity and affordability make it one of our most popular gift choices, especially for elderly parents who want gentle foot relief." },
       { question: "Does it come with a warranty?", answer: "Yes, it comes with a 6-month warranty. AVA Traders handles all warranty claims locally." }
     ],
     bestSeller: false,
     featured: false,
     seo: {
-      metaTitle: "Hattho Economic Leg Massager | Most Affordable Leg Massager | AVA Traders",
+      metaTitle: "Healtho Economic Leg Massager | Most Affordable Leg Massager | AVA Traders",
       metaDescription: "Entry-level economic leg massager with basic air compression — affordable daily relief for tired feet and calves. Shop at AVA Traders, Bhubaneswar."
     }
   },
