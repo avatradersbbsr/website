@@ -1557,11 +1557,66 @@ export const products: Product[] = [
       { question: "Is it safe for people with pacemakers?", answer: "No, EMS devices should not be used by people with pacemakers or other implanted electronic devices. Please consult your doctor." },
       { question: "Can I use it at my office desk?", answer: "Yes! That's one of the best use cases. Place it under your desk and enjoy a subtle foot massage while working." }
     ],
+  },
+  {
+    id: "power-vibration-plate-massager",
+    slug: "power-vibration-plate-massager",
+    name: "Power Vibration Plate Exercise Massager",
+    category: "health-care-products",
+    shortDescription: "Fitness slimming full body shaper and weight loss vibration plate with running, jogging, and walking modes.",
+    description: [
+      "This crazy-fit vibration machine will help you lose weight while increasing your body flexibility. It vibrates in high frequency and low amplitude, making it perfect for a multitude of purposes. It helps your body process fat 30 times faster than running. Simply use the machine for 10 minutes every day.",
+      "It will not only promote blood circulation, fat loss and increase coordination, but it will also help with releasing backache as it decompresses the spine. The reflex of contracting your muscles is the most basic, unconscious movement of any human being. This vibration machine helps in maintaining these reflex reactions, thus burning calories and fat.",
+      "With two resistance bands, you can use the vibration plate in various positions to exercise all of your muscle groups. It can help improve balance for those who have less flexible legs and it can restore lost motor function. Note: Pregnant women and seniors should not use this item too frequently. Do not stomp on the plate."
+    ],
+    images: [
+      "/images/products/health-care-products/power-vibration-plate-massager/1.jpg"
+    ],
+    mrp: 22000,
+    price: 13500,
+    availability: "in-stock",
+    warranty: "1 Year",
+    features: [
+      "Activates entire body, relieve tiredness quickly",
+      "Excellent body shaper melts away mass body fat",
+      "Soothes insomnia efficiently, helps you unwind",
+      "Enhances digestion and increases blood flow to keep you healthy",
+      "Activates joints, soothes arthritis ache, increases bone density",
+      "Improves collagen production and increases flexibility",
+      "Magnetic foot massage helps strengthen metabolism, maintaining youthful vigor",
+      "Sports injury prevention, rehabilitate injuries and ailments",
+      "Help elasticity on the skin and muscles, increases muscle strength and performance",
+      "Prevent fragility from long lacking exercises, beautifying the skin",
+      "Improves blood circulation and metabolism, reducing cellulite"
+    ],
+    specifications: [
+      { label: "Model", value: "Power Vibration Plate" },
+      { label: "Power Output", value: "1.5 HP Motor" },
+      { label: "Power Consumption", value: "200 W" },
+      { label: "Voltage & Frequency", value: "110V / 220V, 50~60Hz" },
+      { label: "Vibration Amplitude", value: "0~10 mm" },
+      { label: "Speed Adjustments", value: "99 Levels" },
+      { label: "Maximum Weight Capacity", value: "265 lbs (120 kg)" },
+      { label: "Product Weight", value: "35 lbs (16 kg)" },
+      { label: "Dimensions", value: "26.8\" x 15.3\" x 5.5\"" },
+      { label: "Colour Options", value: "Red (with resistance bands)" },
+      { label: "Warranty", value: "1 Year Brand Warranty" }
+    ],
+    benefits: [
+      "Burns calories and body fat 30 times faster than running",
+      "Gently decompresses the spine to release backaches",
+      "Includes resistance bands to engage all muscle groups"
+    ],
+    faqs: [
+      { question: "How long should I use the vibration plate daily?", answer: "We recommend using it for 10 minutes every day. This is equivalent to approximately 30 minutes of running or jogging." },
+      { question: "Who should avoid using this vibration machine?", answer: "Pregnant women, individuals with heart pacemakers, and seniors should avoid frequent use or consult their doctor before starting." },
+      { question: "Does it come with exercise bands?", answer: "Yes, it includes two resistance bands that connect to the bottom plate to help exercise upper body muscle groups." }
+    ],
     bestSeller: false,
     featured: false,
     seo: {
-      metaTitle: "Foldable Intelligent Sole Massager | Portable EMS Foot Massager | AVA Traders",
-      metaDescription: "Foldable EMS sole massager with intelligent foot pad, multiple modes and portable design. Shop at AVA Traders, Bhubaneswar."
+      metaTitle: "Power Vibration Plate Exercise Massager | Weight Loss Shaper | AVA Traders",
+      metaDescription: "Get the Power Vibration Plate Exercise Massager at best price in Bhubaneswar. Features 1.5HP motor, 99 speeds, 3 modes, and resistance bands. Shop at AVA Traders."
     }
   }
 ];
