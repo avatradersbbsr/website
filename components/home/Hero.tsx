@@ -36,25 +36,25 @@ function CountUp({ end, duration = 1500, decimals = 0, suffix = "" }: { end: num
 const heroChairs = [
   {
     name: "AM-999 Luxury Premium Massage Chair",
-    image: "/images/products/massage-chairs/am-999/1.png",
+    image: "/images/products/massage-chairs/am-999-luxury-premium/1.jpeg",
     price: "₹2,45,000",
     slug: "am-999-luxury-premium"
   },
   {
     name: "A-710-2 Classic Premium 4D Massage Chair",
-    image: "/images/products/massage-chairs/a-710-2-classic-premium-4d/1.jpg",
+    image: "/images/products/massage-chairs/a-710-2-classic-premium-4d/1.jpeg",
     price: "₹2,80,000",
     slug: "a-710-2-classic-premium-4d"
   },
   {
     name: "Z-91 Ultra Luxury Massage Chair",
-    image: "/images/products/massage-chairs/z-91-ultra-luxury/1.jpg",
+    image: "/images/products/massage-chairs/z-91-ultra-luxury/1.jpeg",
     price: "₹2,20,000",
     slug: "z-91-ultra-luxury"
   },
   {
     name: "RC-2 Economic Premium Massage Chair",
-    image: "/images/products/massage-chairs/rc-2-economic-premium/1.jpg",
+    image: "/images/products/massage-chairs/rc-2-economic-premium/1.jpeg",
     price: "₹1,25,000",
     slug: "rc-2-economic-premium"
   }
