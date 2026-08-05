@@ -7,6 +7,65 @@ export const products: Product[] = [
   // MASSAGE CHAIRS (10 products)
   // ═══════════════════════════════════════════════
   {
+    id: "irest-sl-a710-massage-chair",
+    slug: "irest-sl-a710-massage-chair",
+    name: "iRest SL-A710 Premium 4D Massage Chair",
+    category: "massage-chairs",
+    shortDescription: "Premium 4D performance massage chair with SL-track, 23 auto programs, 3 custom memory slots, 74 precision airbags, and smart voice control.",
+    description: [
+      "The iRest SL-A710 Premium 4D Massage Chair is an advanced home wellness system powered by AI and machine learning. Its 4D performance delivers adaptive, bionic massage hands that adjust precisely to your body shape for tailored comfort.",
+      "Equipped with an SL-track massage system offering a 135cm reach, it covers your neck, shoulders, back, waist, and thighs in a true zero gravity position. The space-saving design slides forward to require minimal clearance from the wall.",
+      "Featuring 23 auto programs, 3 custom memory slots, 74 precision airbags for full-body engagement, graphene heating, calf kneading, automatic leg adjustment, and smart shoulder detection. Complete with high-fidelity Bluetooth audio, USB charging, and intelligent voice control."
+    ],
+    images: [
+      "/images/products/massage-chairs/irest-sl-a710-massage-chair/1.jpg"
+    ],
+    mrp: 435000,
+    price: 280000,
+    availability: "in-stock",
+    warranty: "6 Years (1 Year Comprehensive + 5 Years Motor)",
+    features: [
+      "SL-track massage system with 135 cm reach",
+      "AI-powered 4D massage hands for tailored comfort",
+      "23 auto programs with 3 custom memory slots",
+      "Zero gravity recline with space-saving design",
+      "74 precision airbags for full-body engagement",
+      "Graphene heating for consistent back warmth",
+      "Calf kneading and foot roller with smart detection",
+      "Fully automatic leg adjustment and ankle stretch",
+      "Shoulder position detection for adaptive massage",
+      "Bluetooth audio, USB charging, and voice control",
+      "Engineered by a best massage chair brand for innovation",
+      "The Best massager for everyday wellness and therapeutic"
+    ],
+    specifications: [
+      { label: "Model", value: "iRest SL-A710" },
+      { label: "Track Type", value: "135cm SL-Track" },
+      { label: "Massage Mechanism", value: "AI-Powered 4D Massage Hands" },
+      { label: "Auto Programs", value: "23 Programs + 3 Memory Slots" },
+      { label: "Airbags", value: "74 Precision Airbags" },
+      { label: "Heat Therapy", value: "Graphene Back Heating" },
+      { label: "Foot & Calf Care", value: "Calf Kneading + Foot Rollers" },
+      { label: "Controls", value: "Voice Control + TFT Touchscreen" },
+      { label: "Warranty", value: "6 Years (1 Year Comprehensive + 5 Years Motor)" }
+    ],
+    benefits: [
+      "23 automatic programs and 3 custom memory slots offer tailor-made recovery paths for every user",
+      "AI-powered 4D massage hands automatically detect shoulder position to adapt massage pressure",
+      "74 precision airbags wrap shoulders, arms, hips, and legs for deep full-body relaxation"
+    ],
+    faqs: [
+      { question: "What is the warranty on iRest SL-A710?", answer: "It is covered under our 6-year local showroom warranty (1 Year Comprehensive + 5 Years Motor)." },
+      { question: "Can I try the iRest SL-A710 before purchasing?", answer: "Yes, you can test it at our Puri Bypass Road showroom in Bhubaneswar." }
+    ],
+    bestSeller: false,
+    featured: true,
+    seo: {
+      metaTitle: "iRest SL-A710 Premium 4D Massage Chair | Buy in Bhubaneswar | AVA Traders",
+      metaDescription: "Premium iRest SL-A710 4D massage chair with 135cm SL-track, 74 airbags, 23 auto programs, and custom memory slots. Shop at AVA Traders showroom."
+    }
+  },
+  {
     id: "a-710-2-classic-premium-4d",
     slug: "a-710-2-classic-premium-4d",
     name: "A-710-2 Classic Premium 4D Massage Chair",
@@ -1481,7 +1540,8 @@ products.forEach((p) => {
     p.warranty = "6 Years (1 Year Comprehensive + 5 Years Motor)";
     
     // Add exact airbags count for each model
-    if (p.id === "a-372-2-premium-ultra-luxury") p.airbags = "52";
+    if (p.id === "irest-sl-a710-massage-chair") p.airbags = "74";
+    else if (p.id === "a-372-2-premium-ultra-luxury") p.airbags = "52";
     else if (p.id === "a-710-2-classic-premium-4d") p.airbags = "74";
     else if (p.id === "a-321-19-premium-luxury") p.airbags = "28";
     else if (p.id === "z-90-economic-premium-ultra-luxury") p.airbags = "60";
