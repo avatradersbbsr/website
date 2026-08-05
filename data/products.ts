@@ -7,18 +7,18 @@ export const products: Product[] = [
   // MASSAGE CHAIRS (10 products)
   // ═══════════════════════════════════════════════
   {
-    id: "irest-sl-a710-massage-chair",
-    slug: "irest-sl-a710-massage-chair",
-    name: "iRest SL-A710 Premium 4D Massage Chair",
+    id: "z91-with-thigh-massage",
+    slug: "z91-with-thigh-massage",
+    name: "Z91 with Thigh Massage",
     category: "massage-chairs",
     shortDescription: "Premium 4D performance massage chair with SL-track, 23 auto programs, 3 custom memory slots, 74 precision airbags, and smart voice control.",
     description: [
-      "The iRest SL-A710 Premium 4D Massage Chair is an advanced home wellness system powered by AI and machine learning. Its 4D performance delivers adaptive, bionic massage hands that adjust precisely to your body shape for tailored comfort.",
+      "The Z91 with Thigh Massage is an advanced home wellness system powered by AI and machine learning. Its 4D performance delivers adaptive, bionic massage hands that adjust precisely to your body shape for tailored comfort.",
       "Equipped with an SL-track massage system offering a 135cm reach, it covers your neck, shoulders, back, waist, and thighs in a true zero gravity position. The space-saving design slides forward to require minimal clearance from the wall.",
       "Featuring 23 auto programs, 3 custom memory slots, 74 precision airbags for full-body engagement, graphene heating, calf kneading, automatic leg adjustment, and smart shoulder detection. Complete with high-fidelity Bluetooth audio, USB charging, and intelligent voice control."
     ],
     images: [
-      "/images/products/massage-chairs/irest-sl-a710-massage-chair/1.jpg"
+      "/images/products/massage-chairs/z91-with-thigh-massage/1.jpg"
     ],
     mrp: 435000,
     price: 280000,
@@ -39,7 +39,7 @@ export const products: Product[] = [
       "The Best massager for everyday wellness and therapeutic"
     ],
     specifications: [
-      { label: "Model", value: "iRest SL-A710" },
+      { label: "Model", value: "Z91 with Thigh Massage" },
       { label: "Track Type", value: "135cm SL-Track" },
       { label: "Massage Mechanism", value: "AI-Powered 4D Massage Hands" },
       { label: "Auto Programs", value: "23 Programs + 3 Memory Slots" },
@@ -55,14 +55,14 @@ export const products: Product[] = [
       "74 precision airbags wrap shoulders, arms, hips, and legs for deep full-body relaxation"
     ],
     faqs: [
-      { question: "What is the warranty on iRest SL-A710?", answer: "It is covered under our 6-year local showroom warranty (1 Year Comprehensive + 5 Years Motor)." },
-      { question: "Can I try the iRest SL-A710 before purchasing?", answer: "Yes, you can test it at our Puri Bypass Road showroom in Bhubaneswar." }
+      { question: "What is the warranty on Z91 with Thigh Massage?", answer: "It is covered under our 6-year local showroom warranty (1 Year Comprehensive + 5 Years Motor)." },
+      { question: "Can I try the Z91 with Thigh Massage before purchasing?", answer: "Yes, you can test it at our Puri Bypass Road showroom in Bhubaneswar." }
     ],
     bestSeller: false,
     featured: true,
     seo: {
-      metaTitle: "iRest SL-A710 Premium 4D Massage Chair | Buy in Bhubaneswar | AVA Traders",
-      metaDescription: "Premium iRest SL-A710 4D massage chair with 135cm SL-track, 74 airbags, 23 auto programs, and custom memory slots. Shop at AVA Traders showroom."
+      metaTitle: "Z91 with Thigh Massage Premium 4D Massage Chair | Buy in Bhubaneswar | AVA Traders",
+      metaDescription: "Premium Z91 with Thigh Massage 4D massage chair with 135cm SL-track, 74 airbags, 23 auto programs, and custom memory slots. Shop at AVA Traders showroom."
     }
   },
   {
@@ -1553,7 +1553,7 @@ products.forEach((p) => {
     p.warranty = "6 Years (1 Year Comprehensive + 5 Years Motor)";
     
     // Add exact airbags count for each model
-    if (p.id === "irest-sl-a710-massage-chair") p.airbags = "74";
+    if (p.id === "z91-with-thigh-massage") p.airbags = "74";
     else if (p.id === "a-372-2-premium-ultra-luxury") p.airbags = "52";
     else if (p.id === "a-710-2-classic-premium-4d") p.airbags = "74";
     else if (p.id === "a-321-19-premium-luxury") p.airbags = "28";
