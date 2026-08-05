@@ -55,44 +55,44 @@ export default function CategoryGrid() {
           return (
             <div
               key={cat.slug}
-              className="group relative flex flex-col justify-between rounded-2xl bg-white p-6 sm:p-8 md:p-5 lg:p-4 xl:p-8 border border-secondary-100 shadow-soft hover-lift hover:border-primary-200 overflow-hidden min-h-[490px]"
+              className="group relative flex flex-col justify-between rounded-2xl bg-white p-6 sm:p-8 md:p-5 lg:p-6 xl:p-8 border border-secondary-100 shadow-soft hover:shadow-glow hover:scale-[1.02] hover:-translate-y-1 transition-all duration-500 hover:border-primary/45 overflow-hidden min-h-[510px]"
               style={{ animationDelay: `${i * 100}ms` }}
             >
-              {/* Subtle category gradients */}
-              <div className="absolute inset-0 bg-gradient-to-br from-transparent to-primary-50/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-              <div className="absolute -right-12 -bottom-12 w-32 h-32 bg-primary-100/10 rounded-full blur-2xl group-hover:bg-accent-100/20 transition-all duration-300 pointer-events-none" />
+              {/* Premium glowing background gradient */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary-50/5 via-transparent to-accent-50/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="absolute -right-10 -bottom-10 w-36 h-36 bg-radial-gradient from-accent-200/20 to-transparent rounded-full blur-2xl group-hover:scale-125 transition-all duration-700 pointer-events-none" />
 
               <div>
-                <span className="relative flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 text-primary group-hover:bg-primary group-hover:text-white group-hover:shadow-glow transition-all duration-300">
-                  <Icon className="h-7 w-7" />
+                <span className="relative flex h-14 w-14 items-center justify-center rounded-xl bg-primary-50 text-primary group-hover:bg-primary group-hover:text-white group-hover:shadow-glow-primary group-hover:rotate-6 group-hover:scale-110 transition-all duration-500">
+                  <Icon className="h-7 w-7 transition-transform duration-500" />
                 </span>
                 
                 <Link href={`/products?category=${cat.slug}`}>
-                  <h3 className="mt-6 font-display text-xl font-bold text-secondary-700 hover:text-primary transition-colors">
+                  <h3 className="mt-6 font-display text-xl font-extrabold text-secondary-700 hover:text-primary transition-colors flex items-center gap-1.5">
                     {cat.name}
                   </h3>
                 </Link>
                 
-                <p className="mt-2 text-sm text-secondary-400 leading-relaxed">
+                <p className="mt-2.5 text-sm text-secondary-400 leading-relaxed min-h-[64px] sm:min-h-[48px] md:min-h-[84px] lg:min-h-[80px] xl:min-h-[64px]">
                   {cat.description}
                 </p>
 
                 {/* Products Preview Showcase */}
                 {previewItems.length > 0 && (
                   <div className="mt-6 border-t border-secondary-100 pt-5">
-                    <p className="text-[10px] font-bold uppercase tracking-wider text-secondary-400 mb-3">
+                    <p className="text-[10px] font-extrabold uppercase tracking-wider text-secondary-400 mb-3">
                       Popular Models
                     </p>
                     
-                    {/* The key={startIndex} forces a smooth slide transition when the products change */}
-                    <div key={startIndex} className="flex gap-1.5 animate-slide-in-right">
+                    {/* Slide transition container */}
+                    <div key={startIndex} className="flex gap-2.5 animate-slide-in-right">
                       {previewItems.map((prod) => (
                         <Link
                           key={prod.id}
                           href={`/products/${prod.slug}`}
-                          className="group/prod flex flex-col items-center gap-1.5 flex-1 p-1 rounded-xl border border-secondary-100 bg-secondary-50/30 hover:bg-white hover:border-primary-300 hover:shadow-soft transition-all duration-300 min-w-0"
+                          className="group/prod flex flex-col items-center gap-2 flex-1 p-2 rounded-2xl border border-secondary-100 bg-secondary-50/30 hover:bg-white hover:border-primary-400 hover:shadow-card transition-all duration-300 min-w-0"
                         >
-                          <div className="w-16 h-16 sm:w-20 sm:h-20 lg:w-14 lg:h-14 xl:w-20 xl:h-20 rounded-lg overflow-hidden bg-white border border-secondary-100 flex items-center justify-center p-1 shrink-0">
+                          <div className="w-18 h-18 sm:w-22 sm:h-22 lg:w-18 lg:h-18 xl:w-22 xl:h-22 rounded-xl overflow-hidden bg-white border border-secondary-100 flex items-center justify-center p-1.5 shrink-0 shadow-sm transition-transform duration-300 group-hover/prod:scale-[1.04]">
                             <ProductImageWithFallback
                               src={prod.images[0]}
                               alt={prod.name}
@@ -101,7 +101,7 @@ export default function CategoryGrid() {
                               className="w-full h-full object-contain group-hover/prod:scale-110 transition-transform duration-300"
                             />
                           </div>
-                          <span className="text-[10px] font-semibold text-secondary-600 truncate w-full text-center group-hover/prod:text-primary transition-colors">
+                          <span className="text-[11px] font-bold text-secondary-600 truncate w-full text-center group-hover/prod:text-primary transition-colors px-0.5">
                             {prod.name.replace(/Massage Chair|Leg Massager/i, "").trim().split(" ")[0]}
                           </span>
                         </Link>
@@ -113,10 +113,10 @@ export default function CategoryGrid() {
 
               <Link
                 href={`/products?category=${cat.slug}`}
-                className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:text-accent transition-colors"
+                className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-primary group-hover:text-accent transition-colors relative overflow-hidden"
               >
-                Explore Collection
-                <span className="transform group-hover:translate-x-1 transition-transform">→</span>
+                <span>Explore Collection</span>
+                <span className="transform group-hover:translate-x-1.5 transition-transform duration-300">→</span>
               </Link>
             </div>
           );
