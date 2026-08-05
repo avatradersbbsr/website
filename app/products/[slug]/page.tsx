@@ -240,6 +240,59 @@ export default async function ProductDetailPage({
             </ul>
           </div>
 
+          {product.category === "massage-chairs" && (
+            <div>
+              <h2 className="font-display text-xl font-semibold text-secondary-700 mb-4">
+                Key Functions & Advanced Features
+              </h2>
+              <div className="grid sm:grid-cols-2 gap-6">
+                {/* Panel 1: Functions */}
+                <div className="rounded-2xl border border-secondary-100 bg-white p-6 shadow-soft hover:shadow-card transition-all duration-300">
+                  <h3 className="font-display font-bold text-secondary-800 text-base mb-4 flex items-center gap-2 text-primary">
+                    <span className="h-2 w-2 rounded-full bg-primary" />
+                    Core Massager Functions
+                  </h3>
+                  <ul className="space-y-3.5">
+                    {[
+                      { title: "4D Multi-Function Relief", desc: "4D kneading, tapping, shiatsu, and knock functions for full-body relief." },
+                      { title: "AI-Powered Alignment", desc: "AI-powered detection for accurate shoulder and spine alignment." },
+                      { title: "Smart Hands-Free Control", desc: "Hands-free control with 17 voice commands on the automatic body massager." },
+                      { title: "Zero-Gravity Recline", desc: "Zero-gravity recline for improved circulation and deep comfort." },
+                      { title: "Magnetic Foot Rollers", desc: "Magnetic foot rollers for a complete massager machine for full body experience." }
+                    ].map((f) => (
+                      <li key={f.title} className="text-sm">
+                        <span className="font-semibold text-secondary-700 block">{f.title}</span>
+                        <span className="text-secondary-400 text-xs mt-0.5 block leading-relaxed">{f.desc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                {/* Panel 2: Features */}
+                <div className="rounded-2xl border border-secondary-100 bg-white p-6 shadow-soft hover:shadow-card transition-all duration-300">
+                  <h3 className="font-display font-bold text-secondary-800 text-base mb-4 flex items-center gap-2 text-accent">
+                    <span className="h-2 w-2 rounded-full bg-accent" />
+                    Advanced Chair Features
+                  </h3>
+                  <ul className="space-y-3.5">
+                    {[
+                      { title: "7-Inch Touchscreen Command", desc: "7-inch touchscreen with intuitive, easy-to-use controls." },
+                      { title: "Built-In Entertainment & Power", desc: "Built-in USB charging, Bluetooth speakers, and ambient LED lighting." },
+                      { title: "Graphene Thermal Zones", desc: "Graphene heating zones for targeted back and leg heat therapy." },
+                      { title: "Multi-Zone Compression Airbags", desc: "Airbags targeting shoulders, arms, calves, and feet on the body massage machine." },
+                      { title: "16 cm Calf Extender Adjustment", desc: "Calf extender adjusts up to 16 cm for full coverage across all body types." }
+                    ].map((f) => (
+                      <li key={f.title} className="text-sm">
+                        <span className="font-semibold text-secondary-700 block">{f.title}</span>
+                        <span className="text-secondary-400 text-xs mt-0.5 block leading-relaxed">{f.desc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div>
             <h2 className="font-display text-xl font-semibold text-secondary-700 mb-4">
               Therapeutic Health Benefits
