@@ -154,6 +154,7 @@ export default function Header() {
               exit={{ opacity: 0 }}
               onClick={() => setOpen(false)}
               className="fixed inset-0 z-50 bg-secondary-900 lg:hidden"
+              role="presentation"
             />
 
             {/* Slide-in Menu Panel */}
