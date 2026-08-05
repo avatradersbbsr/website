@@ -124,6 +124,19 @@ export default function Hero() {
             </button>
           </div>
 
+          {/* Premium Trust Highlights */}
+          <div className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5 text-[11px] font-semibold text-secondary-300">
+            <span className="flex items-center gap-1">
+              <span className="text-accent text-[12px]">★</span> Showroom Tested Quality
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="text-accent text-[12px]">✓</span> Direct Local Support & Service
+            </span>
+            <span className="flex items-center gap-1">
+              <span className="text-accent text-[12px]">🚚</span> Safe Odisha-Wide Shipping
+            </span>
+          </div>
+
           <div className="mt-5 grid grid-cols-3 gap-4 w-full border-t border-white/10 pt-3.5 text-white/80">
             <div className="flex flex-col gap-0.5">
               <span className="font-display text-xl sm:text-2xl font-bold text-accent">
@@ -155,53 +168,41 @@ export default function Hero() {
               <div className="absolute inset-0 bg-radial-gradient(circle at 0% 100%, rgba(30,42,120,0.25), transparent 70%)" />
             </div>
 
-            {/* Overlapping glass stat panel 1 */}
-            <div className="absolute top-6 left-2 sm:-left-6 rounded-2xl bg-white/10 border border-white/20 p-3 shadow-card backdrop-blur-xl animate-float flex items-center gap-3 z-20">
-              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-accent text-white shadow-glow-accent">
-                <Award className="h-4 w-4" />
-              </span>
-              <div>
-                <p className="text-[9px] uppercase font-semibold text-secondary-300 tracking-wider">Showroom Tested</p>
-                <p className="text-[11px] font-bold text-white">100% Verified Quality</p>
-              </div>
-            </div>
-
-            {/* Overlapping glass stat panel 2 */}
-            <div className="absolute bottom-12 right-2 sm:-right-6 rounded-2xl bg-white/10 border border-white/20 p-3 shadow-card backdrop-blur-xl animate-float [animation-delay:2s] flex items-center gap-3 z-20">
-              <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-primary text-white shadow-glow">
-                <HeartHandshake className="h-4 w-4" />
-              </span>
-              <div>
-                <p className="text-[9px] uppercase font-semibold text-secondary-300 tracking-wider">After-Sales</p>
-                <p className="text-[11px] font-bold text-white">Direct Local Support</p>
-              </div>
-            </div>
-
             {/* Carousel Inner Enclosure */}
             <div className="absolute inset-4 rounded-2xl bg-secondary-950/80 border border-white/5 flex flex-col justify-between p-4 overflow-hidden z-10">
               {/* Slide image area */}
-              <Link 
-                href={`/products/${heroChairs[activeSlide].slug}`}
-                className="relative flex-1 w-full flex items-center justify-center bg-white rounded-xl overflow-hidden group shadow-inner"
-              >
-                {/* Floating model tag */}
-                <div className="absolute top-3 left-3 bg-secondary-900/90 border border-white/10 rounded-full px-3 py-1 text-[9px] font-bold text-accent uppercase tracking-wider backdrop-blur-sm z-30">
-                  Featured Chair
-                </div>
-                
-                {/* Floating price */}
-                <div className="absolute bottom-3 right-3 bg-primary text-white rounded-full px-3 py-1 text-xs font-bold shadow-glow z-30">
-                  {heroChairs[activeSlide].price}
-                </div>
+              <div className="relative flex-1 w-full bg-white rounded-xl overflow-hidden group shadow-inner">
+                {heroChairs.map((slide, idx) => (
+                  <Link
+                    key={idx}
+                    href={`/products/${slide.slug}`}
+                    className={cn(
+                      "absolute inset-0 w-full h-full flex items-center justify-center transition-all duration-750 ease-in-out p-4",
+                      activeSlide === idx 
+                        ? "opacity-100 scale-100 pointer-events-auto z-10" 
+                        : "opacity-0 scale-95 pointer-events-none z-0"
+                    )}
+                  >
+                    {/* Floating model tag */}
+                    <div className="absolute top-3 left-3 bg-secondary-900/90 border border-white/10 rounded-full px-3 py-1 text-[9px] font-bold text-accent uppercase tracking-wider backdrop-blur-sm z-30">
+                      Featured Chair
+                    </div>
+                    
+                    {/* Floating price */}
+                    <div className="absolute bottom-3 right-3 bg-primary text-white rounded-full px-3 py-1 text-xs font-bold shadow-glow z-30">
+                      {slide.price}
+                    </div>
 
-                <ProductImageWithFallback
-                  src={heroChairs[activeSlide].image}
-                  alt={heroChairs[activeSlide].name}
-                  category="massage-chairs"
-                  className="h-full w-full object-contain p-1 group-hover:scale-105 transition-transform duration-500"
-                  priority={true}
-                />
-              </Link>
+                    <ProductImageWithFallback
+                      src={slide.image}
+                      alt={slide.name}
+                      category="massage-chairs"
+                      className="h-full w-full object-contain p-1 group-hover:scale-105 transition-transform duration-500"
+                      priority={true}
+                    />
+                  </Link>
+                ))}
+              </div>
 
               {/* Slide controls and title */}
               <div className="mt-4 flex flex-col gap-2">
