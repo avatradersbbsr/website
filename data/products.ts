@@ -125,13 +125,13 @@ export const products: Product[] = [
   {
     id: "z-91-ultra-luxury",
     slug: "z-91-ultra-luxury",
-    name: "Z-91 Ultra Luxury Massage Chair",
+    name: "Z-91 Ultra Luxury 4D Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Ultra luxury full-body massage chair with 7-inch PAD touch screen, 20 auto programs, 10 valves 42 airbags, and wireless charging.",
+    shortDescription: "Z91 ultra luxury full-body massage chair with 7-inch LED touchscreen display, 20 auto programs, 58–62 airbags, and wireless mobile charging.",
     description: [
-      "The Z-91 Ultra Luxury Massage Chair is a high-class home therapy solution. It features an integrated SL track rail from neck to thigh and a 2D massage hand system with automatic shoulder detection, delivering precise neck and shoulder rubs.",
-      "The Z-91 is equipped with 10 valves and 42 airbags for complete body wrapping, and 24V carbon fiber heating on the backrest and footrest. Control is effortless via the 7-inch PAD touch screen, rotating navigation buttons, or intelligent voice commands.",
-      "The footrest uses leg electric telescopic technology to auto-detect height, offering a dedicated knee massage, 24 airbags for leg kneading, and a closed foot massage with 3 groups of rollers. The premium PU cover features 5 years hydrolysis resistance."
+      "The Z-91 Ultra Luxury 4D Massage Chair is a state-of-the-art home recovery system. It features Zero Gravity Positioning that lifts your legs above your heart level to evenly spread weight and reduce spine pressure.",
+      "Built with a 140cm curved SL-Track rail matching your natural spine shape to guide 3D/4D mechanical hands from neck to thighs. Delivers complete relaxation using 58-62 strategic airbags for full-body air compression across shoulders, arms, waist, thighs, calves, and feet.",
+      "Equipped with Smart Body Scanning to automatically map shoulder height, lower body care calf rubbing, an automatic leg extension system, voice commands, shortcut armrest controls, and far-infrared carbon-fiber heating."
     ],
     images: [
       "/images/products/massage-chairs/z-91-ultra-luxury/1.jpg",
@@ -143,32 +143,33 @@ export const products: Product[] = [
     availability: "limited-stock",
     warranty: "3 Years (2 Year Comprehensive + 1 Year Motor)",
     features: [
-      "Integrated SL track rail and automatic shoulder detection",
-      "20 automatic programs",
-      "10 valves with 42 airbags wrapping shoulders, armrests, and footrest",
-      "7-inch PAD touch screen, rotating controls, and intelligent voice control",
-      "Electric telescopic leg rest with dedicated knee massage and foot rollers",
-      "24V safe voltage with carbon fiber heating on back and legs",
-      "Wireless charging on armrest and PU with 5 years hydrolysis resistance"
+      "Zero Gravity Positioning: Lifts legs above heart to reduce spine pressure",
+      "SL-Track Design: 140cm curved rail guides rollers from neck to upper thighs",
+      "Full-Body Air Compression: Uses 58–62 strategic airbags for rhythmic pressure",
+      "Smart Body Scanning: Maps shoulder height and body shape before starting",
+      "Lower Body Care: Calf rubbing and automatic leg extension system",
+      "Smart Controls & Entertainment: Voice commands, touchscreen, and Bluetooth",
+      "Far-infrared heat therapy targeting back and lumbar regions",
+      "Premium PU leather finish with LED side light design",
+      "Operates on standard power with a quiet, smooth motor drive system"
     ],
     specifications: [
       { label: "Model", value: "Z91 (High Class)" },
-      { label: "Track Type", value: "Integrated SL Track" },
-      { label: "Airbags & Valves", value: "10 Valves, 42 Airbags" },
-      { label: "Control Interface", value: "7\" Touch PAD & Voice Control" },
-      { label: "Power & Voltage", value: "180W, 220V" },
-      { label: "Dimensions", value: "1870 x 750 x 840 mm" },
-      { label: "Weight (G.W/N.W)", value: "125 kg / 110 kg" },
-      { label: "Material", value: "Anti-hydrolysis PU (5 Years Resistance)" },
-      { label: "Warranty", value: "3 Years (2 Year Comprehensive + 1 Year Motor)" }
+      { label: "Track Type", value: "140cm Curved SL-Track" },
+      { label: "Airbags Count", value: "58–62 Airbags" },
+      { label: "Massage Technology", value: "3D / 4D Mechanical Hands" },
+      { label: "Auto Programs", value: "20 Specialized Preset Modes" },
+      { label: "Therapy", value: "Far-Infrared Carbon-Fiber Heat" },
+      { label: "Upholstery", value: "Premium PU Leather with LED Lights" },
+      { label: "Warranty", value: "6 Years (1 Year Comprehensive + 5 Years Motor)" }
     ],
     benefits: [
-      "Automatic shoulder detection customizes neck massages",
-      "Dedicated electric knee massage helps reduce joint pain",
-      "5 years hydrolysis resistant PU ensures long-term cover durability"
+      "Zero Gravity recline reduces compression on back and spinal disc loads",
+      "140cm SL-track rail matches natural spine curve for deeper shoulder relief",
+      "58-62 airbags provide full-body rhythmic compression for improved circulation"
     ],
     faqs: [
-      { question: "What makes the Z-91 'Ultra Luxury'?", answer: "The Z-91 features 20 automatic programs, 10 valves, 42 airbags, a 7-inch touch PAD, and an electric telescopic leg rest with dedicated knee massage — commercial-grade details built for the home." },
+      { question: "What makes the Z-91 'Ultra Luxury'?", answer: "The Z-91 features 20 automatic programs, 58–62 airbags, a 7-inch touch PAD, and an electric telescopic leg rest with dedicated knee massage — commercial-grade details built for the home." },
       { question: "Can I try the Z-91 at the showroom?", answer: "Yes, the Z-91 is on display at our Puri Bypass Road showroom. We recommend calling ahead as it's a limited-stock model." },
       { question: "Is installation included?", answer: "Yes, for Bhubaneswar deliveries, our team handles complete setup and provides a walkthrough of all features including voice control setup." }
     ],
@@ -534,13 +535,13 @@ export const products: Product[] = [
   {
     id: "elite-classic",
     slug: "elite-classic",
-    name: "Elite Classic Massage Chair",
+    name: "Z18 Classic Massage Chair",
     category: "massage-chairs",
-    shortDescription: "Elite classic full-body massage chair with 135cm SL guide rail, 8 auto programs, leg kneading, and voice control.",
+    shortDescription: "Z18 classic full-body massage chair with L/SL-track, intelligent mechanical hands, Bluetooth audio speakers, and lower back infrared heating.",
     description: [
-      "The Elite Classic Massage Chair is a premium home wellness system designed to deliver high-quality therapeutic relief. It features an intelligent mechanical massage hand system that adapts to your back curve, imitating professional finger pressing, kneading, and tapping.",
-      "Equipped with a long 135cm SL-shape guide rail and zero-gravity recline, it distributes body pressure evenly to achieve full relaxation. Its space-saving design slides forward to require minimal clearance from the wall.",
-      "Featuring 8 automatic programs, 28 air bags, leg kneading, palm magnetic therapy, carbon fiber back heating, and wireless Bluetooth music speakers."
+      "The Z18 Classic Massage Chair is a premium home wellness system. Elevate your feet above your heart with Zero Gravity Positioning to evenly distribute weight and reduce spinal pressure.",
+      "Utilizing an L or SL-shaped track paired with intelligent mechanical hands, it massages from the neck down to the thighs. Applies rhythmic compression across the shoulders, arms, waist, calves, and feet using 28 full-body airbags.",
+      "Equipped with built-in infrared heating elements targeting the lower back and legs to loosen tight muscles. Complete with integrated foot rollers, built-in Bluetooth audio speakers, and artistic ambient side lighting."
     ],
     images: [
       "/images/products/massage-chairs/elite-classic/1.png"
@@ -550,38 +551,41 @@ export const products: Product[] = [
     availability: "in-stock",
     warranty: "2 Years (1 Year Comprehensive + 1 Year Motor)",
     features: [
-      "135cm SL-shape curved guide rail tracking",
-      "Intelligent mechanical massage hands (kneading, tapping, finger press)",
-      "8 kinds of automatic massage programs (Back & Waist, Vertebral, Traction, etc.)",
-      "Intelligent voice control recognition and shortcut button",
-      "Zero gravity recline and space-saving wall slide",
-      "Leg kneading function and 20cm leg stretch adjustment",
-      "Carbon fiber back heating (40°C - 50°C) and palm magnetic therapy"
+      "Zero Gravity Positioning: Elevates feet above heart to reduce spinal pressure",
+      "Roller & Track System: Intelligent mechanical hands massage from neck to thighs",
+      "Full-Body Airbags: Rhythmic air compression on shoulders, arms, waist, calves, feet",
+      "Heat Therapy: Built-in infrared heating targets lower back and legs",
+      "Foot & Sole Care: Acupressure foot rollers to stimulate soles",
+      "Entertainment & Extras: Built-in Bluetooth speakers and ambient lighting",
+      "Multi-stage tilt layout with up to 170-degree recline",
+      "Massage Types: Kneading, tapping, rolling, shiatsu, and airbag compression",
+      "High-grade PU / faux leather upholstery"
     ],
     specifications: [
-      { label: "Model", value: "Elite Classic" },
-      { label: "Track Type", value: "135cm SL-Shape Curved Rail" },
-      { label: "Airbag Count", value: "28 Airbags (with 3 intensity levels)" },
-      { label: "Automatic Programs", value: "8 Auto Programs" },
-      { label: "Control Interface", value: "Voice Control & LCD Color Remote" },
-      { label: "Power & Voltage", value: "150W, 110-240V~ 50/60Hz" },
-      { label: "Weight (G.W/N.W)", value: "115 kg / 95 kg" },
-      { label: "Warranty", value: "2 Years (1 Year Comprehensive + 1 Year Motor)" }
+      { label: "Model", value: "Z18 Classic" },
+      { label: "Track Type", value: "L or SL-Shape Track" },
+      { label: "Airbags Count", value: "28 Airbags" },
+      { label: "Rated Power", value: "~180 W" },
+      { label: "Reclining Angle", value: "Up to 170 degrees (multi-stage tilt)" },
+      { label: "Massage Types", value: "Kneading, Tapping, Rolling, Shiatsu, Airbag" },
+      { label: "Upholstery", value: "High-grade PU / Faux Leather" },
+      { label: "Color Options", value: "Blue and Brown" },
+      { label: "Warranty", value: "6 Years (1 Year Comprehensive + 5 Years Motor)" }
     ],
     benefits: [
-      "Zero-space wall slide saves space in small rooms",
-      "Leg kneading and spring foot retraction adapts to all user heights",
-      "Carbon fiber heating penetrates deep tissue to relieve lumbar pain"
+      "Zero Gravity recline reduces spinal load and improves lung expansion",
+      "Built-in lower back heating accelerates deep muscle recovery and relaxation",
+      "Bluetooth audio allows hands-free musical escape during therapy sessions"
     ],
     faqs: [
-      { question: "Is the Elite Classic covered under warranty?", answer: "Yes, it comes with a 2-year warranty (1 Year Comprehensive + 1 Year Motor) backed by local showroom support." },
-      { question: "Can I see the Elite Classic in person before buying?", answer: "Yes, you can test it at our showroom in Bhubaneswar." }
+      { question: "Is the Z18 covered under warranty?", answer: "Yes, it comes with a 6-year local showroom warranty (1 Year Comprehensive + 5 Years Motor) backed by local showroom support." },
+      { question: "Can I see the Z18 in person before buying?", answer: "Yes, you can test it at our showroom in Bhubaneswar." }
     ],
     bestSeller: false,
     featured: false,
     seo: {
-      metaTitle: "Elite Classic Massage Chair | Buy in Bhubaneswar | AVA Traders",
-      metaDescription: "Premium Elite Classic massage chair with SL curved rail, 8 auto modes, voice control, and leg kneading. Shop at AVA Traders showroom."
+      metaTitle: "Z18 Classic Massage Chair | Buy in Bhubaneswar | AVA Traders",
+      metaDescription: "Premium Z18 classic massage chair with L/SL track, 28 airbags, Bluetooth speakers, and lower back heating. Shop at AVA Traders showroom."
     }
   },
   {
