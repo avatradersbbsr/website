@@ -1557,6 +1557,12 @@ export const products: Product[] = [
       { question: "Is it safe for people with pacemakers?", answer: "No, EMS devices should not be used by people with pacemakers or other implanted electronic devices. Please consult your doctor." },
       { question: "Can I use it at my office desk?", answer: "Yes! That's one of the best use cases. Place it under your desk and enjoy a subtle foot massage while working." }
     ],
+    bestSeller: false,
+    featured: false,
+    seo: {
+      metaTitle: "Foldable Intelligent Sole Massager | Portable EMS Foot Massager | AVA Traders",
+      metaDescription: "Foldable EMS sole massager with intelligent foot pad, multiple modes and portable design. Shop at AVA Traders, Bhubaneswar."
+    }
   },
   {
     id: "power-vibration-plate-massager",
