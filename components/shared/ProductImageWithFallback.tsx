@@ -11,6 +11,7 @@ interface ProductImageWithFallbackProps {
   category: CategorySlug;
   className?: string;
   priority?: boolean;
+  unoptimized?: boolean;
 }
 
 const EXTENSIONS = [".jpg", ".jpeg", ".png", ".webp"];
@@ -21,6 +22,7 @@ export default function ProductImageWithFallback({
   category,
   className,
   priority = false,
+  unoptimized = false,
 }: ProductImageWithFallbackProps) {
   const [currentSrc, setCurrentSrc] = useState<string | undefined>(src);
   const [attemptIndex, setAttemptIndex] = useState(0);
@@ -69,6 +71,7 @@ export default function ProductImageWithFallback({
       onError={handleError}
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       priority={priority}
+      unoptimized={unoptimized}
     />
   );
 }

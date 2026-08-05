@@ -199,6 +199,7 @@ export default function Hero() {
                       category="massage-chairs"
                       className="h-full w-full object-contain p-1 group-hover:scale-105 transition-transform duration-500"
                       priority={true}
+                      unoptimized={true}
                     />
                   </Link>
                 ))}

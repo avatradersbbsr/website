@@ -9,7 +9,7 @@ export const products: Product[] = [
   {
     id: "z91-with-thigh-massage",
     slug: "z91-with-thigh-massage",
-    name: "Z91 with Thigh Massage",
+    name: "Z91 with Thigh Massage Premium 4D Zero Gravity Massage Chair with SL-Track, 74 Airbags, AI Voice Control, Heating & Stretch",
     category: "massage-chairs",
     shortDescription: "Premium 4D performance massage chair with SL-track, 23 auto programs, 3 custom memory slots, 74 precision airbags, and smart voice control.",
     description: [
@@ -68,7 +68,7 @@ export const products: Product[] = [
   {
     id: "a-710-2-classic-premium-4d",
     slug: "a-710-2-classic-premium-4d",
-    name: "A-710-2 Classic Premium 4D Massage Chair",
+    name: "A-710-2 Classic Premium 4D Zero Gravity AI Massage Chair with 135cm S+L Track, Graphene Shawl Heating, TFT Screen & Calf Kneading",
     category: "massage-chairs",
     shortDescription: "Flagship 4D massage chair with 135cm S+L rail, 23 auto programs, graphene shawl heating, and 7-inch TFT color screen.",
     description: [
@@ -134,7 +134,7 @@ export const products: Product[] = [
   {
     id: "z-91-ultra-luxury",
     slug: "z-91-ultra-luxury",
-    name: "Z-91 Ultra Luxury 4D Massage Chair",
+    name: "Z-91 Ultra Luxury 4D Massage Chair with 7-Inch LED Touch Screen, 20 Auto Programs, 58–62 Airbags, Wireless Charging & Body Scan",
     category: "massage-chairs",
     shortDescription: "Z91 ultra luxury full-body massage chair with 7-inch LED touchscreen display, 20 auto programs, 58–62 airbags, and wireless mobile charging.",
     description: [
@@ -193,7 +193,7 @@ export const products: Product[] = [
   {
     id: "z-90-economic-premium-ultra-luxury",
     slug: "z-90-economic-premium-ultra-luxury",
-    name: "Z-90 Economic Premium Ultra Luxury Massage Chair",
+    name: "Z-90 Economic Premium Ultra Luxury Massage Chair with 3D/4D AI Hands, SL Track, Touch PAD, Bluetooth & Back Heating",
     category: "massage-chairs",
     shortDescription: "Economic premium ultra luxury massage chair with 7-inch PAD touch screen, 20 auto programs, and 24V graphene heating.",
     description: [
@@ -250,7 +250,7 @@ export const products: Product[] = [
   {
     id: "a-372-2-premium-ultra-luxury",
     slug: "a-372-2-premium-ultra-luxury",
-    name: "A-372-2 Premium Ultra Luxury Massage Chair",
+    name: "A-372-2 Premium Ultra Luxury Massage Chair with 3D Mechanism, 17 Voice Commands, 52 Airbags & Zero Gravity",
     category: "massage-chairs",
     shortDescription: "Air suspension 3D massage chair with 9 techniques, 17 voice commands, and graphene waist/leg heating.",
     description: [
@@ -368,7 +368,7 @@ export const products: Product[] = [
   {
     id: "a-321-19-premium-luxury",
     slug: "a-321-19-premium-luxury",
-    name: "A-321 Premium 3D Massage Chair",
+    name: "iRest SL-A321 3D Premium Massage Chair with SL Curved Rail, Zero Gravity Recline, Calf Telescopic Stretch & Bluetooth",
     category: "massage-chairs",
     shortDescription: "SL-A321 full body massage chair is built with intelligent features designed for daily relaxation, pain relief, and total body rejuvenation.",
     description: [
@@ -626,7 +626,7 @@ export const products: Product[] = [
   {
     id: "am-999-luxury-premium",
     slug: "am-999-luxury-premium",
-    name: "AM-999 Luxury Premium Massage Chair",
+    name: "AM-999 Luxury Premium Massage Chair with 135cm S+L Track, 74 Airbags, 23 Automatic Programs & Graphene Heating",
     category: "massage-chairs",
     shortDescription: "Futuristic luxury premium massage chair with 135cm S+L rail, 23 auto programs, graphene shawl heating, and 7-inch TFT color screen.",
     description: [
@@ -688,7 +688,7 @@ export const products: Product[] = [
   {
     id: "kiyo-416-classic-premium",
     slug: "kiyo-416-classic-premium",
-    name: "Kiyo-416 Classic Premium Leg Massager",
+    name: "Kiyo-416 Classic Premium Leg Massager with Air Compression, Heel Shaking, Leg Rubbing & Heat Therapy",
     category: "leg-massagers",
     shortDescription: "Classic premium leg massager with air compression, heat therapy and kneading for calves, ankles and feet.",
     description: [
@@ -743,7 +743,7 @@ export const products: Product[] = [
   {
     id: "entuit-ultra-premium",
     slug: "entuit-ultra-premium",
-    name: "Entuit Ultra Premium Leg Massager",
+    name: "Entuit Ultra Premium Leg Massager with 3D Kneading, Full Calf Airbags Wrap & Vibration Therapy",
     category: "leg-massagers",
     shortDescription: "Ultra premium leg massager with full-leg coverage, 3D kneading, vibration and infrared heat therapy.",
     description: [
@@ -959,7 +959,7 @@ export const products: Product[] = [
   {
     id: "healtho-economic",
     slug: "healtho-economic",
-    name: "Healtho Economic Leg Massager",
+    name: "Healtho Economic Leg Massager with Basic Foot & Calf Air Compression & 2 Intensity Levels",
     category: "leg-massagers",
     shortDescription: "Entry-level economic leg massager with basic air compression — affordable daily relief for tired feet and calves.",
     description: [
