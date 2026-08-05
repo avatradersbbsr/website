@@ -46,7 +46,7 @@ export default function CategoryGrid() {
         description="Three dedicated product lines covering full-body zero-gravity relief, targeted foot & leg therapy, and specialized health care devices."
       />
 
-      <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
         {categories.map((cat, i) => {
           const Icon = icons[cat.icon as keyof typeof icons] || Armchair;
           const previewItems = getCategoryPreviews(cat.slug);
@@ -92,7 +92,7 @@ export default function CategoryGrid() {
                           href={`/products/${prod.slug}`}
                           className="group/prod flex flex-col items-center gap-2 flex-1 p-2 rounded-2xl border border-secondary-100 bg-secondary-50/30 hover:bg-white hover:border-primary-400 hover:shadow-card transition-all duration-300 min-w-0"
                         >
-                          <div className="w-18 h-18 sm:w-22 sm:h-22 lg:w-18 lg:h-18 xl:w-22 xl:h-22 rounded-xl overflow-hidden bg-white border border-secondary-100 flex items-center justify-center p-1.5 shrink-0 shadow-sm transition-transform duration-300 group-hover/prod:scale-[1.04]">
+                          <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-24 lg:h-24 xl:w-28 xl:h-28 rounded-xl overflow-hidden bg-white border border-secondary-100 flex items-center justify-center p-1.5 shrink-0 shadow-sm transition-transform duration-300 group-hover/prod:scale-[1.04]">
                             <ProductImageWithFallback
                               src={prod.images[0]}
                               alt={prod.name}

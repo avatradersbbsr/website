@@ -55,7 +55,7 @@ export default function HomePage() {
           eyebrow="Frequently Asked Questions"
           title="Questions before you visit or order"
         />
-        <div className="mt-10 max-w-2xl mx-auto">
+        <div className="mt-6 max-w-2xl mx-auto">
           <FAQAccordion faqs={siteFaqs} />
         </div>
       </section>

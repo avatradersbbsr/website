@@ -29,7 +29,7 @@ export default function ProductRail({
         </Link>
       </div>
 
-      <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {displayProducts.map((p) => (
           <ProductCard key={p.id} product={p} />
         ))}

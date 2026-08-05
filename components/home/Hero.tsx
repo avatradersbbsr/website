@@ -160,36 +160,31 @@ export default function Hero() {
         </div>
 
         {/* Right graphical composition column - interactive product carousel */}
-        <div className="lg:col-span-7 relative flex items-center justify-center mt-8 lg:mt-0 animate-fade-in [animation-delay:200ms]">
-          <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[380px] xl:max-w-[420px] aspect-[4/5] mx-auto">
+        <div className="lg:col-span-7 relative flex items-center justify-center mt-6 lg:mt-0 animate-fade-in [animation-delay:200ms]">
+          <div className="relative w-full max-w-[280px] sm:max-w-[340px] lg:max-w-[320px] xl:max-w-[360px] aspect-[3/4] mx-auto">
             {/* Background glowing card */}
-            <div className="absolute inset-0 rounded-3xl bg-white border border-secondary-200/50 shadow-glow overflow-hidden">
-              <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(221,28,22,0.05), transparent 70%)" />
-              <div className="absolute inset-0 bg-radial-gradient(circle at 0% 100%, rgba(50,42,120,0.05), transparent 70%)" />
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-800/60 via-secondary-700/70 to-secondary-900 border border-white/10 shadow-glow overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-accent/15 rounded-full blur-[60px]" />
+              <div className="absolute bottom-0 left-0 w-40 h-40 bg-primary/20 rounded-full blur-[80px]" />
             </div>
 
-            {/* Carousel Inner Enclosure */}
-            <div className="absolute inset-4 rounded-2xl bg-secondary-50/40 border border-secondary-100 flex flex-col justify-between p-4 overflow-hidden z-10">
+            {/* Carousel Inner */}
+            <div className="absolute inset-3 rounded-xl flex flex-col justify-between overflow-hidden z-10">
               {/* Slide image area */}
-              <div className="relative flex-1 w-full bg-white rounded-xl overflow-hidden group shadow-inner">
+              <div className="relative flex-1 w-full rounded-lg overflow-hidden group bg-gradient-to-b from-white/95 to-secondary-100/80">
                 {heroChairs.map((slide, idx) => (
                   <Link
                     key={idx}
                     href={`/products/${slide.slug}`}
                     className={cn(
-                      "absolute inset-0 w-full h-full flex items-center justify-center transition-all duration-750 ease-in-out p-4 bg-white",
+                      "absolute inset-0 w-full h-full flex items-center justify-center transition-all duration-700 ease-in-out p-3",
                       activeSlide === idx 
                         ? "opacity-100 scale-100 pointer-events-auto z-10" 
                         : "opacity-0 scale-95 pointer-events-none z-0"
                     )}
                   >
-                    {/* Floating model tag */}
-                    <div className="absolute top-3 left-3 bg-secondary-900 text-white rounded-full px-3 py-1 text-[9px] font-bold uppercase tracking-wider z-30 shadow-sm">
-                      Featured Chair
-                    </div>
-                    
                     {/* Floating price */}
-                    <div className="absolute bottom-3 right-3 bg-accent text-white rounded-full px-3 py-1 text-xs font-bold shadow-glow-accent z-30">
+                    <div className="absolute bottom-2 right-2 bg-accent text-white rounded-full px-2.5 py-0.5 text-[11px] font-bold shadow-glow-accent z-30">
                       {slide.price}
                     </div>
 
@@ -197,7 +192,7 @@ export default function Hero() {
                       src={slide.image}
                       alt={slide.name}
                       category="massage-chairs"
-                      className="h-full w-full object-contain p-1 group-hover:scale-105 transition-transform duration-500"
+                      className="h-full w-full object-contain drop-shadow-lg group-hover:scale-105 transition-transform duration-500"
                       priority={true}
                       unoptimized={true}
                     />
@@ -205,34 +200,32 @@ export default function Hero() {
                 ))}
               </div>
 
-              {/* Slide controls and title */}
-              <div className="mt-4 flex flex-col gap-2">
-                <div className="flex items-center justify-between">
-                  <h3 className="font-display font-bold text-secondary-800 text-xs sm:text-sm leading-tight truncate max-w-[80%]">
-                    {heroChairs[activeSlide].name}
-                  </h3>
-                  <Link 
-                    href={`/products/${heroChairs[activeSlide].slug}`}
-                    className="text-[11px] font-semibold text-accent hover:underline flex items-center gap-0.5 shrink-0"
-                  >
-                    View <ArrowRight className="h-3 w-3" />
-                  </Link>
-                </div>
-                
-                {/* Dots indicator */}
-                <div className="flex justify-center gap-2 mt-1">
-                  {heroChairs.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => setActiveSlide(idx)}
-                      className={cn(
-                        "h-1.5 rounded-full transition-all duration-300",
-                        activeSlide === idx ? "w-6 bg-accent" : "w-1.5 bg-secondary-300"
-                      )}
-                      aria-label={`Go to slide ${idx + 1}`}
-                    />
-                  ))}
-                </div>
+              {/* Slide info bar */}
+              <div className="mt-2.5 flex items-center justify-between px-1">
+                <h3 className="font-display font-bold text-white text-[11px] sm:text-xs leading-tight truncate max-w-[75%]">
+                  {heroChairs[activeSlide].name}
+                </h3>
+                <Link 
+                  href={`/products/${heroChairs[activeSlide].slug}`}
+                  className="text-[10px] font-semibold text-accent hover:underline flex items-center gap-0.5 shrink-0"
+                >
+                  View <ArrowRight className="h-2.5 w-2.5" />
+                </Link>
+              </div>
+              
+              {/* Dots */}
+              <div className="flex justify-center gap-1.5 mt-1.5 pb-1">
+                {heroChairs.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveSlide(idx)}
+                    className={cn(
+                      "h-1 rounded-full transition-all duration-300",
+                      activeSlide === idx ? "w-5 bg-accent" : "w-1.5 bg-white/25"
+                    )}
+                    aria-label={`Go to slide ${idx + 1}`}
+                  />
+                ))}
               </div>
             </div>
           </div>
