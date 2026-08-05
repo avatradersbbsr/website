@@ -40,6 +40,7 @@ export interface Product {
   faqs: ProductFAQ[];
   bestSeller?: boolean;
   featured?: boolean;
+  airbags?: string;
   seo: {
     metaTitle: string;
     metaDescription: string;

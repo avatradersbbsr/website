@@ -1480,6 +1480,18 @@ products.forEach((p) => {
   if (p.category === "massage-chairs") {
     p.warranty = "6 Years (1 Year Comprehensive + 5 Years Motor)";
     
+    // Add exact airbags count for each model
+    if (p.id === "a-372-2-premium-ultra-luxury") p.airbags = "52";
+    else if (p.id === "a-710-2-classic-premium-4d") p.airbags = "74";
+    else if (p.id === "a-321-19-premium-luxury") p.airbags = "28";
+    else if (p.id === "z-90-economic-premium-ultra-luxury") p.airbags = "60";
+    else if (p.id === "z-91-ultra-luxury") p.airbags = "58-62";
+    else if (p.id === "elite-classic") p.airbags = "28";
+    else if (p.id === "rc-1-economic") p.airbags = "18-20";
+    else if (p.id === "z-plus-100-premium-luxury") p.airbags = "58";
+    else if (p.id === "rc-2-economic-premium") p.airbags = "34-40";
+    else if (p.id === "am-999-luxury-premium") p.airbags = "74";
+    
     // Remove references to 3D sound / audio / speakers
     const cleanFeatures = p.features.filter(
       (f) => !/audio|sound|speaker|3d digital/i.test(f)
