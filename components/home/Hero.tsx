@@ -72,7 +72,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden bg-secondary-900 py-10 lg:py-14">
+    <section className="relative overflow-hidden bg-secondary-900 pt-6 pb-8 lg:pt-8 lg:pb-10">
       {/* Decorative Brand SVG background */}
       <div className="absolute inset-0 z-0 opacity-10">
         <svg className="h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none">
@@ -90,39 +90,14 @@ export default function Hero() {
       <div className="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-accent/20 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-15%] left-[-10%] w-[60%] h-[60%] bg-primary/25 rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Category selector row at the top */}
-      <div className="container-wide relative z-10 mb-6 animate-fade-in">
-        <div className="flex flex-wrap items-center justify-center gap-4 py-3 px-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md max-w-4xl mx-auto">
-          <span className="text-xs font-semibold text-secondary-300 uppercase tracking-widest mr-2">Categories:</span>
-          <Link
-            href="/products?category=massage-chairs"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-white/5 border border-white/10 hover:bg-accent hover:border-accent hover:shadow-glow-accent transition-all duration-300"
-          >
-            <Armchair className="h-4.5 w-4.5 text-accent" /> Massage Chairs
-          </Link>
-          <Link
-            href="/products?category=leg-massagers"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-white/5 border border-white/10 hover:bg-accent hover:border-accent hover:shadow-glow-accent transition-all duration-300"
-          >
-            <Activity className="h-4.5 w-4.5 text-accent" /> Leg Massagers
-          </Link>
-          <Link
-            href="/products?category=health-care-products"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold text-white bg-white/5 border border-white/10 hover:bg-accent hover:border-accent hover:shadow-glow-accent transition-all duration-300"
-          >
-            <HeartPulse className="h-4.5 w-4.5 text-accent" /> Health Care
-          </Link>
-        </div>
-      </div>
-
-      <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="container-wide relative z-10 grid lg:grid-cols-12 gap-8 lg:gap-6 items-center">
         {/* Left copy column */}
         <div className="lg:col-span-5 flex flex-col items-start animate-fade-up">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-4 py-1.5 text-xs font-semibold text-accent tracking-wide uppercase backdrop-blur-md">
-            <Star className="h-3.5 w-3.5 fill-accent text-accent animate-pulse" /> Bhubaneswar&apos;s Premium Wellness Showroom
+          <div className="inline-flex items-center gap-2 rounded-full bg-white/5 border border-white/10 px-3.5 py-1 text-[11px] font-semibold text-accent tracking-wide uppercase backdrop-blur-md">
+            <Star className="h-3 w-3 fill-accent text-accent animate-pulse" /> Bhubaneswar&apos;s Premium Wellness Showroom
           </div>
 
-          <h1 className="mt-4 text-4xl sm:text-5xl lg:text-5xl font-display font-extrabold text-white leading-[1.05] tracking-tight text-balance">
+          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-display font-extrabold text-white leading-[1.1] tracking-tight text-balance">
             Bhubaneswar&apos;s Finest
             <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-primary-200 to-accent bg-[length:200%_auto] animate-shimmer">
@@ -130,34 +105,34 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-3 text-secondary-200 text-sm sm:text-base leading-relaxed max-w-xl text-balance">
+          <p className="mt-2.5 text-secondary-200 text-sm leading-relaxed max-w-xl text-balance">
             Discover Odisha&apos;s ultimate collection of premium 3D/4D zero-gravity massage chairs, wellness equipment, and elite body massagers. Visit our Puri Bypass Road showroom for a free trial.
           </p>
 
-          <div className="mt-5 flex flex-wrap items-center gap-4 w-full sm:w-auto">
+          <div className="mt-4 flex flex-wrap items-center gap-3 w-full sm:w-auto">
             <Link
               href="/products?category=massage-chairs"
-              className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white px-8 py-4 font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto text-center"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white px-6 py-3 text-sm font-bold shadow-glow-accent hover:bg-accent-600 hover:-translate-y-0.5 transition-all duration-300 w-full sm:w-auto text-center"
             >
-              Explore Massage Chairs <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              Explore Massage Chairs <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
             </Link>
             <button
               onClick={() => openModal()}
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/20 text-white px-8 py-4 font-bold hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto text-center"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/5 border border-white/20 text-white px-6 py-3 text-sm font-bold hover:bg-white/10 hover:border-white/40 hover:-translate-y-0.5 transition-all duration-300 backdrop-blur-sm w-full sm:w-auto text-center"
             >
               Book Showroom Trial
             </button>
           </div>
 
-          <div className="mt-6 grid grid-cols-3 gap-6 w-full border-t border-white/10 pt-4 text-white/80">
-            <div className="flex flex-col gap-1">
-              <span className="font-display text-2xl font-bold text-accent">
+          <div className="mt-5 grid grid-cols-3 gap-4 w-full border-t border-white/10 pt-3.5 text-white/80">
+            <div className="flex flex-col gap-0.5">
+              <span className="font-display text-xl sm:text-2xl font-bold text-accent">
                 <CountUp end={15} suffix="+ Yrs" />
               </span>
-              <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Showroom Legacy</span>
+              <span className="text-[10px] text-secondary-300 uppercase tracking-wider font-semibold">Showroom Legacy</span>
             </div>
-            <div className="flex flex-col gap-1">
-              <span className="font-display text-2xl font-bold text-primary-200">
+            <div className="flex flex-col gap-0.5">
+              <span className="font-display text-xl sm:text-2xl font-bold text-primary-200">
                 <CountUp end={22} suffix="+" />
               </span>
               <span className="text-xs text-secondary-300 uppercase tracking-wider font-medium">Premium Models</span>
@@ -172,8 +147,8 @@ export default function Hero() {
         </div>
 
         {/* Right graphical composition column - interactive product carousel */}
-        <div className="lg:col-span-7 relative flex items-center justify-center mt-10 lg:mt-0 animate-fade-in [animation-delay:200ms]">
-          <div className="relative w-full max-w-[360px] sm:max-w-[460px] lg:max-w-[500px] aspect-[4/5] mx-auto">
+        <div className="lg:col-span-7 relative flex items-center justify-center mt-8 lg:mt-0 animate-fade-in [animation-delay:200ms]">
+          <div className="relative w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[380px] xl:max-w-[420px] aspect-[4/5] mx-auto">
             {/* Background glowing card */}
             <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary-800/40 via-secondary-700/50 to-secondary-900/80 border border-white/10 shadow-card backdrop-blur-md overflow-hidden">
               <div className="absolute inset-0 bg-radial-gradient(circle at 100% 0%, rgba(230,57,70,0.15), transparent 70%)" />
