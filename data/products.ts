@@ -77,9 +77,18 @@ export const products: Product[] = [
       "Complete with 23 automatic programs, 3D digital audio, wireless charging, and a 20cm stretch footrest featuring calf kneading and foot roller scraping, the A-710-2 brings showroom-quality therapy directly to your space."
     ],
     images: [
-      "/images/products/massage-chairs/a-710-2-classic-premium-4d/1.jpg",
-      "/images/products/massage-chairs/a-710-2-classic-premium-4d/2.jpg",
-      "/images/products/massage-chairs/a-710-2-classic-premium-4d/3.jpg"
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/1.jpeg",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/2.jpeg",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/3.webp",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/4.webp",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/5.webp",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/6.webp",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/7.webp",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/8.webp",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/9.webp",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/10.webp",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/11.webp",
+      "/images/products/massage-chairs/a-710-2-classic-premium-4d/12.webp"
     ],
     mrp: 435000,
     price: 280000,
@@ -134,9 +143,10 @@ export const products: Product[] = [
       "Equipped with Smart Body Scanning to automatically map shoulder height, lower body care calf rubbing, an automatic leg extension system, voice commands, shortcut armrest controls, and far-infrared carbon-fiber heating."
     ],
     images: [
-      "/images/products/massage-chairs/z-91-ultra-luxury/1.jpg",
-      "/images/products/massage-chairs/z-91-ultra-luxury/2.jpg",
-      "/images/products/massage-chairs/z-91-ultra-luxury/3.jpg"
+      "/images/products/massage-chairs/z-91-ultra-luxury/1.jpeg",
+      "/images/products/massage-chairs/z-91-ultra-luxury/2.webp",
+      "/images/products/massage-chairs/z-91-ultra-luxury/3.webp",
+      "/images/products/massage-chairs/z-91-ultra-luxury/4.webp"
     ],
     mrp: 350000,
     price: 220000,
@@ -249,9 +259,14 @@ export const products: Product[] = [
       "It features a 17-command voice control system, sleep music surround speakers, a 7-inch touch screen, and armrest controls. Complete with graphene waist and leg heating, whole-body airbags, palm magnetic therapy, and a 16cm extendable calf rest."
     ],
     images: [
-      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/1.jpg",
-      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/2.jpg",
-      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/3.jpg"
+      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/1.jpeg",
+      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/2.png",
+      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/3.png",
+      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/4.png",
+      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/5.jpg",
+      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/6.jpg",
+      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/7.png",
+      "/images/products/massage-chairs/a-372-2-premium-ultra-luxury/8.png"
     ],
     mrp: 305000,
     price: 190000,
@@ -306,9 +321,8 @@ export const products: Product[] = [
       "With full-body airbag wrapping (34 airbags total), 3D digital audio on the upper armrests, sole rollers, calftrest kneading, and a 3.5-inch color remote control, the Z+100 provides a quiet and deeply relaxing home therapy session."
     ],
     images: [
-      "/images/products/massage-chairs/z-plus-100-premium-luxury/1.jpg",
-      "/images/products/massage-chairs/z-plus-100-premium-luxury/2.jpg",
-      "/images/products/massage-chairs/z-plus-100-premium-luxury/3.jpg"
+      "/images/products/massage-chairs/z-plus-100-premium-luxury/1.jpeg",
+      "/images/products/massage-chairs/z-plus-100-premium-luxury/2.jpeg"
     ],
     mrp: 290000,
     price: 175000,
@@ -363,9 +377,13 @@ export const products: Product[] = [
       "Features a zero gravity recline (118°–135° tilt) to reduce spinal pressure, a calf/leg stretch function, air pressure massage with adjustable intensity, built-in Bluetooth audio surround, and zero space reclining which needs only 5 cm from the wall. Includes eight one-touch automatic programs combining spine alignment and deep tissue techniques to deliver premium value at a competitive massage chair price."
     ],
     images: [
-      "/images/products/massage-chairs/a-321-19-premium-luxury/1.jpg",
-      "/images/products/massage-chairs/a-321-19-premium-luxury/2.jpg",
-      "/images/products/massage-chairs/a-321-19-premium-luxury/3.jpg"
+      "/images/products/massage-chairs/a-321-19-premium-luxury/1.png",
+      "/images/products/massage-chairs/a-321-19-premium-luxury/2.png",
+      "/images/products/massage-chairs/a-321-19-premium-luxury/3.png",
+      "/images/products/massage-chairs/a-321-19-premium-luxury/4.png",
+      "/images/products/massage-chairs/a-321-19-premium-luxury/5.png",
+      "/images/products/massage-chairs/a-321-19-premium-luxury/6.png",
+      "/images/products/massage-chairs/a-321-19-premium-luxury/7.png"
     ],
     mrp: 280000,
     price: 170000,
@@ -431,9 +449,17 @@ export const products: Product[] = [
       "Designed to save space (requires only 15cm from the wall), it includes bluetooth music, a USB charging port, heating function, and a large screen touchscreen controller. Best of all, it offers free installation out of the box."
     ],
     images: [
-      "/images/products/massage-chairs/rc-1-economic/1.jpg",
-      "/images/products/massage-chairs/rc-1-economic/2.jpg",
-      "/images/products/massage-chairs/rc-1-economic/3.jpg"
+      "/images/products/massage-chairs/rc-1-economic/1.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/2.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/3.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/4.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/5.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/6.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/7.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/8.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/9.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/10.jpeg",
+      "/images/products/massage-chairs/rc-1-economic/11.jpeg"
     ],
     mrp: 116000,
     price: 75000,
@@ -487,9 +513,15 @@ export const products: Product[] = [
       "Control is simple via the extra-large screen controller with 6 automatic programs. Featuring zero gravity mode, immersive Bluetooth music surround, and all-in-one free installation out of the box, it is the best value upgrade in our showroom."
     ],
     images: [
-      "/images/products/massage-chairs/rc-2-economic-premium/1.jpg",
-      "/images/products/massage-chairs/rc-2-economic-premium/2.jpg",
-      "/images/products/massage-chairs/rc-2-economic-premium/3.jpg"
+      "/images/products/massage-chairs/rc-2-economic-premium/1.jpeg",
+      "/images/products/massage-chairs/rc-2-economic-premium/2.jpeg",
+      "/images/products/massage-chairs/rc-2-economic-premium/3.jpeg",
+      "/images/products/massage-chairs/rc-2-economic-premium/4.jpeg",
+      "/images/products/massage-chairs/rc-2-economic-premium/5.jpeg",
+      "/images/products/massage-chairs/rc-2-economic-premium/6.jpeg",
+      "/images/products/massage-chairs/rc-2-economic-premium/7.jpeg",
+      "/images/products/massage-chairs/rc-2-economic-premium/8.jpeg",
+      "/images/products/massage-chairs/rc-2-economic-premium/9.jpeg"
     ],
     mrp: 200000,
     price: 125000,
@@ -544,7 +576,10 @@ export const products: Product[] = [
       "Equipped with built-in infrared heating elements targeting the lower back and legs to loosen tight muscles. Complete with integrated foot rollers, built-in Bluetooth audio speakers, and artistic ambient side lighting."
     ],
     images: [
-      "/images/products/massage-chairs/elite-classic/1.png"
+      "/images/products/massage-chairs/elite-classic/1.jpeg",
+      "/images/products/massage-chairs/elite-classic/1.png",
+      "/images/products/massage-chairs/elite-classic/2.jpeg",
+      "/images/products/massage-chairs/elite-classic/3.jpeg"
     ],
     mrp: 290000,
     price: 185000,
@@ -600,7 +635,13 @@ export const products: Product[] = [
       "Complete with 23 automatic programs, 3D digital audio, wireless charging, and a 20cm stretch footrest featuring calf kneading, foot roller scraping, and ankle stretching, the AM-999 brings showroom-quality therapy directly to your space."
     ],
     images: [
-      "/images/products/massage-chairs/am-999/1.png"
+      "/images/products/massage-chairs/am-999-luxury-premium/1.jpeg",
+      "/images/products/massage-chairs/am-999-luxury-premium/2.png",
+      "/images/products/massage-chairs/am-999-luxury-premium/3.png",
+      "/images/products/massage-chairs/am-999-luxury-premium/4.png",
+      "/images/products/massage-chairs/am-999-luxury-premium/5.png",
+      "/images/products/massage-chairs/am-999-luxury-premium/6.png",
+      "/images/products/massage-chairs/am-999-luxury-premium/7.png"
     ],
     mrp: 395000,
     price: 245000,
@@ -656,10 +697,10 @@ export const products: Product[] = [
       "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
     ],
     images: [
-      "/images/products/leg-massagers/kiyo-416-classic-premium/1.jpg",
-      "/images/products/leg-massagers/kiyo-416-classic-premium/2.jpg",
-      "/images/products/leg-massagers/kiyo-416-classic-premium/3.jpg",
-      "/images/products/leg-massagers/kiyo-416-classic-premium/4.jpg"
+      "/images/products/leg-massagers/kiyo-416-classic-premium/1.png",
+      "/images/products/leg-massagers/kiyo-416-classic-premium/2.png",
+      "/images/products/leg-massagers/kiyo-416-classic-premium/3.png",
+      "/images/products/leg-massagers/kiyo-416-classic-premium/4.png"
     ],
     mrp: 62500,
     price: 37500,
@@ -711,9 +752,10 @@ export const products: Product[] = [
       "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
     ],
     images: [
-      "/images/products/leg-massagers/entuit-ultra-premium/1.jpg",
-      "/images/products/leg-massagers/entuit-ultra-premium/2.jpg",
-      "/images/products/leg-massagers/entuit-ultra-premium/3.jpg"
+      "/images/products/leg-massagers/entuit-ultra-premium/1.png",
+      "/images/products/leg-massagers/entuit-ultra-premium/2.png",
+      "/images/products/leg-massagers/entuit-ultra-premium/3.png",
+      "/images/products/leg-massagers/entuit-ultra-premium/4.png"
     ],
     mrp: 57000,
     price: 35000,
@@ -820,9 +862,7 @@ export const products: Product[] = [
       "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
     ],
     images: [
-      "/images/products/leg-massagers/pedizen-economic-premium/1.jpg",
-      "/images/products/leg-massagers/pedizen-economic-premium/2.jpg",
-      "/images/products/leg-massagers/pedizen-economic-premium/3.jpg"
+      "/images/products/leg-massagers/pedizen-economic-premium/2.jpeg"
     ],
     mrp: 43500,
     price: 27500,
@@ -928,9 +968,7 @@ export const products: Product[] = [
       "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
     ],
     images: [
-      "/images/products/leg-massagers/healtho-economic/1.jpg",
-      "/images/products/leg-massagers/healtho-economic/2.jpg",
-      "/images/products/leg-massagers/healtho-economic/3.jpg"
+      "/images/products/leg-massagers/healtho-economic/1.png"
     ],
     mrp: 25000,
     price: 15500,
@@ -987,6 +1025,7 @@ export const products: Product[] = [
     ],
     images: [
       "/images/products/health-care-products/healthmate/1.jpg",
+      "/images/products/health-care-products/healthmate/1.png",
       "/images/products/health-care-products/healthmate/2.jpg",
       "/images/products/health-care-products/healthmate/3.jpg",
       "/images/products/health-care-products/healthmate/4.jpg",
@@ -1042,9 +1081,9 @@ export const products: Product[] = [
       "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
     ],
     images: [
-      "/images/products/health-care-products/teppid-back-massager/1.jpg",
-      "/images/products/health-care-products/teppid-back-massager/2.jpg",
-      "/images/products/health-care-products/teppid-back-massager/3.jpg"
+      "/images/products/health-care-products/teppid-back-massager/1.webp",
+      "/images/products/health-care-products/teppid-back-massager/2.webp",
+      "/images/products/health-care-products/teppid-back-massager/3.webp"
     ],
     mrp: 7999,
     price: 4999,
@@ -1266,8 +1305,7 @@ export const products: Product[] = [
     ],
     images: [
       "/images/products/health-care-products/facial-gun/1.jpg",
-      "/images/products/health-care-products/facial-gun/2.jpg",
-      "/images/products/health-care-products/facial-gun/3.jpg"
+      "/images/products/health-care-products/facial-gun/51CwjMMittL.jpg"
     ],
     mrp: 1999,
     price: 1250,
@@ -1319,7 +1357,7 @@ export const products: Product[] = [
     ],
     images: [
       "/images/products/health-care-products/massage-gun/1.jpg",
-      "/images/products/health-care-products/massage-gun/2.jpg",
+      "/images/products/health-care-products/massage-gun/2.webp",
       "/images/products/health-care-products/massage-gun/3.jpg"
     ],
     mrp: 3999,
@@ -1375,7 +1413,12 @@ export const products: Product[] = [
     images: [
       "/images/products/health-care-products/sauna-steam-bath/1.jpg",
       "/images/products/health-care-products/sauna-steam-bath/2.jpg",
-      "/images/products/health-care-products/sauna-steam-bath/3.jpg"
+      "/images/products/health-care-products/sauna-steam-bath/3.jpg",
+      "/images/products/health-care-products/sauna-steam-bath/4.jpg",
+      "/images/products/health-care-products/sauna-steam-bath/5.jpg",
+      "/images/products/health-care-products/sauna-steam-bath/6.jpg",
+      "/images/products/health-care-products/sauna-steam-bath/7.jpg",
+      "/images/products/health-care-products/sauna-steam-bath/8.jpg"
     ],
     mrp: 13900,
     price: 8500,
@@ -1480,8 +1523,8 @@ export const products: Product[] = [
     ],
     images: [
       "/images/products/health-care-products/foldable-intelligent-sole-massager/1.jpg",
-      "/images/products/health-care-products/foldable-intelligent-sole-massager/2.jpg",
-      "/images/products/health-care-products/foldable-intelligent-sole-massager/3.jpg"
+      "/images/products/health-care-products/foldable-intelligent-sole-massager/3.jpg",
+      "/images/products/health-care-products/foldable-intelligent-sole-massager/4175sASK2LL.jpg"
     ],
     mrp: 19500,
     price: 12500,
