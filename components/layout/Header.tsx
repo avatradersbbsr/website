@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, ChevronDown, Armchair, Activity, HeartPulse } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Armchair, Activity, HeartPulse, MapPin, Clock, Facebook, Instagram, Youtube } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { siteConfig, telLink } from "@/lib/site-config";
 import { categories } from "@/data/categories";
@@ -278,6 +278,31 @@ export default function Header() {
                 >
                   Shop Products
                 </Link>
+              </div>
+
+              {/* Showroom Timing & Info inside mobile menu */}
+              <div className="mt-6 pt-6 border-t border-secondary-100 space-y-3.5 text-xs text-secondary-500">
+                <div className="flex items-start gap-2.5">
+                  <MapPin className="h-4 w-4 text-accent shrink-0 mt-0.5" />
+                  <span className="leading-relaxed">Padmabati Complex, Puri Bypass Road, Bhubaneswar</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Clock className="h-4 w-4 text-accent shrink-0" />
+                  <span>Mon-Sun (10:00 AM – 9:30 PM)</span>
+                </div>
+              </div>
+
+              {/* Social links inside mobile menu */}
+              <div className="flex items-center gap-4 mt-6 justify-center">
+                <a href={siteConfig.contact.social.facebook} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-full bg-secondary-50 text-secondary-500 hover:bg-primary-50 hover:text-primary transition-colors border border-secondary-100">
+                  <Facebook className="h-4 w-4" />
+                </a>
+                <a href={siteConfig.contact.social.instagram} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-full bg-secondary-50 text-secondary-500 hover:bg-primary-50 hover:text-primary transition-colors border border-secondary-100">
+                  <Instagram className="h-4 w-4" />
+                </a>
+                <a href={siteConfig.contact.social.youtube} target="_blank" rel="noopener noreferrer" className="p-2.5 rounded-full bg-secondary-50 text-secondary-500 hover:bg-primary-50 hover:text-primary transition-colors border border-secondary-100">
+                  <Youtube className="h-4 w-4" />
+                </a>
               </div>
             </motion.div>
           </>

@@ -128,21 +128,24 @@ export default async function ProductDetailPage({
           </div>
           <div className="mt-5 flex flex-wrap items-center gap-2.5 text-xs sm:text-sm">
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-secondary-50 border border-secondary-100 text-secondary-700 font-semibold shadow-soft">
-              <span className={`h-2 w-2 rounded-full ${product.availability === "in-stock" ? "bg-primary" : "bg-accent"}`} />
-              {product.availability === "in-stock" ? "In Stock" : "Limited Stock"}
+              <span className={`h-2 w-2 rounded-full shrink-0 ${product.availability === "in-stock" ? "bg-primary" : "bg-accent"}`} />
+              <span>{product.availability === "in-stock" ? "In Stock" : "Limited Stock"}</span>
             </div>
             
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-accent-50 border border-accent-100 text-accent font-bold shadow-soft">
-              <ShieldCheck className="h-4 w-4" /> {product.warranty} Warranty
+              <ShieldCheck className="h-4 w-4 shrink-0" />
+              <span className="leading-tight">{product.warranty} Warranty</span>
             </div>
 
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary-50 border border-primary-100 text-primary font-bold shadow-soft">
-              <Truck className="h-4 w-4" /> Free Delivery & Installation*
+              <Truck className="h-4 w-4 shrink-0" />
+              <span className="leading-tight">Free Delivery & Installation*</span>
             </div>
 
             {product.airbags && (
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-red-50 border border-red-100 text-red-700 font-bold shadow-soft">
-                <Layers className="h-4 w-4" /> {product.airbags} Airbags
+                <Layers className="h-4 w-4 shrink-0" />
+                <span className="leading-tight">{product.airbags} Airbags</span>
               </div>
             )}
           </div>
