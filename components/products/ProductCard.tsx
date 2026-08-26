@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import { Share2, MessageCircle } from "lucide-react";
+import { Share2, MessageCircle, ShieldCheck, Star, Truck } from "lucide-react";
 import { Product, discountPercent } from "@/types/product";
 import { formatINR, cn } from "@/lib/utils";
 import { whatsappLink } from "@/lib/site-config";
@@ -16,14 +16,13 @@ export default function ProductCard({ product }: { product: Product }) {
   const startImageCycle = () => {
     if (product.images.length <= 1) return;
     
-    // Clear any existing interval before starting a new one
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
     }
 
     intervalRef.current = setInterval(() => {
       setCurrentImageIndex((prev) => (prev + 1) % product.images.length);
-    }, 3000);
+    }, 2800);
   };
 
   const stopImageCycle = () => {
@@ -34,7 +33,6 @@ export default function ProductCard({ product }: { product: Product }) {
     setCurrentImageIndex(0);
   };
 
-  // Clean up interval on component unmount
   useEffect(() => {
     return () => {
       if (intervalRef.current) {
@@ -57,87 +55,147 @@ export default function ProductCard({ product }: { product: Product }) {
   };
 
   const isMassageChair = product.category === "massage-chairs";
+  const primaryFeature = product.features?.[0];
 
   return (
     <div
       onMouseEnter={startImageCycle}
       onMouseLeave={stopImageCycle}
       className={cn(
-        "group flex flex-col rounded-2xl bg-white transition-all duration-300 overflow-hidden hover-lift",
+        "group flex flex-col rounded-2xl bg-white transition-all duration-300 overflow-hidden hover-lift border",
         isMassageChair
-          ? "border-2 border-gold/70 glow-gold-pulse hover:border-primary ring-1 ring-gold/20"
-          : "border border-secondary-100 shadow-soft hover:shadow-card hover:border-primary-200"
+          ? "border-gold/60 glow-gold-pulse hover:border-primary ring-1 ring-gold/20 shadow-soft"
+          : "border-secondary-100 shadow-soft hover:shadow-card hover:border-primary-200"
       )}
     >
-      <Link href={`/products/${product.slug}`} className="block relative overflow-hidden bg-secondary-50/20">
+      {/* Product Image Area */}
+      <Link href={`/products/${product.slug}`} className="block relative overflow-hidden bg-gradient-to-b from-secondary-50/40 to-white">
         <ProductImageWithFallback
           src={product.images[currentImageIndex]}
           alt={product.name}
           category={product.category}
-          className="aspect-square w-full object-contain p-1.5 group-hover:scale-105 transition-transform duration-500"
+          className="aspect-square w-full object-contain p-3 group-hover:scale-105 transition-transform duration-500"
         />
-        {discount > 0 && (
-          <span className="absolute top-3 left-3 rounded-full bg-accent text-white text-xs font-bold px-2.5 py-1 z-10">
-            {discount}% OFF
-          </span>
-        )}
-        {isMassageChair ? (
-          <span className="absolute top-3 right-3 rounded-full bg-gradient-to-r from-gold-600 to-gold-700 text-white text-[9px] font-bold uppercase tracking-wider px-3 py-1 shadow-sm border border-gold-400/20 z-10">
-            ★ Flagship Series
-          </span>
-        ) : product.bestSeller ? (
-          <span className="absolute top-3 right-3 rounded-full bg-primary text-white text-[10px] font-semibold uppercase tracking-wide px-2.5 py-1 z-10">
-            Best Seller
-          </span>
-        ) : null}
-      </Link>
-
-      <div className="flex flex-col gap-2 p-4 flex-1">
-        <Link href={`/products/${product.slug}`}>
-          <h3 className="font-display font-semibold text-secondary-700 leading-snug hover:text-primary transition-colors line-clamp-2">
-            {product.name}
-          </h3>
-        </Link>
-        <p className="text-sm text-secondary-400 line-clamp-2 hidden sm:block">{product.shortDescription}</p>
-
-        <div className="flex items-baseline gap-2 mt-1">
-          <span className="text-lg font-bold text-secondary-700">{formatINR(product.price)}</span>
+        
+        {/* Top Badges */}
+        <div className="absolute top-3 left-3 flex flex-col gap-1 z-10">
           {discount > 0 && (
-            <span className="text-sm text-secondary-300 line-through">{formatINR(product.mrp)}</span>
+            <span className="rounded-full bg-accent text-white text-[11px] font-extrabold px-2.5 py-0.5 shadow-sm">
+              {discount}% OFF
+            </span>
           )}
         </div>
 
-        <p
-          className={`text-xs font-medium hidden sm:block ${
-            product.availability === "in-stock" ? "text-primary" : "text-accent-600"
-          }`}
-        >
-          {product.availability === "in-stock" ? "In Stock — Ready to Ship" : "Limited Stock"}
-        </p>
+        <div className="absolute top-3 right-3 flex flex-col items-end gap-1 z-10">
+          {isMassageChair ? (
+            <span className="rounded-full bg-gradient-to-r from-gold-600 to-gold-700 text-white text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 shadow-sm border border-gold-400/20">
+              ★ Flagship Series
+            </span>
+          ) : product.bestSeller ? (
+            <span className="rounded-full bg-primary text-white text-[9px] font-bold uppercase tracking-wide px-2.5 py-0.5 shadow-sm">
+              Best Seller
+            </span>
+          ) : null}
+        </div>
 
-        <div className="mt-3 flex items-center gap-2">
-          <Link
-            href={`/products/${product.slug}`}
-            className="flex-1 text-center rounded-full border border-secondary-200 text-secondary-700 text-sm font-semibold py-2.5 hover:border-primary hover:text-primary transition-colors min-h-[44px] flex items-center justify-center"
-          >
-            View Details
+        {/* Live Showroom Tested Pill */}
+        <div className="absolute bottom-2 left-2 z-10 flex items-center gap-1 bg-white/90 backdrop-blur-sm rounded-full px-2 py-0.5 text-[10px] font-semibold text-secondary-600 border border-secondary-100 shadow-xs">
+          <Star className="h-3 w-3 text-amber-500 fill-amber-500" />
+          <span>4.9 Showroom Tested</span>
+        </div>
+      </Link>
+
+      {/* Content Area */}
+      <div className="flex flex-col p-4 sm:p-5 flex-1 justify-between gap-3">
+        <div>
+          {/* Category Tag */}
+          <span className="text-[10px] font-bold uppercase tracking-wider text-accent">
+            {product.category === "massage-chairs" ? "Massage Chair" : product.category === "leg-massagers" ? "Leg Massager" : "Healthcare Device"}
+          </span>
+
+          {/* Title */}
+          <Link href={`/products/${product.slug}`}>
+            <h3 className="font-display font-bold text-secondary-800 text-sm sm:text-base leading-snug hover:text-primary transition-colors line-clamp-2 mt-1">
+              {product.name}
+            </h3>
           </Link>
-          <a
-            href={whatsappLink(`Hi, I'm interested in the ${product.name} (${formatINR(product.price)}). Please share more details.`)}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Enquire about ${product.name} on WhatsApp`}
-            className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white hover:brightness-95 transition-all"
-          >
-            <MessageCircle className="h-4 w-4" />
-          </a>
-          <button
-            onClick={handleShare}
-            aria-label={`Share ${product.name}`}
-            className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-secondary-200 text-secondary-500 hover:border-primary hover:text-primary transition-colors"
-          >
-            <Share2 className="h-4 w-4" />
-          </button>
+
+          {/* Short Description */}
+          {product.shortDescription && (
+            <p className="text-xs text-secondary-500 line-clamp-2 mt-1.5 leading-relaxed">
+              {product.shortDescription}
+            </p>
+          )}
+
+          {/* Key Highlight Chips */}
+          <div className="mt-2.5 flex flex-wrap gap-1.5">
+            {product.warranty && (
+              <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-secondary-700 bg-secondary-50 border border-secondary-100 rounded-md px-2 py-0.5">
+                <ShieldCheck className="h-3 w-3 text-accent shrink-0" />
+                {product.warranty}
+              </span>
+            )}
+            {product.airbags && (
+              <span className="inline-flex items-center gap-1 text-[11px] font-semibold text-primary bg-primary-50 border border-primary-100 rounded-md px-2 py-0.5">
+                {product.airbags} Airbags
+              </span>
+            )}
+            {!product.airbags && primaryFeature && (
+              <span className="inline-flex items-center gap-1 text-[11px] font-medium text-secondary-600 bg-secondary-50 border border-secondary-100 rounded-md px-2 py-0.5 line-clamp-1 max-w-[200px]">
+                {primaryFeature}
+              </span>
+            )}
+          </div>
+        </div>
+
+        {/* Pricing & Actions */}
+        <div className="pt-3 border-t border-secondary-100 flex flex-col gap-2.5">
+          {/* Price Block */}
+          <div className="flex items-baseline justify-between">
+            <div className="flex items-baseline gap-2">
+              <span className="text-lg sm:text-xl font-extrabold text-secondary-800">{formatINR(product.price)}</span>
+              {discount > 0 && (
+                <span className="text-xs sm:text-sm text-secondary-400 line-through font-medium">{formatINR(product.mrp)}</span>
+              )}
+            </div>
+            <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-full px-2 py-0.5">
+              Free Delivery*
+            </span>
+          </div>
+
+          {/* Delivery & Demo Note */}
+          <p className="text-[10px] text-secondary-400 flex items-center gap-1">
+            <Truck className="h-3 w-3 text-primary shrink-0" />
+            <span>Showroom Demo & Ready to Dispatch in Odisha</span>
+          </p>
+
+          {/* Action CTA Buttons */}
+          <div className="mt-1 flex items-center gap-2">
+            <Link
+              href={`/products/${product.slug}`}
+              className="flex-1 text-center rounded-xl bg-primary text-white text-xs sm:text-sm font-bold py-2.5 hover:bg-primary-600 transition-all shadow-xs hover:shadow-soft flex items-center justify-center"
+            >
+              View Details
+            </Link>
+            <a
+              href={whatsappLink(`Hi, I'm interested in the ${product.name} (${formatINR(product.price)}). Please share more details.`)}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Enquire about ${product.name} on WhatsApp`}
+              className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#25D366] text-white hover:brightness-95 transition-all shadow-xs"
+              title="Enquire on WhatsApp"
+            >
+              <MessageCircle className="h-4 w-4" />
+            </a>
+            <button
+              onClick={handleShare}
+              aria-label={`Share ${product.name}`}
+              className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-secondary-200 text-secondary-500 hover:border-primary hover:text-primary transition-colors"
+              title="Share product"
+            >
+              <Share2 className="h-4 w-4" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
