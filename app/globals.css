@@ -13,15 +13,23 @@
   body {
     @apply bg-canvas text-secondary-700 font-body antialiased;
   }
-  h1, h2, h3, h4 {
+  h1, h2, h3, h4, h5, h6 {
     @apply font-display;
+    text-align: left;
+    text-wrap: balance;
   }
-  p, li, dd, dt, h1, h2, h3, h4, h5, h6 {
-    text-align: justify;
-    text-justify: inter-word;
+  p, li, dd, dt {
+    text-align: left;
+    text-wrap: pretty;
     overflow-wrap: break-word;
-    word-break: break-word;
-    hyphens: auto;
+  }
+  /* On desktop/tablet screens, long descriptive paragraphs get neat justified alignment */
+  @media (min-width: 768px) {
+    article p, .prose p, .product-description p, section > div > p {
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+    }
   }
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-primary;
