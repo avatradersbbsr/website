@@ -15,7 +15,7 @@ export default function ProductGallery({ product }: { product: Product }) {
   const isActiveVideo = activeSrc?.match(/\.(mp4|webm)$/i);
 
   return (
-    <div>
+    <div className="w-full max-w-full overflow-hidden">
       <div
         className={cn(
           "relative aspect-square rounded-2xl overflow-hidden border border-secondary-100 bg-white",
