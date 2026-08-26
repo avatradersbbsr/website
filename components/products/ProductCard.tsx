@@ -98,7 +98,7 @@ export default function ProductCard({ product }: { product: Product }) {
             {product.name}
           </h3>
         </Link>
-        <p className="text-sm text-secondary-400 line-clamp-2">{product.shortDescription}</p>
+        <p className="text-sm text-secondary-400 line-clamp-2 hidden sm:block">{product.shortDescription}</p>
 
         <div className="flex items-baseline gap-2 mt-1">
           <span className="text-lg font-bold text-secondary-700">{formatINR(product.price)}</span>
@@ -108,7 +108,7 @@ export default function ProductCard({ product }: { product: Product }) {
         </div>
 
         <p
-          className={`text-xs font-medium ${
+          className={`text-xs font-medium hidden sm:block ${
             product.availability === "in-stock" ? "text-primary" : "text-accent-600"
           }`}
         >
@@ -127,14 +127,14 @@ export default function ProductCard({ product }: { product: Product }) {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={`Enquire about ${product.name} on WhatsApp`}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white hover:brightness-95 transition-all"
+            className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-[#25D366] text-white hover:brightness-95 transition-all"
           >
             <MessageCircle className="h-4 w-4" />
           </a>
           <button
             onClick={handleShare}
             aria-label={`Share ${product.name}`}
-            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-secondary-200 text-secondary-500 hover:border-primary hover:text-primary transition-colors"
+            className="hidden sm:flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-secondary-200 text-secondary-500 hover:border-primary hover:text-primary transition-colors"
           >
             <Share2 className="h-4 w-4" />
           </button>

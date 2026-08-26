@@ -74,17 +74,17 @@ export default function ContactPopupModal() {
           {/* Close button */}
           <button
             onClick={closeModal}
-            className="absolute top-4 right-4 z-50 p-2 rounded-full bg-secondary-50 text-secondary-500 hover:bg-secondary-100 hover:text-secondary-800 transition-colors shadow-sm"
+            className="absolute top-3 right-3 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white lg:bg-secondary-50 lg:text-secondary-500 lg:hover:bg-secondary-100 lg:hover:text-secondary-800 transition-colors border border-white/15 lg:border-none shadow-md"
             aria-label="Close modal"
           >
             <X className="h-5 w-5" />
           </button>
 
           {/* Mobile-Only Top Slide Banner (Stunning Visual on Mobile) */}
-          <div className="lg:hidden w-full bg-gradient-to-r from-primary-950 to-secondary-900 text-white p-5 flex items-center justify-between border-b border-secondary-800 relative overflow-hidden shrink-0 pr-14">
+          <div className="lg:hidden w-full bg-gradient-to-r from-primary-900 to-secondary-900 text-white p-5 flex items-center justify-between border-b border-secondary-800 relative overflow-hidden shrink-0 pr-14">
             <div className="absolute top-[-25%] right-[-10%] w-[60%] h-[120%] bg-accent/25 rounded-full blur-[40px] pointer-events-none" />
             <div className="relative z-10 flex flex-col gap-0.5">
-              <span className="inline-flex self-start items-center gap-1 px-2.5 py-0.5 rounded-full bg-accent/35 border border-accent/40 text-[9px] font-bold text-accent-100 uppercase tracking-widest">
+              <span className="inline-flex self-start items-center gap-1 px-2.5 py-0.5 rounded-full bg-accent text-white border border-accent/20 text-[9px] font-bold uppercase tracking-widest">
                 ★ Flagship Offer
               </span>
               <h4 className="font-display text-sm font-extrabold leading-tight mt-1.5">
@@ -174,7 +174,7 @@ export default function ContactPopupModal() {
               
               <div className="flex items-center gap-6 text-xs text-secondary-300 mt-2">
                 <span className="flex items-center gap-1.5">
-                  <Calendar className="h-4 w-4 text-accent" /> Mon-Sat (10AM-9PM)
+                  <Calendar className="h-4 w-4 text-accent" /> Mon-Sun (10AM-9:30PM)
                 </span>
                 <span className="flex items-center gap-1.5">
                   <MapPin className="h-4 w-4 text-accent" /> Puri Bypass Road

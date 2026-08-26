@@ -23,7 +23,8 @@ export default function Header() {
   const { openModal } = useContactModal();
 
   return (
-    <header className="sticky top-0 z-50 w-full glass-premium shadow-soft border-b border-primary-50">
+    <>
+      <header className="sticky top-0 z-50 w-full glass-premium shadow-soft border-b border-primary-50">
       <div className="container-wide flex items-center justify-between h-16 lg:h-20">
         <Link href="/" className="flex items-center gap-3 shrink-0" onClick={() => setOpen(false)}>
           <img
@@ -142,8 +143,9 @@ export default function Header() {
           <Menu className="h-6 w-6" />
         </button>
       </div>
+    </header>
 
-      {/* Mobile drawer menu */}
+    {/* Mobile drawer menu */}
       <AnimatePresence>
         {open && (
           <>
@@ -281,7 +283,7 @@ export default function Header() {
           </>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
 
