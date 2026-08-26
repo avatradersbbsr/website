@@ -340,9 +340,22 @@ export default async function ProductDetailPage({
       </section>
 
       {related.length > 0 && (
-        <section className="container-wide pb-20">
-          <h2 className="font-display text-xl font-semibold text-secondary-700 mb-6">Related Products</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <section className="pb-20 overflow-hidden">
+          <div className="container-wide">
+            <h2 className="font-display text-xl font-semibold text-secondary-700 mb-6">Related Products</h2>
+          </div>
+
+          {/* Mobile view: Horizontal scrollable carousel */}
+          <div className="flex sm:hidden gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory px-5 pb-4 scrollbar-none" style={{ WebkitOverflowScrolling: "touch" }}>
+            {related.map((p) => (
+              <div key={p.id} className="w-[75vw] max-w-[280px] flex-shrink-0 snap-start">
+                <ProductCard product={p} />
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop/Tablet view: Grid */}
+          <div className="container-wide hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {related.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
