@@ -71,7 +71,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="col-span-2 md:col-span-1 pt-4 md:pt-0 border-t border-secondary-800/60 md:border-t-0">
           <h3 className="font-display text-sm font-bold text-white mb-4 tracking-wide uppercase">
             Visit or Contact
           </h3>
