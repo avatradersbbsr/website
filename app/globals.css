@@ -18,6 +18,10 @@
   }
   p, li, dd {
     text-align: justify;
+    text-justify: inter-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
   }
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-primary;
