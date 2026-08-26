@@ -32,8 +32,7 @@ export const siteConfig = {
       process.env.NEXT_PUBLIC_GOOGLE_MAPS_EMBED_SRC ||
       "https://maps.google.com/maps?q=20.248739,85.8613237&z=17&output=embed",
     hours: [
-      { day: "Monday – Saturday", time: "10:00 AM – 9:00 PM" },
-      { day: "Sunday", time: "10:00 AM – 2:00 PM" },
+      { day: "Monday – Sunday", time: "10:00 AM – 9:30 PM" },
     ],
     social: {
       facebook: "https://facebook.com/",

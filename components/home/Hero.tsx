@@ -7,31 +7,7 @@ import { siteConfig, whatsappLink } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 import ProductImageWithFallback from "@/components/shared/ProductImageWithFallback";
 import { useContactModal } from "@/components/shared/ContactModalContext";
-
-function CountUp({ end, duration = 1500, decimals = 0, suffix = "" }: { end: number; duration?: number; decimals?: number; suffix?: string }) {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    let startTimestamp: number | null = null;
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const currentCount = progress * end;
-      setCount(currentCount);
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  }, [end, duration]);
-
-  return (
-    <span>
-      {count.toFixed(decimals)}
-      {suffix}
-    </span>
-  );
-}
+import CountUp from "@/components/shared/CountUp";
 
 const heroChairs = [
   {

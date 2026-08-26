@@ -1,10 +1,16 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Phone, Mail, MapPin, Clock, MessageCircle, ArrowRight } from "lucide-react";
 import EnquiryForm from "@/components/shared/EnquiryForm";
 import MapSection from "@/components/home/MapSection";
 import { BreadcrumbSchema } from "@/components/seo/schema";
 import { siteConfig, telLink, whatsappLink } from "@/lib/site-config";
+
+export const metadata: Metadata = {
+  title: "Contact Us",
+  description:
+    "Get in touch with AVA Traders — call, WhatsApp, or visit our showroom on Puri Bypass Road, Badagada, Bhubaneswar.",
+  alternates: { canonical: "/contact" },
+};
 
 export default function ContactPage() {
   return (

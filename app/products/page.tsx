@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import ProductsCatalog from "@/components/products/ProductsCatalog";
 import { BreadcrumbSchema } from "@/components/seo/schema";
+import { products } from "@/data/products";
 
 export const metadata: Metadata = {
   title: "Shop Massage Chairs, Leg Massagers & Health Care Products",
@@ -32,6 +33,15 @@ export default function ProductsPage() {
         <Suspense fallback={<div className="text-secondary-400 text-sm">Loading products…</div>}>
           <ProductsCatalog />
         </Suspense>
+
+        {/* Static HTML fallback links for search engine crawlers to discover all dynamic product pages */}
+        <div className="hidden" aria-hidden="true">
+          {products.map((p) => (
+            <a key={p.id} href={`/products/${p.slug}`}>
+              {p.name}
+            </a>
+          ))}
+        </div>
       </section>
     </>
   );

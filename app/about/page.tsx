@@ -1,10 +1,16 @@
-"use client";
-
-import { useState, useEffect } from "react";
+import type { Metadata } from "next";
 import Image from "next/image";
 import { ShieldCheck, Target, Eye, Award, Calendar } from "lucide-react";
 import SectionHeading from "@/components/shared/SectionHeading";
 import { BreadcrumbSchema } from "@/components/seo/schema";
+import CountUp from "@/components/shared/CountUp";
+
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "AVA Traders has been Bhubaneswar's showroom for massage chairs, leg massagers and health care products since 2010. Learn our story, mission and values.",
+  alternates: { canonical: "/about" },
+};
 
 const values = [
   { icon: ShieldCheck, title: "Honest Recommendations", text: "We'd rather sell you the right product at a lower price than the most expensive one that doesn't fit your needs." },
@@ -19,30 +25,7 @@ const timeline = [
   { year: "2026", title: "Modern Premium Overhaul", desc: "Now Bhubaneswar's leading premium wellness retail showroom offering zero-gravity massage chairs and AI-powered massagers." },
 ];
 
-function CountUp({ end, duration = 1500, decimals = 0, suffix = "" }: { end: number; duration?: number; decimals?: number; suffix?: string }) {
-  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    let startTimestamp: number | null = null;
-    const step = (timestamp: number) => {
-      if (!startTimestamp) startTimestamp = timestamp;
-      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const currentCount = progress * end;
-      setCount(currentCount);
-      if (progress < 1) {
-        window.requestAnimationFrame(step);
-      }
-    };
-    window.requestAnimationFrame(step);
-  }, [end, duration]);
-
-  return (
-    <span>
-      {count.toFixed(decimals)}
-      {suffix}
-    </span>
-  );
-}
 
 export default function AboutPage() {
   return (
