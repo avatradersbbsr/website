@@ -101,7 +101,7 @@ export default async function ProductDetailPage({
         <span className="text-secondary-600">{product.name}</span>
       </div>
 
-      <section className="container-wide grid lg:grid-cols-2 gap-12 pb-16">
+      <section className="container-wide grid lg:grid-cols-2 gap-8 lg:gap-12 pb-16 overflow-hidden">
         <ProductGallery product={product} />
 
         <div>
@@ -342,7 +342,7 @@ export default async function ProductDetailPage({
       {related.length > 0 && (
         <section className="container-wide pb-20">
           <h2 className="font-display text-xl font-semibold text-secondary-700 mb-6">Related Products</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {related.map((p) => (
               <ProductCard key={p.id} product={p} />
             ))}
