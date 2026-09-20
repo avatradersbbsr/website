@@ -134,7 +134,11 @@ export default async function ProductDetailPage({
             
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-accent-50 border border-accent-100 text-accent font-bold shadow-soft">
               <ShieldCheck className="h-4 w-4 shrink-0" />
-              <span className="leading-tight">{product.warranty} Warranty</span>
+              <span className="leading-tight">
+                {product.warranty.toLowerCase().includes("warranty")
+                  ? product.warranty
+                  : `${product.warranty} Warranty`}
+              </span>
             </div>
 
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-primary-50 border border-primary-100 text-primary font-bold shadow-soft">

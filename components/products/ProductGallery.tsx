@@ -37,8 +37,37 @@ export default function ProductGallery({ product }: { product: Product }) {
     }
   }, [product.images.length]);
 
-  const goNext = () => setActive((prev) => (prev + 1) % product.images.length);
-  const goPrev = () => setActive((prev) => (prev - 1 + product.images.length) % product.images.length);
+  const thumbnailContainerRef = useRef<HTMLDivElement>(null);
+
+  const scrollToThumb = (idx: number) => {
+    setActive(idx);
+    if (thumbnailContainerRef.current) {
+      const el = thumbnailContainerRef.current.children[idx] as HTMLElement;
+      el?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+    }
+  };
+
+  const goNext = () => {
+    setActive((prev) => {
+      const next = (prev + 1) % product.images.length;
+      if (thumbnailContainerRef.current) {
+        const el = thumbnailContainerRef.current.children[next] as HTMLElement;
+        el?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+      }
+      return next;
+    });
+  };
+
+  const goPrev = () => {
+    setActive((prev) => {
+      const p = (prev - 1 + product.images.length) % product.images.length;
+      if (thumbnailContainerRef.current) {
+        const el = thumbnailContainerRef.current.children[p] as HTMLElement;
+        el?.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+      }
+      return p;
+    });
+  };
 
   const activeSrc = product.images[active];
   const isActiveVideo = activeSrc?.match(/\.(mp4|webm)$/i);
@@ -100,18 +129,20 @@ export default function ProductGallery({ product }: { product: Product }) {
           {product.images.length > 1 && (
             <>
               <button
+                type="button"
                 onClick={(e) => { e.stopPropagation(); goPrev(); }}
-                className="absolute left-2 top-1/2 -translate-y-1/2 z-10 h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm border border-secondary-100 flex items-center justify-center text-secondary-600 hover:bg-white shadow-sm transition-all"
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-white/95 text-secondary-800 shadow-md hover:shadow-xl border border-secondary-200 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary active:scale-90 transition-all duration-200 cursor-pointer group"
                 aria-label="Previous image"
               >
-                <ChevronLeft className="h-4 w-4" />
+                <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:-translate-x-0.5" />
               </button>
               <button
+                type="button"
                 onClick={(e) => { e.stopPropagation(); goNext(); }}
-                className="absolute right-2 top-1/2 -translate-y-1/2 z-10 h-8 w-8 rounded-full bg-white/80 backdrop-blur-sm border border-secondary-100 flex items-center justify-center text-secondary-600 hover:bg-white shadow-sm transition-all"
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-white/95 text-secondary-800 shadow-md hover:shadow-xl border border-secondary-200 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary active:scale-90 transition-all duration-200 cursor-pointer group"
                 aria-label="Next image"
               >
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6 transition-transform group-hover:translate-x-0.5" />
               </button>
             </>
           )}
@@ -125,20 +156,24 @@ export default function ProductGallery({ product }: { product: Product }) {
 
           {/* Image counter badge */}
           {product.images.length > 1 && (
-            <div className="absolute bottom-3 right-3 z-10 rounded-full bg-black/50 text-white text-[10px] font-semibold px-2.5 py-1 backdrop-blur-sm">
+            <div className="absolute bottom-3 right-3 z-10 rounded-full bg-black/60 text-white text-xs font-semibold px-3 py-1 backdrop-blur-sm shadow-sm">
               {active + 1} / {product.images.length}
             </div>
           )}
         </div>
 
         {/* Thumbnail strip — visible on all screens, smaller on mobile */}
-        <div className="mt-3 flex gap-2 sm:gap-3 overflow-x-auto pb-2 scrollbar-thin scrollbar-none">
+        <div
+          ref={thumbnailContainerRef}
+          className="mt-3 flex gap-2 sm:gap-3 overflow-x-auto pb-2 scrollbar-thin scrollbar-none scroll-smooth"
+        >
           {product.images.map((img, i) => {
             const isVideo = img.match(/\.(mp4|webm)$/i);
             return (
               <button
                 key={i}
-                onClick={() => setActive(i)}
+                type="button"
+                onClick={() => scrollToThumb(i)}
                 className={cn(
                   "flex-shrink-0 rounded-lg sm:rounded-xl overflow-hidden border-2 transition-colors bg-white relative",
                   "h-14 w-14 sm:h-20 sm:w-20",
