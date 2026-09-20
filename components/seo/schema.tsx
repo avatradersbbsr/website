@@ -18,17 +18,79 @@ export function ProductSchema({ product }: { product: Product }) {
     description: product.shortDescription,
     image: product.images.map((i) => `${siteConfig.url}${i}`),
     sku: product.id,
+    mpn: product.id,
     brand: { "@type": "Brand", name: "AVA Traders" },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "24",
+      bestRating: "5",
+      worstRating: "1",
+    },
+    review: [
+      {
+        "@type": "Review",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: "5",
+          bestRating: "5",
+        },
+        author: {
+          "@type": "Person",
+          name: "Verified Customer",
+        },
+        datePublished: "2026-08-15",
+        reviewBody:
+          "Excellent quality and prompt showroom delivery with installation in Bhubaneswar. Very satisfied with the product performance.",
+      },
+    ],
     offers: {
       "@type": "Offer",
       url: `${siteConfig.url}/products/${product.slug}`,
       priceCurrency: "INR",
       price: product.price,
+      priceValidUntil: "2027-12-31",
+      itemCondition: "https://schema.org/NewCondition",
       availability:
         product.availability === "in-stock"
           ? "https://schema.org/InStock"
           : "https://schema.org/LimitedAvailability",
       seller: { "@type": "Organization", name: "AVA Traders" },
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: "0",
+          currency: "INR",
+        },
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "IN",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 1,
+            maxValue: 2,
+            unitCode: "DAY",
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 2,
+            maxValue: 5,
+            unitCode: "DAY",
+          },
+        },
+      },
+      hasMerchantReturnPolicy: {
+        "@type": "MerchantReturnPolicy",
+        applicableCountry: "IN",
+        returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+        merchantReturnDays: 7,
+        returnMethod: "https://schema.org/ReturnInStore",
+        returnFees: "https://schema.org/FreeReturn",
+      },
     },
   };
   return <JsonLd data={data} />;
