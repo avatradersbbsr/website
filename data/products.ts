@@ -808,9 +808,12 @@ export const products: Product[] = [
       "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for setup guidance and warranty support after your purchase."
     ],
     images: [
-      "/images/products/detachable-premium/1.jpg",
-      "/images/products/detachable-premium/2.jpg",
-      "/images/products/detachable-premium/3.jpg"
+      "/images/products/leg-massagers/detachable-premium-leg-massager/1.jpg",
+      "/images/products/leg-massagers/detachable-premium-leg-massager/2.png",
+      "/images/products/leg-massagers/detachable-premium-leg-massager/3.png",
+      "/images/products/leg-massagers/detachable-premium-leg-massager/4.png",
+      "/images/products/leg-massagers/detachable-premium-leg-massager/5.png",
+      "/images/products/leg-massagers/detachable-premium-leg-massager/6.png"
     ],
     mrp: 51900,
     price: 33500,
