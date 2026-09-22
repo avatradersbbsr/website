@@ -1028,13 +1028,13 @@ export const products: Product[] = [
     ],
     images: [
       "/images/products/health-care-products/healthmate/1.jpg",
-      "/images/products/health-care-products/healthmate/1.png",
-      "/images/products/health-care-products/healthmate/2.jpg",
+      "/images/products/health-care-products/healthmate/2.png",
       "/images/products/health-care-products/healthmate/3.jpg",
       "/images/products/health-care-products/healthmate/4.jpg",
       "/images/products/health-care-products/healthmate/5.jpg",
       "/images/products/health-care-products/healthmate/6.jpg",
-      "/images/products/health-care-products/healthmate/7.jpg"
+      "/images/products/health-care-products/healthmate/7.jpg",
+      "/images/products/health-care-products/healthmate/8.jpg"
     ],
     mrp: 59500,
     price: 37500,
@@ -1360,8 +1360,9 @@ export const products: Product[] = [
     ],
     images: [
       "/images/products/health-care-products/massage-gun/1.jpg",
-      "/images/products/health-care-products/massage-gun/2.webp",
-      "/images/products/health-care-products/massage-gun/3.jpg"
+      "/images/products/health-care-products/massage-gun/2.jpg",
+      "/images/products/health-care-products/massage-gun/3.jpg",
+      "/images/products/health-care-products/massage-gun/4.jpg"
     ],
     mrp: 3999,
     price: 2499,
@@ -1473,9 +1474,8 @@ export const products: Product[] = [
       "Every unit sold by AVA Traders is checked at our showroom before dispatch, and our team is available on call or WhatsApp for support after your purchase."
     ],
     images: [
-      "/images/products/health-care-products/hpm-physiotherapy/1.jpg",
-      "/images/products/health-care-products/hpm-physiotherapy/2.jpg",
-      "/images/products/health-care-products/hpm-physiotherapy/3.jpg"
+      "/images/products/health-care-products/hpm-physiotherapy/1.jpeg",
+      "/images/products/health-care-products/hpm-physiotherapy/2.jpeg"
     ],
     mrp: 23999,
     price: 14999,
